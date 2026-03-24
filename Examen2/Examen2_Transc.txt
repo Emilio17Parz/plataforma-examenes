@@ -1,0 +1,176 @@
+1. Transcripción del Material Genético en Procariontes
+1.1. En el contexto de la expresión génica, ¿cómo se define la transcripción?
+1.1.a. El proceso de duplicación exacta del DNA celular.
+1.1.b.*. El proceso que permite el flujo de información genética desde el DNA hasta el RNA mensajero (RNAm).
+1.1.c. La síntesis de proteínas a partir de una cadena de RNA.
+
+1.2. La transcripción se divide en tres fases principales. ¿En qué fase ocurre la formación del tallo y la acción de la proteína rho?
+1.2.a. Inicio
+1.2.b. Elongación
+1.2.c.*. Terminación
+
+1.3. La síntesis del RNAm es llevada a cabo por la enzima RNA polimerasa. Además de un DNA molde y la presencia de iones de Magnesio (Mg2+), ¿qué más requiere esta enzima para sintetizar la cadena?
+1.3.a. Un cebador de RNA y aminoácidos libres.
+1.3.b.*. Un "pool" de los cuatro ribonucleótidos trifosfato (NTP) como precursores.
+1.3.c. Desoxirribonucleótidos trifosfato (dNTP) y ATP para energía.
+
+1.4. A diferencia de las células eucariontes, ¿qué característica fundamental distingue a la transcripción en procariontes respecto a la traducción?
+1.4.a. La transcripción ocurre en el núcleo y la traducción en el citoplasma.
+1.4.b. La transcripción siempre requiere la destrucción de la célula.
+1.4.c.*. La transcripción y la traducción ocurren de manera simultánea.
+
+1.5. [Requiere imagen: colinearidad_gen.jpg - Sugerencia: recorta el cuadro donde se comparan las secuencias del DNA y el RNA transcrito]
+Durante la transcripción, la secuencia del RNAm recién sintetizado es colinear (casi idéntica) a una de las hebras del DNA, cambiando solo la Timina por Uracilo. ¿Cómo se denomina a esta hebra de DNA?
+1.5.a. Hebra molde
+1.5.b.*. Hebra codificante (nontemplate strand)
+1.5.c. Hebra rezagada
+
+1.6. [Requiere imagen: rna_polimerasa.jpg - Sugerencia: recorta el esquema visual de las 6 subunidades de la holoenzima]
+La RNA polimerasa (o transcriptasa) procarionte está formada por 6 subunidades. ¿Cuál de estas subunidades es dissociable y tiene la función específica de reconocer los promotores para iniciar la transcripción?
+1.6.a. Subunidad beta (β)
+1.6.b. Subunidad alfa (α)
+1.6.c.*. Subunidad o factor sigma (σ)
+
+1.7. [Requiere imagen: secuencias_promotores.jpg - Sugerencia: recorta la tabla de "Consensus sequence" mostrando las regiones -35 y -10]
+El inicio de la transcripción requiere que el factor sigma reconozca secuencias específicas en el DNA llamadas promotores. ¿En qué posiciones se localizan típicamente las secuencias consenso (como la caja TATA o Pribnow) en procariontes?
+1.7.a. En las posiciones +1 y +10.
+1.7.b.*. En las posiciones -35 y -10.
+1.7.c. En las posiciones -70 y +30.
+
+1.8. [Requiere imagen: elongacion_burbuja.jpg - Sugerencia: recorta el diagrama de la burbuja de transcripción donde se ve la enzima abriendo el DNA]
+Durante la fase de elongación, la RNA polimerasa abre el DNA formando una "burbuja de transcripción". Dentro de esta burbuja y en el sitio activo, ¿de cuántos pares de bases (pb) es aproximadamente el híbrido temporal de RNA-DNA que se forma? 1.8.a. 2 pares de bases.
+1.8.b.*. 8 pares de bases.
+1.8.c. 20 pares de bases.
+2. Terminación, Procesamiento y Traducción del RNA
+2.1. En la bacteria *E. coli*, existen dos mecanismos principales para señalar la terminación de la transcripción. ¿Cuáles son?
+2.1.a. Hidrólisis de ATP y degradación del promotor.
+2.1.b.*. Formación de un tallo terminador (intrínseco) y terminación dependiente de la proteína rho.
+2.1.c. Unión de la subunidad sigma y formación de la burbuja.
+
+2.2. [Requiere imagen: terminacion_tallo.jpg - Sugerencia: recorta el diagrama que muestra el plegamiento del RNA en forma de horquilla]
+En la terminación intrínseca (independiente de rho), el RNA recién sintetizado se pliega sobre sí mismo formando una estructura de "tallo y asa". ¿Qué secuencias caracterizan esta región terminadora?
+2.2.a. Una región rica en Adenina y Timina (A-T).
+2.2.b. Una larga secuencia exclusiva de Guaninas.
+2.2.c.*. Una región del tallo rica en G-C seguida de un tramo monocatenario de Uracilos (U).
+
+2.3. [Requiere imagen: terminacion_rho.jpg - Sugerencia: recorta el esquema circular rojo de la proteína rho separando el ARN]
+En la terminación dependiente de la proteína rho, ¿cuál es el mecanismo de acción de este factor?
+2.3.a.*. El factor rho se une al ARN desnudo, avanza hacia la ARN polimerasa y provoca que esta se disocie del ADN, liberando el ARN.
+2.3.b. El factor rho corta físicamente el ADN para detener la polimerasa.
+2.3.c. El factor rho se une al promotor para evitar que otra polimerasa inicie.
+
+2.4. Después de la transcripción, la molécula de RNA recién sintetizada (transcrito primario) sufre modificaciones antes de ser funcional. En los procariontes, ¿qué tipo de moléculas catalizan a menudo estas reacciones de maduración?
+2.4.a. Proteasomas
+2.4.b. Ligasas de ADN
+2.4.c.*. RNA catalíticos conocidos como ribozimas.
+
+2.5. [Requiere imagen: exones_intrones.jpg - Sugerencia: recorta el esquema donde se ve el "splicing" o corte de los intrones negros]
+El transcrito primario de un RNAm eucariótico contiene secuencias codificantes y no codificantes. Durante la maduración, ¿qué proceso elimina las secuencias no codificantes para unir las codificantes y formar el RNA maduro?
+2.5.a. Poliadenilación
+2.5.b.*. Corte y empalme (Splicing), eliminando intrones y uniendo exones.
+2.5.c. Traducción simultánea
+
+2.6. Además del "splicing", el procesamiento postranscripcional del RNAm eucariota incluye dos modificaciones cruciales en sus extremos para protegerlo y facilitar su transporte. ¿Cuáles son?
+2.6.a. Adición de intrones en 5' y corte en 3'.
+2.6.b.*. Modificación del extremo 5' con una "gorra" (cap) de 7-metil Guanosina y la adición de una cola de poli-A en el extremo 3'.
+2.6.c. Unión de ribosomas en 5' y de la proteína rho en 3'.
+
+2.7. ¿Qué complejo celular, compuesto por ARN ribosomal (RNAr) y proteínas, es el encargado de realizar la traducción (síntesis de proteínas) leyendo el RNAm?
+2.7.a. El nucleosoma
+2.7.b. El aparato de Golgi
+2.7.c.*. El ribosoma 
+2.8. Durante la traducción, ¿qué molécula actúa como "adaptador" reconociendo los codones (tripletes) del RNAm e insertando el aminoácido correspondiente en la cadena polipeptídica?
+2.8.a. El DNA polimerasa
+2.8.b. El RNAr
+2.8.c.*. El RNA de transferencia (RNAt)
+
+2.9. El código genético se describe como "degenerado" o "redundante". ¿Qué significa esta característica?
+2.9.a. Que el código pierde información con el tiempo.
+2.9.b.*. Que varios codones diferentes pueden codificar para el mismo aminoácido.
+2.9.c. Que un solo codón puede codificar para múltiples aminoácidos distintos simultáneamente.
+
+2.10. [Requiere imagen: tabla_codigo_genetico.jpg - Sugerencia: utiliza la tabla completa de los codones para que el alumno pueda consultarla]
+Consultando la tabla del código genético, ¿cuál es el codón de iniciación que codifica para Metionina (o N-formilmetionina en procariontes)?
+2.10.a. UAA
+2.10.b. UGA
+2.10.c.*. AUG
+3. Ribosomas, RNAt y Etapas de la Traducción
+3.1. Los ribosomas bacterianos son complejos supramoleculares vitales para la traducción. ¿Cuál es su composición aproximada?
+3.1.a. 50% ADN y 50% proteínas.
+3.1.b. 90% proteínas y 10% RNAr.
+3.1.c.*. 65% RNAr y 35% proteína.
+
+3.2. [Requiere imagen: ribosoma_bacteriano.jpg - Sugerencia: recorta el esquema de las subunidades 50S y 30S uniéndose para formar el ribosoma 70S]
+El ribosoma bacteriano completo tiene un valor de sedimentación de 70S. ¿Cuáles son los valores de sedimentación de sus dos subunidades individuales (mayor y menor, respectivamente)?
+3.2.a. 40S y 30S
+3.2.b.*. 50S y 30S
+3.2.c. 60S y 40S
+
+3.3. [Requiere imagen: rna_transferencia_trebol.jpg - Sugerencia: recorta el modelo bidimensional en forma de trébol mostrando los brazos]
+El RNA de transferencia (RNAt) actúa como molécula adaptadora y se pliega en una estructura característica "en forma de trébol". ¿En qué parte específica del RNAt se une (esterifica) el aminoácido correspondiente?
+3.3.a. En el brazo D.
+3.3.b. En el bucle del anticodón.
+3.3.c.*. En el tallo aceptor (extremo 3'), que posee la secuencia CCA.
+
+3.4. La traducción o síntesis de proteínas se divide en varias etapas secuenciales. ¿Cuál de las siguientes etapas debe ocurrir *antes* de que inicie la traducción propiamente dicha en el ribosoma?
+3.4.a. Plegamiento y modificación postraduccional.
+3.4.b.*. Activación de los RNAt (unión del aminoácido a su RNAt específico).
+3.4.c. Elongación de la cadena polipeptídica.
+
+3.5. [Requiere imagen: activacion_trna.png - Sugerencia: recorta el diagrama cíclico donde la sintetasa une el aminoácido y el ATP al RNAt]
+La activación de los RNAt asegura que el aminoácido correcto se asocie a su RNAt específico. ¿Qué enzima cataliza esta reacción crucial en el citosol consumiendo ATP?
+3.5.a. RNA polimerasa
+3.5.b.*. Aminoacil-RNAt sintetasa
+3.5.c. Peptidil transferasa
+
+3.6. Para que la fase de inicio de la traducción comience en procariontes, se requieren varios componentes interactuando. ¿Qué componente específico del RNA mensajero (RNAm) ayuda a posicionar correctamente al ribosoma bacteriano?
+3.6.a. La cola de poli-A.
+3.6.b.*. La secuencia de Shine-Dalgarno y el codón de iniciación (AUG).
+3.6.c. El terminador intrínseco.
+
+3.7. Durante el inicio de la traducción en procariontes, el primer RNAt (iniciador) se aparea con el codón AUG. ¿Qué aminoácido particular transporta este RNAt iniciador bacteriano?
+3.7.a. Metionina estándar.
+3.7.b. Valina.
+3.7.c.*. N-Formilmetionina (fMet).
+
+3.8. ¿Cuál es la secuencia correcta del ensamblaje del complejo de inicio durante la traducción?
+3.8.a. Las subunidades 50S y 30S se unen primero, luego el RNAm y finalmente el RNAt iniciador entran juntos.
+3.8.b.*. El RNAm se une a la subunidad menor (30S) junto con el RNAt-fMet iniciador; posteriormente se une la subunidad mayor (50S) para completar el complejo.
+3.8.c. El RNAt-fMet se une a la subunidad mayor (50S), la cual escanea el RNAm hasta encontrar el AUG, atrayendo finalmente a la subunidad menor (30S).
+4. Elongación, Terminación y Modificaciones Postraduccionales
+4.1. [Requiere imagen: complejo_iniciacion.jpg - Sugerencia: recorta el diagrama del complejo 30S sobre el mRNA]
+Retomando el complejo de iniciación en procariontes, ¿qué componente de la subunidad ribosómica menor (30S) es el responsable de reconocer y unirse a la secuencia de Shine-Dalgarno en el mRNA?
+4.1.a. El tRNA-fMet
+4.1.b. El factor de iniciación IF3
+4.1.c.*. El rRNA 16S
+
+4.2. Durante la etapa de elongación, la cadena polipeptídica naciente se alarga. Además del ribosoma 70S funcional, aminoacil-tRNAs y Mg2+, ¿qué proteínas citosólicas son estrictamente requeridas para esta fase?
+4.2.a. Factores de iniciación (IF-1, IF-2, IF-3)
+4.2.b.*. Factores de elongación (EF-Tu, EF-Ts, EF-G)
+4.2.c. Factores de transcripción (como el factor sigma)
+
+4.3. La fijación de los aminoacil-tRNA entrantes y el desplazamiento del ribosoma a lo largo del mRNA son procesos que consumen energía. ¿Qué molécula se hidroliza para proporcionar la energía necesaria en la elongación?
+4.3.a. ATP
+4.3.b.*. GTP
+4.3.c. AMPc
+
+4.4. [Requiere imagen: elongacion_esquema.jpg - Sugerencia: recorta el diagrama donde se ven los sitios P y A del ribosoma con los aminoácidos uniéndose]
+De acuerdo con el modelo de elongación, ¿qué sucede inmediatamente después de que el anticodón del tRNA entrante se aparea correctamente con el codón del mRNA en el sitio activo?
+4.4.a. El ribosoma se desarma para liberar la proteína.
+4.4.b. El tRNA se transforma en RNA mensajero.
+4.4.c.*. Se forma una unión covalente (enlace peptídico) entre los aminoácidos y el ribosoma avanza al siguiente codón.
+
+4.5. Este ciclo de elongación se repite continuamente hasta que el ribosoma recibe una señal de parada. ¿Qué evento marca el final de la elongación y el inicio de la terminación?
+4.5.a. El ribosoma choca con una enzima exonucleasa.
+4.5.b.*. El ribosoma alcanza un codón de terminación o finalización en el mRNA.
+4.5.c. Se agotan las moléculas de tRNA en el citosol.
+
+4.6. Una vez alcanzado el codón de terminación, la cadena polipeptídica nueva debe desprenderse. ¿Qué proteínas asisten al ribosoma para liberar la cadena polipeptídica finalizada?
+4.6.a. Chaperonas
+4.6.b.*. Factores de liberación de polipéptidos (RF1, RF2, RF3)
+4.6.c. Topoisomerasas
+
+4.7. La proteína recién liberada (polipéptido nuevo) rara vez es funcional de inmediato. Para adoptar su forma biológicamente activa, ¿qué tipo de procesos de plegamiento y modificación postraduccional puede experimentar?
+4.7.a. Traducción inversa para corregir errores genéticos.
+4.7.b. Integración permanente al núcleo bacteriano.
+4.7.c.*. Plegamiento tridimensional, cortes proteolíticos, o la adición de grupos funcionales (acetilo, fosfato, glúcidos, etc.).

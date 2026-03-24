@@ -1,0 +1,219 @@
+1. Biología Molecular - Ácidos Nucleicos
+1.1. ¿Quién aisló por primera vez el DNA en 1869, denominándolo inicialmente como "nucleína"?
+1.1.a.*. J. F. Miescher
+1.1.b. Richard Altman
+1.1.c. Frederick Griffith
+1.1.d. James Watson
+
+1.2. ¿Qué científicos propusieron en 1953 el modelo estructural de la doble hélice para el DNA?
+1.2.a. Avery, McLeod y McCarty
+1.2.b. Maurice Wilkins y Rosalind Franklin
+1.2.c.*. Watson y Crick
+1.2.d. Erwin Chargaff
+
+1.3. Los ácidos nucleicos son polímeros compuestos por monómeros llamados nucleótidos. ¿Cuáles son los tres componentes básicos de un nucleótido?
+1.3.a. Un aminoácido, una base nitrogenada y un grupo sulfato.
+1.3.b. Una hexosa, un grupo fosfato y un enlace peptídico.
+1.3.c.*. Una pentosa (azúcar), una base nitrogenada y un grupo fosfato.
+
+1.4. ¿Cuál es la diferencia estructural que define a un nucleósido en comparación con un nucleótido?
+1.4.a. El nucleósido contiene un grupo fosfato adicional.
+1.4.b.*. El nucleósido consta únicamente de la pentosa y la base nitrogenada, careciendo del grupo fosfato.
+1.4.c. El nucleósido solo está presente en el RNA, no en el DNA.
+
+1.5. [Requiere imagen: pentosas.png - Sugerencia: recorta la imagen de la diapositiva donde se comparan la Ribosa y la 2' Desoxi-Ribosa]
+Observando la estructura química de los azúcares, ¿cuál es la diferencia principal entre las pentosas del RNA y del DNA?
+1.5.a. La presencia de un átomo de carbono extra en el DNA.
+1.5.b.*. La ausencia de un grupo hidroxilo (-OH) en la posición 2' de la pentosa del DNA.
+1.5.c. El RNA utiliza una hexosa en lugar de una pentosa.
+
+1.6. Las bases nitrogenadas se dividen en dos grupos principales. ¿Cuáles de las siguientes bases son clasificadas como purinas?
+1.6.a. Timina, Citosina y Uracilo
+1.6.b.*. Adenina y Guanina
+1.6.c. Adenina y Timina
+
+1.7. [Requiere imagen: bases_nitrogenadas.png - Sugerencia: recorta la imagen donde se ven las estructuras de purinas (2 anillos) y pirimidinas (1 anillo)]
+Basado en su estructura de anillos heterocíclicos, ¿qué característica distingue a las pirimidinas de las purinas?
+1.7.a. Tienen una estructura de doble anillo.
+1.7.b.*. Tienen una estructura de anillo simple.
+1.7.c. Carecen de átomos de nitrógeno en su estructura.
+
+1.8. ¿Qué base nitrogenada se encuentra exclusivamente en el RNA y sustituye a la Timina del DNA?
+1.8.a. Citosina
+1.8.b. Guanina
+1.8.c.*. Uracilo
+
+1.9. ¿Cómo se llama el enlace químico que une la base nitrogenada con el azúcar (pentosa) en la formación de un nucleósido?
+1.9.a. Enlace fosfodiéster
+1.9.b.*. Enlace β-glicosídico
+1.9.c. Puente de hidrógeno
+
+1.10. Según las Reglas de Erwin Chargaff (1949), ¿qué proporciones de bases se mantienen siempre cercanas a 1 en las moléculas de DNA estudiadas?
+1.10.a. A:U y G:C
+1.10.b. A:G y T:C
+1.10.c.*. A:T y G:C
+
+1.11. El modelo de Watson y Crick establece que la molécula de DNA se pliega como una doble cadena con ciertas características. ¿Cuáles son estas características?
+1.11.a. Helicoidal, idéntica y paralela con las bases hacia el exterior.
+1.11.b.*. Helicoidal, complementaria y antiparalela, con las bases nitrogenadas hacia el interior.
+1.11.c. Lineal, complementaria y de cadena simple.
+
+1.12. ¿De quiénes fueron los estudios de difracción de rayos X (1950-1952) que resultaron fundamentales para descubrir la estructura del DNA?
+1.12.a. Linus Pauling
+1.12.b. F. Griffith y Richard Altman
+1.12.c.*. Maurice Wilkins y Rosalind Franklin
+
+1.13. [Requiere imagen: corte_transversal_dna.jpg - Sugerencia: recorta el diagrama que muestra el corte transversal con hexágonos/pentágonos]
+En una vista de corte transversal del DNA, ¿qué componentes estructurales se ubican en la parte exterior de la hélice protegiendo a las bases nitrogenadas?
+1.13.a. Los enlaces de hidrógeno.
+1.13.b.*. El esqueleto de pentosa-fosfato.
+1.13.c. Las purinas y pirimidinas exclusivamente.
+2. Biología Molecular - Conformaciones y Estabilidad del DNA
+2.1. ¿En qué prestigiosa revista científica publicaron Watson y Crick su artículo "A Structure for Deoxyribose Nucleic Acid" el 25 de abril de 1953?
+2.1.a. Science
+2.1.b.*. Nature
+2.1.c. Cell
+2.1.d. The Lancet
+
+2.2. Además de Watson y Crick, ¿quiénes son considerados "los otros descubridores" de la estructura del DNA por sus aportaciones cristalográficas?
+2.2.a. Linus Pauling y Erwin Chargaff
+2.2.b. Avery, McLeod y McCarty
+2.2.c.*. Maurice Wilkins y Rosalind Franklin
+
+2.3. La complementariedad de las bases en el DNA tiene una gran importancia biológica. ¿Cuál de las siguientes es una ventaja clave de esta característica?
+2.3.a. Permite que la molécula cambie de pentosa a hexosa libremente.
+2.3.b.*. Favorece la replicación, la transcripción y el reconocimiento/reparación del DNA dañado.
+2.3.c. Aumenta la velocidad a la que se destruye el DNA celular.
+
+2.4. En la formación de puentes de hidrógeno para el apareamiento específico entre pares purina-pirimidina, ¿cuántos enlaces se forman entre la Guanina (G) y la Citosina (C)?
+2.4.a. Un puente de hidrógeno
+2.4.b. Dos puentes de hidrógeno
+2.4.c.*. Tres puentes de hidrógeno
+
+2.5. [Requiere imagen: surcos_dna.jpg - Sugerencia: recorta el diagrama que muestra el "Major groove side" y "Minor groove side" con los anillos de bases]
+Debido al ángulo de los enlaces glicosídicos respecto al centro estructural, la doble hélice presenta dos espacios de distinto tamaño. ¿Cómo se denominan estos espacios?
+2.5.a.*. Surco mayor y surco menor
+2.5.b. Hendidura interna y externa
+2.5.c. Surco levógiro y dextrógiro
+
+2.6. De acuerdo con el modelo de la conformación B del DNA (el más común en la naturaleza), ¿cuántos pares de bases (pb) hay aproximadamente por cada vuelta completa de la hélice?
+2.6.a.*. ~10 pares de bases
+2.6.b. 11 pares de bases
+2.6.c. 12 pares de bases
+
+2.7. En la conformación B del DNA, ¿cómo se posicionan los planos de las bases nitrogenadas en relación con el eje central de la hélice?
+2.7.a. De forma paralela al eje
+2.7.b.*. De forma perpendicular al eje de la hélice
+2.7.c. Con una inclinación exacta de 45 grados
+
+2.8. [Requiere imagen: conformacion_z.jpg - Sugerencia: recorta los modelos en 3D de la Conformación Z donde se nota la forma de zig-zag y la línea amarilla del esqueleto]
+Existen distintas conformaciones estructurales del DNA. ¿Qué característica principal distingue a la conformación Z de las conformaciones A y B?
+2.8.a. Es la conformación más ancha ("Broadest").
+2.8.b. Sus bases no forman puentes de hidrógeno.
+2.8.c.*. Es una doble hélice enrollada hacia la izquierda (levógira, o "Left-handed").
+
+2.9. Analizando las características de las conformaciones del DNA, ¿cuál de ellas se caracteriza por ser la más ancha (Broadest), girar hacia la derecha (Right-handed) y tener 11 pares de bases por vuelta?
+2.9.a.*. Conformación A
+2.9.b. Conformación B
+2.9.c. Conformación Z
+
+2.10. La estabilidad de la doble hélice del DNA depende en gran parte de los enlaces por puente de hidrógeno. En términos de estabilidad térmica, ¿cuál de las siguientes afirmaciones es correcta?
+2.10.a. Las uniones A=T son más estables porque tienen tres enlaces.
+2.10.b.*. Las uniones C≡G son más estables porque tienen tres enlaces.
+2.10.c. Todas las uniones son igual de estables sin importar el número de enlaces.
+
+2.11. El DNA se considera un "polianión" que genera repulsión electrostática por las cargas negativas de sus grupos fosfato. ¿Qué elementos biológicos ayudan a "apantallar" o reducir esta repulsión para estabilizar la doble hélice?
+2.11.a. Solamente el agua intracelular.
+2.11.b. Aniones monovalentes como el Cloro y ácidos grasos.
+2.11.c.*. Cationes divalentes (como Mg2+), poliaminas y proteínas básicas ricas en Lisina y Arginina (como las histonas).
+3. Biología Molecular - Superenrollamiento y Genomas
+3.1. Además de los puentes de hidrógeno, ¿qué otro tipo de interacción fundamental contribuye a la estabilidad de la doble hélice del DNA, según los modelos de estabilidad?
+3.1.a. Enlaces disulfuro entre las pentosas.
+3.1.b.*. Interacciones de apilamiento (stacking interactions) entre las bases.
+3.1.c. Enlaces iónicos externos.
+
+3.2. ¿Qué tipo de superenrollamiento es el más común biológicamente y cuál es su principal ventaja para la molécula de DNA?
+3.2.a. Superenrollamiento positivo; hace la molécula más larga y fácil de leer.
+3.2.b.*. Superenrollamiento negativo (infra-enrollado); genera una molécula más compacta.
+3.2.c. Superenrollamiento relajado; evita que las hebras se rompan.
+
+3.3. El superenrollamiento in vivo es un proceso catalizado que requiere energía (ATP). ¿Cuál es la diferencia principal entre las topoisomerasas de tipo I y tipo II?
+3.3.a.*. Las de tipo I relajan el DNA superenrollado cortando una hebra, y las de tipo II introducen superenrollamiento negativo cortando y girando las dos hebras.
+3.3.b. Las de tipo I cortan ambas hebras, mientras que las de tipo II solo actúan en eucariotas.
+3.3.c. Las de tipo I no requieren ATP, mientras que las de tipo II sí.
+
+3.4. En las células eucariontes, el DNA se encuentra principalmente contenido en el núcleo. Sin embargo, ¿qué otros organelos poseen su propio genoma?
+3.4.a. Aparato de Golgi y Retículo Endoplásmico.
+3.4.b. Lisosomas y Ribosomas.
+3.4.c.*. Mitocondrias y Cloroplastos.
+
+3.5. Al comparar la proporción de información útil (codificante) en la estructura de los genomas, ¿cuál de las siguientes afirmaciones es correcta?
+3.5.a. Ambos genomas tienen aproximadamente un 50% de material codificante.
+3.5.b. El genoma eucarionte es >90% codificante, mientras que el procarionte es mayormente no codificante.
+3.5.c.*. El genoma procarionte es mayormente codificante (>90%), mientras que una gran parte del genoma eucarionte es no codificante (70 - 85%).
+
+3.6. [Requiere imagen: cromosoma_procariota.jpg - Sugerencia: recorta el diagrama que muestra el "Cromosoma de Escherichia coli" con bucles superenrollados y el centro proteico]
+En procariontes, el DNA forma una estructura altamente comprimida en el citoplasma. ¿Cómo se denomina esta estructura y qué la estabiliza en su centro?
+3.6.a. Cromatina, estabilizada por histonas completas.
+3.6.b. Plásmido central, estabilizado por lípidos de membrana.
+3.6.c.*. Nucleoide, estabilizado por un núcleo de proteínas (como tetrámeros HU) y poliaminas catiónicas.
+
+3.7. ¿Cómo se da principalmente la segregación del genoma en procariontes y eucariontes respectivamente, para repartir el material genético a las células hijas?
+3.7.a. Procariontes por mitosis; Eucariontes por meiosis.
+3.7.b.*. Procariontes por unión a la membrana celular y bipartición; Eucariontes mediante el proceso de mitosis.
+3.7.c. Ambos lo hacen mediante la formación de un huso acromático.
+
+3.8. [Requiere imagen: segregacion_procariota.jpg - Sugerencia: recorta el diagrama visual de los pasos de la división celular con los símbolos de replisome, condensins, etc.]
+¿Cuáles son las dos fases principales en las que se divide el proceso de segregación del cromosoma en procariotas?
+3.8.a. Fase S y Fase M.
+3.8.b. Transcripción y Traducción.
+3.8.c.*. 1) Replicación y resolución de los cromosomas recién replicados, y 2) División celular.
+4. Biología Molecular - Estructura Eucariota, Nucleosomas y Dogma Central
+4.1. [Requiere imagen: celula_eucarionte.jpg - Sugerencia: utiliza el esquema general de la célula vegetal para señalar la ubicación]
+A diferencia de los procariontes, el material genético principal de las células eucariontes se encuentra aislado del citoplasma. ¿En qué organelo se almacena y organiza este DNA?
+4.1.a. En la vacuola central.
+4.1.b. En el aparato de Golgi.
+4.1.c.*. En el núcleo.
+
+4.2. [Requiere imagen: cariotipo_humano.jpg - Sugerencia: recorta la imagen del cariotipo humano numerado del 1 al 22 más el par sexual]
+¿Cómo está estructurado el genoma humano normal según su cariotipo?
+4.2.a. Por un único cromosoma circular muy extenso.
+4.2.b.*. Por 23 pares de cromosomas homólogos (uno de origen materno y otro paterno).
+4.2.c. Por 46 pares de cromosomas de cadena simple.
+
+4.3. El DNA eucariota es lineal y debe alcanzar un alto grado de compactación. ¿Cómo se llama la unidad repetida estructural, compuesta por 145 pares de bases (pb) enrolladas alrededor de un núcleo de proteínas, que se repite cada 200 pb?
+4.3.a. Cromátida hermana
+4.3.b. Plásmido
+4.3.c.*. Nucleosoma
+
+4.4. Las histonas son proteínas fundamentales para el empaquetamiento del DNA en eucariotas. Teniendo en cuenta que el DNA es un polianión, ¿qué característica de las histonas permite su interacción electrostática?
+4.4.a.*. Son proteínas policatiónicas ricas en aminoácidos como Lisina (Lys) y Arginina (Arg).
+4.4.b. Son proteínas ácidas cargadas negativamente que repelen los grupos fosfato.
+4.4.c. Son lípidos hidrofóbicos que aíslan la doble hélice.
+
+4.5. [Requiere imagen: estructura_nucleosomas.jpg - Sugerencia: recorta el diagrama que muestra el núcleo de histonas y la histona interactuando por fuera]
+El núcleo del nucleosoma (octámero) está formado por dos copias de las histonas H2A, H2B, H3 y H4. ¿Qué histona NO forma parte del octámero central, sino que interactúa con el DNA conector para delimitar el nucleosoma?
+4.5.a. Histona H2A
+4.5.b.*. Histona H1
+4.5.c. Histona H3
+
+4.6. ¿Qué mecanismo bioquímico regula la funcionalidad del DNA y altera la expresión génica modificando la estructura de la cromatina?
+4.6.a.*. Modificaciones covalentes de las histonas (acetilación, metilación, fosforilación).
+4.6.b. La destrucción controlada de los nucleosomas.
+4.6.c. El cambio espontáneo de purinas a pirimidinas.
+
+4.7. De las siguientes opciones, ¿cuáles representan las funciones biológicas primordiales del DNA?
+4.7.a. Producir ATP celular, transportar oxígeno y catalizar la digestión intracelular.
+4.7.b.*. Contener y salvaguardar la información genética, transmitirla a la siguiente generación, y controlar la síntesis de proteínas.
+4.7.c. Exportar energía, crear puentes disulfuro y destruir RNA defectuoso.
+
+4.8. [Requiere imagen: dogma_central.png - Sugerencia: recorta el esquema de flechas de flujo de información]
+Según el Dogma Central de la Biología Molecular, el proceso biológico mediante el cual la información del DNA se utiliza para sintetizar una molécula de RNA se denomina:
+4.8.a. Replicación
+4.8.b.*. Transcripción
+4.8.c. Traducción
+
+4.9. En el Dogma Central, el flujo de información suele ir de DNA a RNA y luego a Proteína. Sin embargo, existe un proceso direccional inverso entre los ácidos nucleicos. ¿Cómo se llama el proceso de síntesis de DNA a partir de una plantilla de RNA?
+4.9.a.*. Transcripción inversa
+4.9.b. Replicación retrógrada
+4.9.c. Traducción inversa

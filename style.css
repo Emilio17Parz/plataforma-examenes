@@ -1,0 +1,9 @@
+/* Custom CSS opcional */
+button:disabled {
+    cursor: not-allowed;
+}
+
+/* Evita saltos bruscos en el diseño */
+#quiz-container {
+    min-height: 50vh;
+}

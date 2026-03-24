@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Estudio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 min-h-screen font-sans text-gray-800 bg-cover bg-center bg-fixed transition-all" style="background-image: url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2070&auto=format&fit=crop');">
+    
+    <div class="fixed inset-0 bg-black bg-opacity-60 z-0"></div>
+
+    <div class="relative z-10 container mx-auto px-4 py-8 max-w-4xl">
+        <header class="text-center mb-10 text-white">
+            <h1 class="text-4xl font-bold mb-2">Simulador de Exámenes</h1>
+            <p class="text-lg opacity-80">Selecciona un examen para comenzar a estudiar</p>
+        </header>
+
+        <div id="menu" class="bg-white rounded-xl shadow-2xl p-8 mb-8">
+            <h2 class="text-2xl font-semibold mb-6 text-center">Exámenes Disponibles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="exam-list">
+                </div>
+        </div>
+
+        <div id="quiz-container" class="bg-white rounded-xl shadow-2xl p-8 hidden">
+            <div class="flex justify-between items-center mb-6 pb-4 border-b">
+                <h2 id="exam-title" class="text-xl font-bold text-blue-600">Título</h2>
+                <span id="question-counter" class="text-gray-500 font-semibold">Pregunta 1 / 10</span>
+            </div>
+
+            <div id="question-box" class="mb-6">
+                </div>
+
+            <div id="options-box" class="space-y-3 mb-8">
+                </div>
+
+            <div class="flex justify-between items-center border-t pt-4">
+                <button id="btn-menu" class="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition">Volver al Menú</button>
+                <button id="btn-next" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition hidden">Siguiente Pregunta</button>
+            </div>
+        </div>
+
+        <div id="results-container" class="bg-white rounded-xl shadow-2xl p-8 hidden text-center">
+            <h2 class="text-3xl font-bold mb-4">¡Examen Terminado!</h2>
+            <p class="text-xl mb-2">Tu calificación es:</p>
+            <div id="score-display" class="text-5xl font-extrabold text-blue-600 mb-6">10/10</div>
+            <div class="flex justify-center space-x-4">
+                <button id="btn-retry" class="px-6 py-3 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600 transition">Volver a Intentar</button>
+                <button id="btn-home" class="px-6 py-3 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition">Ir al Menú</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
