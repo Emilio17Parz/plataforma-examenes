@@ -3,7 +3,7 @@ const exams = [
     { folder: 'Examen2', file: 'Examen2_Transc.txt', name: 'Examen 2 - Transcripción' }
 ];
 
-// Mapeo manual para las imágenes que están divididas en varias (ej. terminacion_rho1, 2, 3)
+// Mapeo para las imágenes que están divididas en varias
 const imageMap = {
     'segregacion_procariota': ['segregacion_procariota1.png', 'segregacion_procariota2.png'],
     'elongacion_esquema': ['elongacion_esquema1.png', 'elongacion_esquema2.png'],
@@ -30,7 +30,7 @@ function initMenu() {
     examList.innerHTML = '';
     exams.forEach(exam => {
         const btn = document.createElement('button');
-        btn.className = 'p-6 bg-blue-50 border border-blue-200 text-blue-700 rounded-xl hover:bg-blue-600 hover:text-white transition shadow-sm font-semibold text-lg';
+        btn.className = 'w-full p-6 bg-blue-50 border border-blue-200 text-blue-700 rounded-xl hover:bg-blue-600 hover:text-white transition shadow-sm font-semibold text-lg text-left md:text-center';
         btn.textContent = exam.name;
         btn.onclick = () => loadExam(exam);
         examList.appendChild(btn);
@@ -41,7 +41,8 @@ function initMenu() {
 async function loadExam(exam) {
     try {
         currentExamFolder = exam.folder;
-        const response = await fetch(`${exam.folder}/${exam.file}`);
+        // Agregamos un timestamp para evitar problemas de caché al recargar la página
+        const response = await fetch(`${exam.folder}/${exam.file}?t=${new Date().getTime()}`);
         const text = await response.text();
         
         currentQuestions = parseExamData(text);
@@ -57,57 +58,83 @@ async function loadExam(exam) {
         
         showQuestion();
     } catch (error) {
-        alert('Error al cargar el examen. Asegúrate de estar ejecutando esto en un servidor local (Live Server) para que la petición Fetch funcione.');
+        alert('Error al cargar el examen. Asegúrate de estar corriendo tu servidor local o que GitHub Pages ya haya publicado los cambios.');
         console.error(error);
     }
 }
 
-// Parsear el TXT
+// Nuevo Parseador: Lee línea por línea de forma inteligente
 function parseExamData(text) {
-    // Dividir por números de pregunta al inicio de la línea (ej. "1.1. ")
-    const blocks = text.split(/(?=\n\d+\.\d+\.)/); 
-    const questions = [];
+    let questions = [];
+    let currentQ = null;
 
-    blocks.forEach(block => {
-        if (!block.trim()) return;
+    // Limpiar saltos de línea raros (Windows vs Linux)
+    const lines = text.replace(/\r/g, '').split('\n');
+    
+    for (let i = 0; i < lines.length; i++) {
+        let line = lines[i].trim();
+        if (!line) continue;
 
-        // Extraer imágenes
-        const imageRegex = /\[Requiere imagen:\s*([^\s]+)\s*-.*\]/g;
-        let images = [];
-        let match;
-        while ((match = imageRegex.exec(block)) !== null) {
-            let baseName = match[1].replace('.jpg', '').replace('.png', '');
-            if(imageMap[baseName]) {
-                images = images.concat(imageMap[baseName]);
-            } else {
-                images.push(baseName + '.png');
-            }
-        }
+        // Detectar si la línea es una opción de respuesta (Ej: "1.1.a.", "1.1.a.*.", "1.1.b. Texto")
+        const optRegex = /^\d+\.\d+\.[a-z]\.?(\*)?\.?\s*(.*)/;
+        const optMatch = line.match(optRegex);
 
-        // Limpiar el texto de la pregunta (quitar las etiquetas de imagen)
-        let qText = block.replace(/\[Requiere imagen:.*?\]/g, '').trim();
-        
-        // Separar la pregunta de las opciones
-        const lines = qText.split('\n');
-        let questionString = "";
-        let options = [];
-
-        lines.forEach(line => {
-            const optMatch = line.match(/^\d+\.\d+\.[a-z]\.(\*)?\.\s*(.*)/) || line.match(/^\d+\.\d+\.[a-z]\.(\*)?\s*(.*)/);
-            if (optMatch) {
-                options.push({
+        if (optMatch) {
+            if (currentQ) {
+                currentQ.options.push({
                     text: optMatch[2],
-                    isCorrect: optMatch[1] === '*'
+                    // Validamos si tiene el asterisco en el grupo regex o en la línea completa
+                    isCorrect: optMatch[1] === '*' || line.includes('*') 
                 });
-            } else {
-                questionString += line + " ";
             }
-        });
+        } else {
+            // Detectar si es una nueva pregunta (Ej: "1.1. Pregunta...")
+            const qStartRegex = /^(\d+\.\d+)\.\s*(.*)/;
+            const qMatch = line.match(qStartRegex);
 
-        if (options.length > 0) {
-            questions.push({ text: questionString.trim(), images, options });
+            if (qMatch) {
+                // Si ya había una pregunta armándose, la guardamos
+                if (currentQ && currentQ.options.length > 0) {
+                    questions.push(currentQ);
+                }
+                currentQ = {
+                    text: qMatch[2] || line.replace(/^(\d+\.\d+)\.\s*/, ''), 
+                    images: [],
+                    options: []
+                };
+            } else if (currentQ && currentQ.options.length === 0) {
+                // Si aún no tiene opciones, es la continuación del texto de la pregunta principal
+                currentQ.text += " " + line;
+            } else if (currentQ && currentQ.options.length > 0) {
+                // Si ya tiene opciones, probablemente sea una opción larga que brincó de renglón
+                currentQ.options[currentQ.options.length - 1].text += " " + line;
+            }
         }
+    }
+    
+    // Guardar la última pregunta del documento
+    if (currentQ && currentQ.options.length > 0) {
+        questions.push(currentQ);
+    }
+
+    // Post-procesamiento: Extraer imágenes y limpiar todo el texto entre corchetes [...]
+    questions.forEach(q => {
+        // Buscar el nombre del archivo dentro de los corchetes
+        const imgRegex = /\[.*?([a-zA-Z0-9_]+)\.(png|jpg).*?\]/gi;
+        let match;
+        while ((match = imgRegex.exec(q.text)) !== null) {
+            let baseName = match[1]; // ej. "pentosas" o "terminacion_rho"
+            if (imageMap[baseName]) {
+                q.images.push(...imageMap[baseName]); // Si requiere varias imágenes
+            } else {
+                q.images.push(baseName + '.png'); // Forzamos .png porque así están en tu carpeta
+            }
+        }
+        
+        // Magia: Eliminar todo lo que esté entre corchetes [...] del texto final
+        q.text = q.text.replace(/\[.*?\]/g, '').trim();
     });
+
     return questions;
 }
 
@@ -117,22 +144,23 @@ function showQuestion() {
     const q = currentQuestions[currentQuestionIndex];
     questionCounter.textContent = `Pregunta ${currentQuestionIndex + 1} / ${currentQuestions.length}`;
     
-    // Renderizar imágenes si las hay
+    // Renderizar imágenes (adaptables a celular gracias a Tailwind)
     let imagesHTML = '';
     if (q.images && q.images.length > 0) {
-        imagesHTML = `<div class="flex flex-wrap gap-4 mb-4 justify-center">`;
+        imagesHTML = `<div class="flex flex-col md:flex-row flex-wrap gap-4 mb-6 justify-center">`;
         q.images.forEach(img => {
-            imagesHTML += `<img src="${currentExamFolder}/${img}" alt="Imagen de soporte" class="max-h-64 object-contain rounded border shadow-sm" onerror="this.style.display='none'">`;
+            imagesHTML += `<img src="${currentExamFolder}/${img}" alt="Imagen de soporte" class="w-full md:w-auto max-h-64 object-contain rounded-lg border shadow-md" onerror="this.style.display='none'">`;
         });
         imagesHTML += `</div>`;
     }
 
-    questionBox.innerHTML = `${imagesHTML}<p class="text-xl font-medium text-gray-800 leading-relaxed">${q.text}</p>`;
+    questionBox.innerHTML = `${imagesHTML}<p class="text-xl md:text-2xl font-medium text-gray-800 leading-relaxed">${q.text}</p>`;
     
     optionsBox.innerHTML = '';
     q.options.forEach((opt, index) => {
         const btn = document.createElement('button');
-        btn.className = 'w-full text-left p-4 border rounded-lg hover:bg-gray-50 transition text-lg bg-white';
+        // Clases pensadas para que se vean bien y sean fáciles de tocar en celulares
+        btn.className = 'w-full text-left p-4 md:p-5 border-2 rounded-xl hover:bg-gray-50 transition text-lg bg-white mb-3 shadow-sm active:scale-95';
         btn.textContent = opt.text;
         btn.onclick = () => selectOption(btn, opt.isCorrect);
         optionsBox.appendChild(btn);
@@ -143,23 +171,23 @@ function showQuestion() {
 function selectOption(selectedBtn, isCorrect) {
     const allBtns = optionsBox.querySelectorAll('button');
     
-    // Deshabilitar todos
+    // Deshabilitar todos los botones para que no seleccione otra vez
     allBtns.forEach(btn => btn.disabled = true);
 
     if (isCorrect) {
         selectedBtn.classList.remove('hover:bg-gray-50', 'bg-white', 'border-gray-200');
-        selectedBtn.classList.add('bg-green-100', 'border-green-500', 'text-green-800', 'font-bold');
+        selectedBtn.classList.add('bg-green-100', 'border-green-500', 'text-green-900', 'font-bold');
         score++;
     } else {
         selectedBtn.classList.remove('hover:bg-gray-50', 'bg-white', 'border-gray-200');
-        selectedBtn.classList.add('bg-red-100', 'border-red-500', 'text-red-800');
+        selectedBtn.classList.add('bg-red-100', 'border-red-500', 'text-red-900', 'font-semibold');
         
-        // Pintar la correcta de verde
+        // Pintar la correcta de verde para que el usuario aprenda
         const q = currentQuestions[currentQuestionIndex];
         q.options.forEach((opt, idx) => {
             if(opt.isCorrect) {
                 allBtns[idx].classList.remove('bg-white', 'border-gray-200');
-                allBtns[idx].classList.add('bg-green-100', 'border-green-500', 'text-green-800', 'font-bold');
+                allBtns[idx].classList.add('bg-green-100', 'border-green-500', 'text-green-900', 'font-bold');
             }
         });
     }
@@ -167,7 +195,7 @@ function selectOption(selectedBtn, isCorrect) {
     btnNext.classList.remove('hidden');
 }
 
-// Botones de navegación
+// Navegación
 btnNext.onclick = () => {
     currentQuestionIndex++;
     if (currentQuestionIndex < currentQuestions.length) {
@@ -208,5 +236,5 @@ document.getElementById('btn-home').onclick = () => {
     menu.classList.remove('hidden');
 };
 
-// Iniciar
+// Iniciar aplicación
 initMenu();
