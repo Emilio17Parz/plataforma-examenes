@@ -1,9 +1,31 @@
-/* Custom CSS opcional */
 button:disabled {
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
-/* Evita saltos bruscos en el diseño */
 #quiz-container {
-    min-height: 50vh;
+  min-height: 50vh;
+}
+
+.question-image {
+  max-height: 280px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 14px;
+  border: 1px solid #dbeafe;
+  background: #f8fafc;
+  padding: 10px;
+  margin-bottom: 18px;
+}
+
+.option-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 800;
+  margin-right: 10px;
 }

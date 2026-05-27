@@ -1,0 +1,133 @@
+1. Zscaler EDU-200 - Introducción a Zero Trust
+1.1. What is a critical flaw in the Traditional Perimeter Network Security Architecture as highlighted in the content?
+1.1.a. Limited access for remote workers through VPN
+1.1.b.*. Implicit trust of users once they cross the perimeter
+1.1.c. Over-reliance on internal DC/Colo for resource management
+1.1.d. Lack of centralized Firewall/VPN for defense
+
+1.2. What is a core principle of the Zero Trust security model implemented by Zscaler, and why is it necessary for modern cloud-driven environments?
+1.2.a. Extend implicit trust to all devices connected through VPNs and firewalls
+1.2.b. Grant broad network access based on user location and device type
+1.2.c.*. Never trust, always verify—access is granted based on identity and context, ensuring every connection is dynamically validated regardless of network or device
+1.2.d. Allow full lateral movement within the network for ease of collaboration
+
+1.3. Why is traditional perimeter security considered obsolete in a cloud-driven remote work environment?
+1.3.a. Because users no longer need access to applications
+1.3.b.*. Because users, applications, and data are no longer limited to a single corporate network perimeter
+1.3.c. Because firewalls are no longer able to block any traffic
+1.3.d. Because all modern applications must be public
+
+1.4. In the bank robbery analogy, what does identifying bank branches represent in a cyberattack?
+1.4.a. Encrypting data for ransom
+1.4.b. Moving laterally inside the network
+1.4.c.*. Identifying the organization's attack surface
+1.4.d. Applying a business access policy
+
+1.5. Which items are examples of an exposed attack surface in a traditional security model?
+1.5.a. Only internal users and HR documents
+1.5.b.*. Public IPs, firewalls, VPNs, and internet-facing application portals
+1.5.c. Only encrypted SaaS traffic
+1.5.d. Only applications hidden from the internet
+
+1.6. In the bank robbery analogy, what does locating the cash safe represent in a cyberattack?
+1.6.a. User authentication with SSO
+1.6.b.*. Lateral movement to find sensitive data or high-value systems
+1.6.c. Blocking access with MFA
+1.6.d. Reducing IT costs
+
+1.7. What is one major risk of using VPNs as the main access method?
+1.7.a. VPNs always hide applications from the internet
+1.7.b.*. VPNs can place users on the network and increase the risk of lateral movement
+1.7.c. VPNs eliminate phishing attacks completely
+1.7.d. VPNs prevent all credential theft
+
+1.8. What does Zscaler mean by the Zero Trust Exchange acting like an intelligent switchboard?
+1.8.a. It connects all users to the corporate network by default
+1.8.b.*. It securely connects the right users, apps, and machines based on identity, context, and policy
+1.8.c. It replaces every application with a public web portal
+1.8.d. It allows unrestricted communication between all networks
+
+1.9. What does the Zero Trust Exchange do before brokering a connection?
+1.9.a. It automatically trusts traffic from corporate devices
+1.9.b.*. It terminates the connection, inspects content, evaluates context, and enforces policy
+1.9.c. It exposes the private application to the internet
+1.9.d. It disables identity verification after login
+
+1.10. Why does Zscaler connect users to applications instead of networks?
+1.10.a. To make all applications publicly reachable
+1.10.b.*. To reduce lateral movement and limit access only to the specific authorized application
+1.10.c. To bypass identity providers
+1.10.d. To remove the need for all access policies
+
+1.11. Which phrase best summarizes the difference between legacy security and Zscaler Zero Trust?
+1.11.a. Legacy security blocks all cloud applications, while Zscaler allows everything
+1.11.b.*. Legacy security connects users to networks; Zscaler connects verified users only to authorized applications
+1.11.c. Legacy security verifies every request; Zscaler trusts users after login
+1.11.d. Legacy security uses no perimeter; Zscaler depends only on a perimeter
+
+1.12. What is the purpose of Step 1: “Who are you? — Identify”?
+1.12.a. To determine the cost of the application
+1.12.b.*. To verify the user and device using identity, SSO, groups, roles, certificates, OS checks, and device posture
+1.12.c. To let the user browse the entire network
+1.12.d. To disable access policies
+
+1.13. Which identity providers can Zscaler integrate with according to the learning content?
+1.13.a. Only local usernames and passwords
+1.13.b.*. Microsoft Entra ID, Okta, or Ping
+1.13.c. Only public DNS providers
+1.13.d. Only endpoint antivirus products
+
+1.14. What is the purpose of Step 2: “Where are you going? — Application Policy”?
+1.14.a. To approve all internet traffic automatically
+1.14.b.*. To identify the requested application and apply access policy based on role, groups, posture, and app segments
+1.14.c. To connect the user to every subnet in the data center
+1.14.d. To ignore user identity after authentication
+
+1.15. What is the purpose of Step 3: “What’s the risk? — Adaptive Evaluation”?
+1.15.a. To stop evaluating the user after login
+1.15.b.*. To continuously evaluate risk using behavior, device posture changes, geolocation, traffic anomalies, and threat intelligence
+1.15.c. To make every device trusted permanently
+1.15.d. To allow access only from the office network
+
+1.16. What can happen if risk increases during an active session?
+1.16.a. Zscaler must keep the original access decision forever
+1.16.b.*. Zscaler can adjust the level of access or block/challenge the session based on policy
+1.16.c. The user is automatically granted administrator access
+1.16.d. The application becomes public on the internet
+
+1.17. What is the purpose of Step 4: “Go or No-Go? — Real-Time Policy Enforcement”?
+1.17.a. To manually review every request days later
+1.17.b.*. To apply real-time decisions such as allow, block, isolate, caution, redirect, or require MFA
+1.17.c. To remove inspection from user traffic
+1.17.d. To bypass device posture checks
+
+1.18. What is a benefit of allowing no inbound connections to private applications?
+1.18.a. It makes the internal network easier to scan from the internet
+1.18.b.*. It keeps applications invisible to the internet and helps eliminate exposed attack surface
+1.18.c. It disables encryption for all users
+1.18.d. It allows attackers to discover private apps faster
+
+1.19. In the Zscaler model, what is the final connection if access is approved?
+1.19.a. A broad connection from the user to the entire network
+1.19.b.*. A one-to-one connection between the verified user and the authorized application
+1.19.c. A connection from the user to every application in the data center
+1.19.d. A public inbound connection to the application
+
+1.20. Which statement best describes why “lift and shift” firewalls and VPNs to the cloud is not true Zero Trust?
+1.20.a. Because it automatically removes all attack surfaces
+1.20.b.*. Because it keeps traditional network dependencies, exposed services, lateral movement risk, complexity, and cost
+1.20.c. Because it prevents all users from accessing SaaS
+1.20.d. Because it removes the need for identity and context
+
+1.21. What does Zero Trust require for every access request?
+[Imagen: img/zscaler_zero_trust_intro.png]
+1.21.a. Permanent trust after the first successful login
+1.21.b. Broad access to the corporate network
+1.21.c.*. Dynamic verification using identity, context, device posture, requested application, content, and risk
+1.21.d. A public IP address for every private application
+
+1.22. What is the main business benefit of the Zero Trust Exchange described in the introduction?
+1.22.a. It makes every branch office dependent on MPLS
+1.22.b.*. It helps organizations securely embrace digital transformation while reducing business risk and simplifying IT
+1.22.c. It removes the need for compliance and security policies
+1.22.d. It forces all users to work from corporate offices only
