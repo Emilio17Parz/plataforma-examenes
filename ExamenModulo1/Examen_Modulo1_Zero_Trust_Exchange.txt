@@ -1,0 +1,951 @@
+1. Zscaler EDU-200 Module 1 - Context and Administrator Role
+
+1.1. What modern reality drives the need for a new security architecture in EDU-200 Module 1?
+1.1.a. Users and applications are always located inside the corporate office
+1.1.b.*. Users work from everywhere and applications live everywhere
+1.1.c. Organizations no longer use cloud applications
+1.1.d. Firewalls automatically remove all security risks
+
+1.2. Who is Jane in the EDU-200 learning path?
+1.2.a. A threat actor testing exposed firewalls
+1.2.b.*. The Lead Zscaler Platform Administrator at Safemarch Corporation
+1.2.c. A user who only accesses SaaS apps
+1.2.d. A third-party application developer
+
+1.3. What does Jane manage for Safemarch Corporation?
+1.3.a. Only physical branch office routers
+1.3.b.*. A secure, cloud-based infrastructure for a globally distributed workforce
+1.3.c. Only local desktop applications
+1.3.d. A legacy-only data center with no remote users
+
+1.4. Which responsibility best matches Jane’s role as a Zscaler administrator?
+1.4.a. Removing security policies to improve speed
+1.4.b.*. Ensuring secure user access, compliance, data protection, and business continuity
+1.4.c. Allowing every user full network access
+1.4.d. Replacing identity providers with static IP allowlists
+
+1.5. What is the main focus of Module 1?
+1.5.a. Configuring only endpoint antivirus
+1.5.b.*. Understanding the limits of traditional perimeter security and the foundation of the Zero Trust Exchange
+1.5.c. Migrating all apps to one data center
+1.5.d. Learning only about password complexity rules
+
+1.6. What does Jane review at the beginning of Module 1?
+1.6.a. Payroll reports
+1.6.b.*. The foundational security architecture used by Safemarch
+1.6.c. Only DNS zone files
+1.6.d. A list of employee devices without context
+
+1.7. What does Jane use to explore Zscaler’s integrated solutions?
+1.7.a. A local VPN concentrator only
+1.7.b.*. The Zscaler Experience Center
+1.7.c. A spreadsheet of IP addresses only
+1.7.d. A physical firewall console only
+
+1.8. What balance does Jane confirm in the Zscaler configuration?
+1.8.a. Cost, advertising, and branding
+1.8.b.*. Security, performance, and user experience
+1.8.c. VPN size, branch count, and IP range
+1.8.d. Router model, switch speed, and cable length
+
+2. Traditional Perimeter Security and Its Limits
+
+2.1. What does traditional perimeter network security primarily protect?
+2.1.a. Only SaaS applications
+2.1.b.*. Internal DC/Colo and campus networks
+2.1.c. Only mobile phones
+2.1.d. Only public cloud workloads
+
+2.2. What is a Remote Workforce Tunnel in a traditional architecture?
+2.2.a. A direct app-to-app Zero Trust connection
+2.2.b.*. The requirement for remote users to tunnel in through VPN to access resources
+2.2.c. A connector that hides all applications from the internet
+2.2.d. An AI assistant for administrators
+
+2.3. Why does extending VPN access increase risk?
+2.3.a. It makes applications invisible to the internet
+2.3.b.*. It expands the trusted network and can expose more resources
+2.3.c. It eliminates all credential-based attacks
+2.3.d. It prevents lateral movement automatically
+
+2.4. What is a critical flaw in traditional perimeter architecture?
+2.4.a. It never allows remote work
+2.4.b.*. It often creates implicit trust after a user crosses the perimeter
+2.4.c. It cannot connect to the internet at all
+2.4.d. It only works with SaaS
+
+2.5. What is lateral movement risk?
+2.5.a. The risk of losing internet speed
+2.5.b.*. The risk that an attacker who breaches the firewall can move across the internal network
+2.5.c. The risk that a user forgets a password
+2.5.d. The risk that a dashboard has too many charts
+
+2.6. Why are public-facing firewalls and VPNs risky?
+2.6.a. They are never visible to attackers
+2.6.b.*. They can be discovered, exploited, and attacked from the internet
+2.6.c. They automatically enforce least privilege
+2.6.d. They remove the attack surface
+
+2.7. What can a single compromised credential allow in a traditional model?
+2.7.a. Only dashboard access with no impact
+2.7.b.*. Unauthorized access and possible lateral movement
+2.7.c. Automatic deprovisioning of the attacker
+2.7.d. Removal of all public IPs
+
+2.8. Why does a perimeter-only model fall short in hybrid work?
+2.8.a. It was designed for a world where users, apps, and data were mostly inside one network boundary
+2.8.b.*. It was designed for a world where users, apps, and data were mostly inside one network boundary
+2.8.c. It is designed only for Zero Trust Exchange
+2.8.d. It never uses networks
+
+2.9. What happens when firewalls and VPNs are simply moved into virtual machines in the cloud?
+2.9.a. They automatically become Zero Trust
+2.9.b.*. The same network vulnerabilities and trust assumptions remain
+2.9.c. Lateral movement becomes impossible
+2.9.d. The attack surface disappears
+
+2.10. Why is “lift and shift” not true Zero Trust?
+2.10.a. It requires identity and context for every request
+2.10.b.*. It preserves network dependencies, exposed services, complexity, and lateral movement risk
+2.10.c. It hides all applications from the internet
+2.10.d. It only connects users to specific applications
+
+2.11. What is one operational challenge of traditional network-centric security?
+2.11.a. It requires no management effort
+2.11.b.*. It can create complexity through route tables, firewalls, VPNs, and many devices
+2.11.c. It cannot use any policies
+2.11.d. It blocks every user by default
+
+2.12. Which statement best summarizes the problem with perimeter security?
+2.12.a. It connects verified users only to one authorized application
+2.12.b.*. It trusts the network boundary too much and leaves exposed entry points
+2.12.c. It never exposes public IPs
+2.12.d. It eliminates the need for identity
+
+3. Bank Robbery Analogy and Cyberattack Lifecycle
+
+3.1. In the bank robbery analogy, what is Step 1 for criminals?
+3.1.a. Escape with the cash
+3.1.b.*. Find and map bank branches
+3.1.c. Locate the cash safe
+3.1.d. Call the police
+
+3.2. In the cyberattack analogy, what corresponds to finding bank branches?
+3.2.a. Data exfiltration
+3.2.b.*. Identifying the attack surface
+3.2.c. Applying MFA
+3.2.d. Creating a private app segment
+
+3.3. Which items are examples of attack surface in the cyberattack analogy?
+3.3.a. Only employee names
+3.3.b.*. Public IPs, firewalls, VPNs, and internet-facing application portals
+3.3.c. Only dashboard colors
+3.3.d. Only hidden private applications
+
+3.4. What is Step 2 in the bank robbery analogy?
+3.4.a. Get away with the cash
+3.4.b.*. Identify vulnerabilities and break in
+3.4.c. Create a Zero Trust policy
+3.4.d. Benchmark digital experience
+
+3.5. What is Step 2 in the cyberattack analogy?
+3.5.a. Identify user experience metrics
+3.5.b.*. Compromise the target through vulnerabilities, phishing, social engineering, or stolen credentials
+3.5.c. Create policy segments
+3.5.d. Forward logs to a SIEM
+
+3.6. What does locating the cash safe represent in a cyberattack?
+3.6.a. Authentication with SSO
+3.6.b.*. Lateral movement to find high-value data or systems
+3.6.c. Running a speed test
+3.6.d. Enrolling a device certificate
+
+3.7. What is Step 4 in the cyberattack analogy?
+3.7.a. Verify the user identity
+3.7.b.*. Data exfiltration and disruption
+3.7.c. Assign an administrator role
+3.7.d. Configure ZDX
+
+3.8. What can attackers do after finding sensitive data?
+3.8.a. Only improve application performance
+3.8.b.*. Steal it, send it to external servers, sell it, or encrypt it for ransom
+3.8.c. Automatically apply DLP
+3.8.d. Remove attack surface
+
+3.9. What does the analogy teach about security?
+3.9.a. Only the entry point matters
+3.9.b.*. Defenses must protect across multiple stages of an attack
+3.9.c. Physical security has no relationship to cyber security
+3.9.d. VPNs always prevent every phase
+
+3.10. Why are layered defenses important?
+3.10.a. Attackers only use one random step
+3.10.b.*. Threat actors follow planned steps, so defenses must mitigate risk throughout the attack path
+3.10.c. Layered defenses remove the need for identity
+3.10.d. They replace all business policies
+
+4. Zero Trust Architecture and Zero Trust Exchange
+
+4.1. What is the guiding principle of Zero Trust?
+4.1.a. Trust every device inside the network
+4.1.b.*. Never trust, always verify
+4.1.c. Trust users after one login forever
+4.1.d. Allow access based only on IP range
+
+4.2. What does Zero Trust eliminate from network-centric security?
+4.2.a. Identity verification
+4.2.b.*. Implicit trust
+4.2.c. Security policies
+4.2.d. Application access
+
+4.3. What is Zero Trust Architecture designed for?
+4.3.a. Only branch office MPLS networks
+4.3.b.*. A secure cloud and mobile world
+4.3.c. Only legacy data centers
+4.3.d. Public-facing VPNs only
+
+4.4. What is the Zero Trust Exchange?
+4.4.a. A legacy firewall cluster
+4.4.b.*. A cloud-native platform that securely brokers connections using identity, context, and least-privileged access
+4.4.c. A password database
+4.4.d. A router-only management console
+
+4.5. Why is it called an “Exchange”?
+4.5.a. It exchanges user passwords between applications
+4.5.b.*. It acts like an intelligent switchboard connecting users to apps, apps to apps, and machines to machines
+4.5.c. It replaces the internet
+4.5.d. It stores all application source code
+
+4.6. What does the Zero Trust Exchange use to connect the right user to the right application?
+4.6.a. Static network trust only
+4.6.b.*. Business policies and context
+4.6.c. Public IP range only
+4.6.d. Device hostname only
+
+4.7. What does the Zero Trust Exchange do first with each connection?
+4.7.a. It places the user on the corporate network
+4.7.b.*. It terminates the connection
+4.7.c. It disables inspection
+4.7.d. It grants administrator rights
+
+4.8. Why is connection termination important?
+4.8.a. It prevents all monitoring
+4.8.b.*. It enables deep inspection of content and evaluation of rich context
+4.8.c. It exposes the app to the internet
+4.8.d. It removes all policy enforcement
+
+4.9. What context can the policy engine evaluate?
+4.9.a. Only user location
+4.9.b.*. User, device, application, and content
+4.9.c. Only the network subnet
+4.9.d. Only a firewall rule name
+
+4.10. What does the Zero Trust Exchange broker after policy is verified?
+4.10.a. A full network tunnel
+4.10.b.*. A connection only between identified and authorized resources
+4.10.c. A public inbound path to the application
+4.10.d. A permanent trusted session for all apps
+
+4.11. Why does connecting users only to applications reduce lateral movement?
+4.11.a. Users receive access to every subnet
+4.11.b.*. Users are not placed on the network, so they cannot freely traverse it
+4.11.c. Applications are made public
+4.11.d. The firewall is disabled
+
+4.12. What happens because no inbound connection is allowed to private apps?
+4.12.a. Private apps become easier to scan
+4.12.b.*. Applications remain invisible to the internet
+4.12.c. Users cannot access any app
+4.12.d. VPNs become mandatory
+
+4.13. Which access model best matches the Zero Trust Exchange?
+4.13.a. Broad network access
+4.13.b.*. Least-privileged access based on identity and context
+4.13.c. Location-only access
+4.13.d. Trust after firewall traversal
+
+4.14. What business outcome does ZTE support?
+4.14.a. More VPN dependency
+4.14.b.*. Secure digital transformation while reducing business risk
+4.14.c. Removal of all policies
+4.14.d. Permanent trust for corporate devices
+
+4.15. What user experience outcome does ZTE aim to deliver?
+4.15.a. Slow, complex access through multiple backhauls
+4.15.b.*. Fast and secure access directly to cloud and applications
+4.15.c. No access to cloud applications
+4.15.d. Only branch-office access
+
+5. Why Organizations Need to Evolve
+
+5.1. Why do organizations need to evolve from perimeter security?
+5.1.a. Users and apps are always inside the network
+5.1.b.*. Cloud-driven work requires dynamic verification instead of implicit network trust
+5.1.c. Data is no longer valuable
+5.1.d. Firewalls cannot be managed
+
+5.2. What does Zero Trust require for every access request?
+5.2.a. Permanent trust after first login
+5.2.b.*. Dynamic verification
+5.2.c. Only a public IP address
+5.2.d. Only VPN membership
+
+5.3. What does “Users” refer to in the Zero Trust evolution model?
+5.3.a. Only administrators in the office
+5.3.b.*. People accessing resources from any location or device
+5.3.c. Only data center servers
+5.3.d. Only unmanaged IoT cameras
+
+5.4. What is the user access challenge described in the module?
+5.4.a. Users only connect from one office
+5.4.b.*. Users connect from home, coffee shops, client sites, and personal or corporate devices
+5.4.c. Users never access SaaS
+5.4.d. Users do not need identity verification
+
+5.5. How do ZIA and ZPA address the user challenge?
+5.5.a. They trust users based on location only
+5.5.b.*. They verify identity, check device compliance, and provide least-privilege access based on context
+5.5.c. They remove all policies
+5.5.d. They expose applications to the internet
+
+5.6. What do “Workloads” represent?
+5.6.a. Only laptops
+5.6.b.*. Applications and cloud services that communicate with each other
+5.6.c. Only human users
+5.6.d. Only legacy printers
+
+5.7. What is the workload challenge?
+5.7.a. Workloads never communicate
+5.7.b.*. Cloud-native apps in AWS, Azure, or GCP must communicate safely without external threat exposure
+5.7.c. Workloads do not use the internet
+5.7.d. Workloads are always trusted
+
+5.8. What traffic directions are mentioned for workload protection?
+5.8.a. Left-right and up-down only
+5.8.b.*. East-west and north-south
+5.8.c. LAN-only traffic
+5.8.d. Local-only traffic
+
+5.9. What does east-west traffic generally refer to in this module context?
+5.9.a. User-to-printer traffic only
+5.9.b.*. Cloud-to-cloud or workload-to-workload communication
+5.9.c. Physical campus routing only
+5.9.d. Browser-to-human interaction
+
+5.10. What does north-south traffic generally refer to in this module context?
+5.10.a. Keyboard-to-monitor traffic
+5.10.b.*. Cloud-to-internet or external traffic
+5.10.c. Physical office access
+5.10.d. Only local disk access
+
+5.11. What does Zscaler help prevent for workloads?
+5.11.a. Useful application communication
+5.11.b.*. Lateral threat movement
+5.11.c. Identity verification
+5.11.d. Cloud adoption
+
+5.12. What do IoT/OT systems represent?
+5.12.a. Only SaaS dashboards
+5.12.b.*. Specialized or unmanaged devices used in business operations
+5.12.c. Only admin users
+5.12.d. Only user passwords
+
+5.13. What is a challenge with IoT/OT devices?
+5.13.a. They always run traditional security software
+5.13.b.*. They may not be able to run traditional security software
+5.13.c. They never communicate
+5.13.d. They are always patched automatically
+
+5.14. Which are examples of IoT/OT devices?
+5.14.a. Only employee laptops
+5.14.b.*. Smart sensors, cameras, manufacturing equipment, and medical equipment
+5.14.c. Only public websites
+5.14.d. Only SaaS portals
+
+5.15. How does Zscaler help secure IoT/OT systems?
+5.15.a. By placing them directly on the full network
+5.15.b.*. By enforcing secure access, inspecting traffic through specialized connectors, and isolating them from the network
+5.15.c. By disabling policy enforcement
+5.15.d. By making them public-facing
+
+6. Four Zero Trust Access Decisions
+
+6.1. What is the first question in the Zscaler Zero Trust flow?
+6.1.a. What is the router model?
+6.1.b.*. Who are you?
+6.1.c. What is the monthly bill?
+6.1.d. Where is the branch office?
+
+6.2. What is the purpose of “Who are you? — Identity”?
+6.2.a. To connect users to every subnet
+6.2.b.*. To verify user identity, device identity, roles, groups, certificates, OS checks, and posture
+6.2.c. To bypass identity providers
+6.2.d. To disable SSO
+
+6.3. Which identity providers are mentioned for integration?
+6.3.a. Only DNS providers
+6.3.b.*. Microsoft Entra ID, Okta, or Ping
+6.3.c. Only local firewalls
+6.3.d. Only antivirus products
+
+6.4. Does Zscaler need to store identities to integrate with IdPs?
+6.4.a. Yes, it must store every password
+6.4.b.*. No, it integrates with existing identity providers without storing identities
+6.4.c. Yes, it replaces every IdP
+6.4.d. No, because identity is never used
+
+6.5. Which protocols are mentioned for SSO identity verification?
+6.5.a. GRE and IPsec only
+6.5.b.*. OIDC and SAML
+6.5.c. DNS and DHCP only
+6.5.d. SNMP and SSH only
+
+6.6. How does Zscaler validate authorization in the identity step?
+6.6.a. Using public IP range only
+6.6.b.*. Using SCIM-synced groups and roles
+6.6.c. Using device color theme
+6.6.d. Using router hostname only
+
+6.7. What must happen before users and devices are allowed to proceed?
+6.7.a. They must connect through a public firewall only
+6.7.b.*. They must be verified
+6.7.c. They must receive broad network access
+6.7.d. They must bypass SSO
+
+6.8. What is the second question in the Zscaler Zero Trust flow?
+6.8.a. Which router do you use?
+6.8.b.*. Where are you going?
+6.8.c. What is your salary?
+6.8.d. What is the branch code?
+
+6.9. What does “Where are you going? — Application Policy” determine?
+6.9.a. The user’s favorite SaaS provider
+6.9.b.*. The specific application the user wants to access
+6.9.c. The public IP of every branch
+6.9.d. The user’s keyboard layout
+
+6.10. Which application types can be evaluated in the application policy step?
+6.10.a. Only local desktop files
+6.10.b.*. SaaS apps, public websites, and private apps in data centers or cloud
+6.10.c. Only printers
+6.10.d. Only legacy file shares
+
+6.11. What are access policies based on?
+6.11.a. Only user location
+6.11.b.*. User roles, group membership, device posture, and app segments
+6.11.c. Only network ownership
+6.11.d. Only VPN membership
+
+6.12. What is the goal of application policy?
+6.12.a. Users access every internal application
+6.12.b.*. Users only access applications assigned to their role
+6.12.c. Users bypass policy checks
+6.12.d. Users receive all subnet access
+
+6.13. What is the third question in the Zscaler Zero Trust flow?
+6.13.a. What is the password length?
+6.13.b.*. What’s the risk?
+6.13.c. What is the device brand?
+6.13.d. What is the office name?
+
+6.14. Why does Zscaler continuously evaluate even verified users?
+6.14.a. Identity is never useful
+6.14.b.*. Risk can change during a session
+6.14.c. Applications are always public
+6.14.d. Policies never apply after login
+
+6.15. Which telemetry signals can Zscaler analyze?
+6.15.a. Only screen brightness
+6.15.b.*. User behavior, device posture changes, geolocation, traffic anomalies, and threat intelligence
+6.15.c. Only keyboard type
+6.15.d. Only file names
+
+6.16. What does adaptive evaluation enable?
+6.16.a. Permanent trust without verification
+6.16.b.*. Dynamic risk scoring and continuous trust evaluation
+6.16.c. Unrestricted lateral movement
+6.16.d. Removal of identity checks
+
+6.17. What is the fourth question in the Zscaler Zero Trust flow?
+6.17.a. Which data center is closest?
+6.17.b.*. Go or No-Go?
+6.17.c. Which DNS server responds?
+6.17.d. What is the app logo?
+
+6.18. What actions can real-time policy enforcement take?
+6.18.a. Only allow
+6.18.b.*. Allow, block, isolate, redirect, deceive, or challenge with MFA
+6.18.c. Only log
+6.18.d. Only redirect
+
+6.19. What happens if access is approved for a private app through ZPA?
+6.19.a. The user is placed on the entire network
+6.19.b.*. A one-to-one connection is established between the user and app
+6.19.c. The application becomes internet-facing
+6.19.d. The firewall is disabled
+
+6.20. What risk is eliminated by not placing the user on the network?
+6.20.a. Authentication
+6.20.b.*. Lateral movement
+6.20.c. Policy enforcement
+6.20.d. Identity validation
+
+7. Zscaler Experience Center Overview
+
+7.1. What is the Zscaler Experience Center?
+7.1.a. A VPN-only access portal
+7.1.b.*. A unified management console for the Zero Trust Exchange
+7.1.c. A local firewall dashboard only
+7.1.d. A password vault only
+
+7.2. What does the Experience Center simplify management of?
+7.2.a. Only physical switches
+7.2.b.*. Internet and SaaS applications, private applications, digital experience monitoring, and endpoint agents
+7.2.c. Only payroll systems
+7.2.d. Only router firmware
+
+7.3. Why is a single console useful for administrators?
+7.3.a. It requires administrators to switch between more tools
+7.3.b.*. It reduces the need to switch between multiple interfaces
+7.3.c. It removes policy visibility
+7.3.d. It disables troubleshooting
+
+7.4. What does the Experience Center centralize?
+7.4.a. Only advertisements
+7.4.b.*. Visibility, configuration, and monitoring
+7.4.c. Only password resets
+7.4.d. Only keyboard preferences
+
+7.5. What are the five main vertices or tabs of the Experience Center?
+7.5.a. Users, Workloads, IoT, VPN, and Firewall
+7.5.b.*. Analytics, Administration, Policies, Infrastructure, and Logs
+7.5.c. DNS, DHCP, NAT, Routing, and Switching
+7.5.d. Tickets, Cases, Billing, HR, and Payroll
+
+7.6. What does the Analytics tab provide?
+7.6.a. Only admin password settings
+7.6.b.*. A high-level view of the environment by consolidating organizational data
+7.6.c. Only physical rack inventory
+7.6.d. Only browser settings
+
+7.7. What can administrators analyze from Analytics?
+7.7.a. Only static diagrams
+7.7.b.*. Trends, user activity, and potential threats in real time
+7.7.c. Only employee vacation data
+7.7.d. Only domain registration history
+
+7.8. Which digital experience examples are mentioned in Analytics?
+7.8.a. Keyboard layout and screen size
+7.8.b.*. Connector activity and application latency
+7.8.c. Office seating charts
+7.8.d. Physical badge scans only
+
+7.9. Which cybersecurity insights are mentioned in Analytics?
+7.9.a. Payroll exports and HR approvals
+7.9.b.*. Advanced sandbox threats, global threat locations, and SSL/TLS inspection health
+7.9.c. Only DNS names
+7.9.d. Only browser fonts
+
+7.10. Across which channels can data security be monitored?
+7.10.a. Only branch routers
+7.10.b.*. Inline, SaaS, and email channels
+7.10.c. Only local printers
+7.10.d. Only user wallpapers
+
+8. Experience Center Administration, Policies, Infrastructure, and Logs
+
+8.1. In Administration, what does Account Management handle?
+8.1.a. Threat prevention only
+8.1.b.*. Organization profiles
+8.1.c. GRE tunnel credentials
+8.1.d. Application latency
+
+8.2. In Administration, what does Admin Management control?
+8.2.a. Application latency
+8.2.b.*. Administrator access and roles
+8.2.c. DLP dictionaries only
+8.2.d. Static DNS records
+
+8.3. In Administration, what does Identity manage?
+8.3.a. Only data center routers
+8.3.b.*. Users and groups
+8.3.c. Only SSL certificates
+8.3.d. Only firewall serial numbers
+
+8.4. What do Entitlements assign?
+8.4.a. Browser themes
+8.4.b.*. Service privileges
+8.4.c. Public IP addresses
+8.4.d. Cable labels
+
+8.5. What is API Configuration used for?
+8.5.a. Password reset only
+8.5.b.*. Programmatic access setup
+8.5.c. Log deletion only
+8.5.d. App logo changes
+
+8.6. What do Alerts allow administrators to configure?
+8.6.a. User wallpapers
+8.6.b.*. System notifications
+8.6.c. Static IPs only
+8.6.d. Payroll notifications only
+
+8.7. What does Backup and Restore provide?
+8.7.a. Threat inspection policies only
+8.7.b.*. Disaster recovery options
+8.7.c. Application latency dashboards only
+8.7.d. Browser bookmarks
+
+8.8. In Policies, what does Access Control manage?
+8.8.a. Admin profile photos
+8.8.b.*. Connectivity rules for internet and private apps
+8.8.c. Billing settings only
+8.8.d. Device wallpaper
+
+8.9. In Policies, what does Cybersecurity manage?
+8.9.a. User vacation requests
+8.9.b.*. Threat prevention tools like sandbox and IPS
+8.9.c. Static DNS zones
+8.9.d. Payroll settings
+
+8.10. In Policies, what does Data Protection help prevent?
+8.10.a. Admin login only
+8.10.b.*. Data loss through DLP and CASB policies
+8.10.c. Traffic forwarding only
+8.10.d. Office access card issues
+
+8.11. What does Digital Experience Monitoring configure?
+8.11.a. Password vaults only
+8.11.b.*. ZDX to track user performance and troubleshoot network issues
+8.11.c. GRE tunnel bandwidth only
+8.11.d. Local file backup only
+
+8.12. What does Common Configuration centralize?
+8.12.a. Only user photos
+8.12.b.*. Shared settings such as location groups and time intervals
+8.12.c. Only endpoint names
+8.12.d. Only source code repositories
+
+8.13. In Infrastructure, what does Internet and SaaS manage?
+8.13.a. Password resets only
+8.13.b.*. Traffic forwarding, GRE, IPsec tunnels, and VPN credentials
+8.13.c. Email templates only
+8.13.d. User group names only
+
+8.14. What does Private Access configure?
+8.14.a. User interface colors
+8.14.b.*. App connectors and service edges
+8.14.c. Payroll permissions
+8.14.d. Browser themes
+
+8.15. What do Locations define?
+8.15.a. Only user group names
+8.15.b.*. Network sites, static IPs, and their attributes for policy enforcement
+8.15.c. Only encrypted passwords
+8.15.d. Only file names
+
+8.16. What does Connector management centralize?
+8.16.a. Only admin MFA
+8.16.b.*. Branch, cloud, and client connectors for unified edge connectivity
+8.16.c. Only DLP incidents
+8.16.d. Only browser caches
+
+8.17. What does Common Resources house?
+8.17.a. Only source code
+8.17.b.*. Shared network objects and configuration elements
+8.17.c. Only user passwords
+8.17.d. Only HR files
+
+8.18. In Logs, what does Insights provide?
+8.18.a. Only monthly invoices
+8.18.b.*. Granular transaction logs across web, firewall, and private apps
+8.18.c. Only DNS cache entries
+8.18.d. Only dashboard colors
+
+8.19. What is Log Streaming used for?
+8.19.a. Streaming entertainment content
+8.19.b.*. Real-time forwarding of logs to external SIEMs or storage through services like NSS
+8.19.c. Sending user passwords to applications
+8.19.d. Changing user roles only
+
+8.20. Why is Log Streaming useful?
+8.20.a. It removes all audit needs
+8.20.b.*. It supports security operations and long-term data retention
+8.20.c. It disables SIEM integration
+8.20.d. It blocks all traffic by default
+
+9. Experience Center Benefits
+
+9.1. What does Unified Management bring into one interface?
+9.1.a. Only VPN concentrators
+9.1.b.*. ZIA, ZPA, and ZDX
+9.1.c. Only routers
+9.1.d. Only logs
+
+9.2. How does Unified Management help administrators?
+9.2.a. It hides monitoring data
+9.2.b.*. It allows policy management, troubleshooting, and monitoring without switching consoles
+9.2.c. It disables policy management
+9.2.d. It removes all identity checks
+
+9.3. What does Operational Efficiency use to reduce administrative effort?
+9.3.a. Separate policy engines for each location only
+9.3.b.*. A centralized policy engine
+9.3.c. Manual spreadsheet tracking only
+9.3.d. No policy engine
+
+9.4. What is the benefit of creating a policy once and applying it across the organization?
+9.4.a. More duplicate policies
+9.4.b.*. Consistency and reduced manual work
+9.4.c. Less visibility
+9.4.d. No troubleshooting capability
+
+9.5. What does Simplified Zero Trust provide?
+9.5.a. Unrestricted network access
+9.5.b.*. Guided workflows and an intuitive layout
+9.5.c. Removal of identity checks
+9.5.d. Public inbound app access
+
+9.6. Which tasks can guided workflows help with?
+9.6.a. Disabling all controls
+9.6.b.*. Onboarding users, setting access policies, and segmenting private applications
+9.6.c. Publishing private apps to the internet
+9.6.d. Removing all policies
+
+9.7. What do Comprehensive Insights provide?
+9.7.a. Only static PDF reports
+9.7.b.*. Real-time analytics and unified dashboards
+9.7.c. Only password history
+9.7.d. Only billing data
+
+9.8. Which metrics are shown in Comprehensive Insights?
+9.8.a. Only employee birthdays
+9.8.b.*. Threat activity, network performance, and user experience metrics
+9.8.c. Only office floor plans
+9.8.d. Only router names
+
+9.9. What does AI-Driven Assistance provide?
+9.9.a. Manual-only configuration
+9.9.b.*. Integrated GenAI capabilities as a built-in assistant
+9.9.c. Removal of troubleshooting
+9.9.d. No recommendations
+
+9.10. What can AI copilot and automated workflows help with?
+9.10.a. Disabling security policies
+9.10.b.*. Troubleshooting issues, recommending policies, and simplifying complex configurations
+9.10.c. Exposing private apps
+9.10.d. Removing dashboards
+
+10. Module 1 Glossary and Core Terms
+
+10.1. What is an Application Programming Interface, or API?
+10.1.a. A physical security camera
+10.1.b.*. A set of definitions and protocols for building and integrating application software
+10.1.c. A data center rack
+10.1.d. A phishing message
+
+10.2. What is Attack Surface?
+10.2.a. Only public websites owned by an organization
+10.2.b.*. The total number of all possible entry points for unauthorized access into any system
+10.2.c. The number of approved users
+10.2.d. The total number of firewall rules only
+
+10.3. What is a Cybersecurity Threat?
+10.3.a. A normal login from a verified user
+10.3.b.*. A malicious act that can harm systems or data through destruction, theft, alteration, disclosure, or denial of access or service
+10.3.c. A dashboard filter
+10.3.d. A cloud subscription
+
+10.4. What is Data Loss Prevention, or DLP?
+10.4.a. A solution for increasing screen brightness
+10.4.b.*. A security solution that identifies and helps prevent unsafe or inappropriate sharing, transfer, or use of sensitive data
+10.4.c. A VPN tunnel type
+10.4.d. A user password policy only
+
+10.5. What is Internet Protocol, or IP?
+10.5.a. A type of MFA factor
+10.5.b.*. A set of standards for addressing and routing data on the Internet
+10.5.c. A Zero Trust dashboard
+10.5.d. A cloud identity provider
+
+10.6. What is phishing?
+10.6.a. A secure application connector
+10.6.b.*. A cyberattack where an attacker impersonates a legitimate entity to trick users into revealing sensitive information
+10.6.c. A policy engine for ZDX
+10.6.d. A browser encryption protocol
+
+10.7. What is Software-as-a-Service, or SaaS?
+10.7.a. A physical branch router
+10.7.b.*. A cloud-based software model that delivers applications to end users through a browser
+10.7.c. A private app connector only
+10.7.d. A local-only application model
+
+10.8. What is Secure Sockets Layer, or SSL?
+10.8.a. A user group
+10.8.b.*. A security protocol that creates an encrypted link between a web server and a browser
+10.8.c. A SIEM forwarding method only
+10.8.d. An access control role
+
+10.9. What is Transport Layer Security, or TLS?
+10.9.a. A data center cable standard
+10.9.b.*. A widely adopted security protocol for privacy and data security over the Internet
+10.9.c. A browser theme
+10.9.d. A VPN-only service
+
+10.10. What is a Virtual Private Network, or VPN?
+10.10.a. A device posture score
+10.10.b.*. An encrypted connection over the Internet from a device to a network
+10.10.c. A DLP dictionary
+10.10.d. A ZDX metric
+
+10.11. What is Zscaler Digital Experience, or ZDX?
+10.11.a. A VPN concentrator
+10.11.b.*. A multi-tenant, cloud-based monitoring platform for measuring digital experiences
+10.11.c. A phishing filter only
+10.11.d. A data center firewall only
+
+10.12. What is Zscaler Internet Access, or ZIA?
+10.12.a. A local router-only product
+10.12.b.*. A cloud-native Security Service Edge solution built on secure web gateway leadership
+10.12.c. A physical badge access system
+10.12.d. A private app connector only
+
+10.13. What is Zscaler Private Access, or ZPA?
+10.13.a. A public search engine
+10.13.b.*. A Zscaler service that enables secure access to internal applications and services
+10.13.c. A payroll application
+10.13.d. A local endpoint antivirus only
+
+10.14. What is Zero Trust Architecture, or ZTA?
+10.14.a. A model that trusts VPN users by default
+10.14.b.*. A data-centric methodology focused on protecting resources over the network perimeter
+10.14.c. A physical firewall deployment only
+10.14.d. A network-only routing protocol
+
+10.15. What is Zero Trust Exchange, or ZTE?
+10.15.a. A shared password database
+10.15.b.*. A cloud-native platform for direct and secure connections based on least-privileged access
+10.15.c. A public inbound application portal
+10.15.d. A physical switch
+
+10.16. Which Zscaler service is associated with secure web gateway and internet access?
+10.16.a.*. ZIA
+10.16.b. ZPA
+10.16.c. ZDX
+10.16.d. VPN
+
+10.17. Which Zscaler service is associated with private application access?
+10.17.a. ZIA
+10.17.b.*. ZPA
+10.17.c. ZDX
+10.17.d. TLS
+
+10.18. Which Zscaler service is associated with digital experience monitoring?
+10.18.a. ZIA
+10.18.b. ZPA
+10.18.c.*. ZDX
+10.18.d. API
+
+10.19. Which term means possible entry points for unauthorized access?
+10.19.a. DLP
+10.19.b.*. Attack Surface
+10.19.c. SaaS
+10.19.d. ZDX
+
+10.20. Which term is most directly related to preventing unsafe sharing of sensitive data?
+10.20.a. API
+10.20.b.*. DLP
+10.20.c. IP
+10.20.d. VPN
+
+10.21. Which term describes applications delivered to users through a browser?
+10.21.a. TLS
+10.21.b.*. SaaS
+10.21.c. ZPA
+10.21.d. API
+
+10.22. Which term describes an attacker pretending to be a legitimate entity?
+10.22.a. API
+10.22.b.*. Phishing
+10.22.c. ZTA
+10.22.d. TLS
+
+10.23. Which term describes a protocol for privacy and data security over the Internet?
+10.23.a. SCIM
+10.23.b.*. TLS
+10.23.c. ZDX
+10.23.d. API
+
+10.24. Which term describes a set of standards for addressing and routing data?
+10.24.a. DLP
+10.24.b.*. IP
+10.24.c. ZTE
+10.24.d. ZDX
+
+10.25. Which statement best describes least-privileged access in ZTE?
+10.25.a. Users and applications are trusted by default
+10.25.b.*. Access is limited to what is required and trust is built using identity and context
+10.25.c. Users receive full network access
+10.25.d. Applications must be publicly exposed
+
+11. Scenario-Based Module 1 Review
+
+11.1. A remote employee wants access to a private application. Which approach aligns with Zscaler Zero Trust?
+11.1.a. Connect the user to the full internal network through VPN
+11.1.b.*. Verify identity and context, then broker a one-to-one connection to the application
+11.1.c. Trust the user because they are remote
+11.1.d. Publish the app to the internet
+
+11.2. An attacker scans the internet for exposed VPNs and firewalls. Which concept is involved?
+11.2.a. User experience monitoring
+11.2.b.*. Attack surface
+11.2.c. Operational efficiency
+11.2.d. Service entitlement
+
+11.3. A device is verified at login but later shows suspicious behavior. Which Zero Trust capability addresses this?
+11.3.a. Permanent trust
+11.3.b.*. Adaptive evaluation
+11.3.c. No inspection
+11.3.d. Static VPN access
+
+11.4. A user should access only one assigned app and not the full subnet. Which principle is this?
+11.4.a. Broad network access
+11.4.b.*. Least-privilege access
+11.4.c. Perimeter trust
+11.4.d. Lift and shift
+
+11.5. A company wants to monitor connector activity, application latency, sandbox threats, and SSL/TLS inspection health. Which Experience Center area is most relevant?
+11.5.a. Administration
+11.5.b.*. Analytics
+11.5.c. Backup and Restore only
+11.5.d. Locations only
+
+11.6. A team needs detailed transaction logs for investigation and troubleshooting. Which Experience Center area is most relevant?
+11.6.a. Policies > Common Configuration
+11.6.b.*. Logs > Insights
+11.6.c. Infrastructure > Common Resources
+11.6.d. Administration > Entitlements
+
+11.7. A security operations team needs real-time forwarding of logs to its SIEM. Which capability should be used?
+11.7.a. User Account Management
+11.7.b.*. Log Streaming
+11.7.c. Digital Experience Monitoring
+11.7.d. App Segmentation
+
+11.8. An administrator wants to create one policy and apply it consistently across the organization. Which benefit is this?
+11.8.a. Attack Surface Expansion
+11.8.b.*. Operational Efficiency
+11.8.c. Lateral Movement
+11.8.d. Remote Workforce Tunnel
+
+11.9. An organization wants users, workloads, and IoT/OT systems protected with context-based controls. Which model is most appropriate?
+11.9.a. Traditional perimeter-only security
+11.9.b.*. Zero Trust
+11.9.c. VPN-only remote access
+11.9.d. Public firewall-only access
+
+11.10. A private app has no inbound connection and is invisible from the internet. What risk is reduced?
+11.10.a. Policy enforcement
+11.10.b.*. Public attack surface exposure
+11.10.c. Identity validation
+11.10.d. Dynamic verification
