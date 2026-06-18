@@ -1,0 +1,1899 @@
+1. Zscaler EDU-200 - Module 3 Device Management Introduction
+
+1.1. What is the main focus of Module 3 in the Zscaler for Users Administrator learning path?
+1.1.a. User provisioning only
+1.1.b.*. Device management, Client Connector deployment, posture, tunneling, forwarding, and telemetry
+1.1.c. Billing and licensing management only
+1.1.d. Email security only
+
+1.2. In the module scenario, what does Jane focus on after setting up user management workflows?
+1.2.a. Removing all endpoint software
+1.2.b.*. Safeguarding Safemarch Corporation’s devices
+1.2.c. Disabling device posture checks
+1.2.d. Replacing Zscaler with legacy VPN
+
+1.3. Which application does Jane deploy to end-user devices?
+1.3.a. Zscaler Log Streaming Agent
+1.3.b.*. Zscaler Client Connector
+1.3.c. Zscaler Billing Connector
+1.3.d. Zscaler DNS Proxy only
+
+1.4. Which platforms are mentioned as supported for Client Connector installation?
+1.4.a. Only Windows and macOS
+1.4.b.*. Windows, macOS, ChromeOS, iOS, Linux, and Android
+1.4.c. Only iOS and Android
+1.4.d. Only Linux servers
+
+1.5. What does Jane deploy for SSL inspection?
+1.5.a. GRE tunnels only
+1.5.b.*. ZIA CA certificates
+1.5.c. ZDX probes only
+1.5.d. Password policies only
+
+1.6. What does Jane use to track device status and performance anomalies?
+1.6.a. Local firewall logs only
+1.6.b.*. Telemetry and health metric collection tools
+1.6.c. Password reset reports only
+1.6.d. Manual screenshots only
+
+1.7. What is one outcome of proper device management in the module?
+1.7.a. Users must always rely on legacy VPN
+1.7.b.*. Users remain securely connected, protected, and productive regardless of location
+1.7.c. Devices bypass all policies
+1.7.d. SSL inspection is impossible
+
+1.8. Which concepts are central to this module?
+1.8.a. DNS only and email forwarding
+1.8.b.*. Z-Tunnel 1.0, Z-Tunnel 2.0, Client Connector, forwarding profiles, posture, and telemetry
+1.8.c. Only user groups and SAML
+1.8.d. Only ZDX dashboards
+
+2. Introduction to Tunneling
+
+2.1. What is tunneling used for in networking?
+2.1.a. To expose private resources to the internet
+2.1.b.*. To protect traffic in transit by wrapping it inside another packet
+2.1.c. To disable encryption
+2.1.d. To remove routing information
+
+2.2. What does tunneling secure data through?
+2.2.a. Password expiration only
+2.2.b.*. Encapsulation, encryption, and controlled routing
+2.2.c. Browser themes
+2.2.d. Manual firewall screenshots
+
+2.3. In the finance analyst scenario, why is tunneling useful?
+2.3.a. It allows public Wi-Fi to bypass all security
+2.3.b.*. It protects traffic in transit and routes it through cloud security policies
+2.3.c. It disables all company policies
+2.3.d. It removes the need for authentication
+
+2.4. What risk exists when using unsecured public Wi-Fi?
+2.4.a. Faster access to internal data
+2.4.b.*. Traffic interception such as man-in-the-middle attacks
+2.4.c. Automatic compliance
+2.4.d. Mandatory encryption by default
+
+2.5. In tunneling, what is encapsulation?
+2.5.a. Deleting the packet payload
+2.5.b.*. Wrapping the original packet inside another packet
+2.5.c. Removing all headers
+2.5.d. Sending traffic without routing information
+
+2.6. What is decapsulation?
+2.6.a. Creating a new user identity
+2.6.b.*. Removing the outer layer and delivering the original packet
+2.6.c. Blocking all packets
+2.6.d. Resetting the endpoint
+
+2.7. What are the two main parts of a network packet?
+2.7.a. Username and password
+2.7.b.*. Header and payload
+2.7.c. Browser and certificate
+2.7.d. Token and user group
+
+2.8. What does the packet header contain?
+2.8.a. Actual user data only
+2.8.b.*. Routing information
+2.8.c. DLP incidents only
+2.8.d. Device posture score only
+
+2.9. What does the packet payload contain?
+2.9.a. Routing metadata only
+2.9.b.*. The actual data
+2.9.c. Only certificate data
+2.9.d. Only network name
+
+2.10. Which statement best describes tunneling?
+2.10.a. It is a way to remove security from traffic
+2.10.b.*. It is a way to securely move data between networks by encapsulating it
+2.10.c. It is only used for password resets
+2.10.d. It only works inside a private office
+
+3. Common Tunnel Types
+
+3.1. What does an HTTP CONNECT tunnel do?
+3.1.a. It routes only SSH traffic
+3.1.b.*. It routes web traffic through a proxy using HTTP CONNECT
+3.1.c. It replaces all certificates
+3.1.d. It disables proxy traffic
+
+3.2. What is SSH port forwarding commonly used for?
+3.2.a. Public DNS hosting
+3.2.b.*. Secure remote access to internal resources over an untrusted network
+3.2.c. Disabling encrypted access
+3.2.d. Installing ZDX only
+
+3.3. What do DTLS and TLS encrypted tunnels protect?
+3.3.a. Only user names
+3.3.b.*. Data in transit
+3.3.c. Only browser bookmarks
+3.3.d. Only device names
+
+3.4. Which tunneling type is often useful for traffic needing security with real-time performance?
+3.4.a. Static routing only
+3.4.b.*. DTLS / TLS encrypted tunnels
+3.4.c. Password history
+3.4.d. Browser proxy only
+
+3.5. What does GRE do?
+3.5.a. It stores user passwords
+3.5.b.*. It encapsulates different types of traffic inside an IP tunnel
+3.5.c. It disables traffic forwarding
+3.5.d. It only supports DLP events
+
+3.6. What types of traffic can GRE commonly carry?
+3.6.a. Only email OTPs
+3.6.b.*. Voice, video, and data
+3.6.c. Only browser cookies
+3.6.d. Only admin logs
+
+3.7. What does IPSec secure?
+3.7.a. Only browser tabs
+3.7.b.*. IP traffic between networks or endpoints
+3.7.c. Only local passwords
+3.7.d. Only device posture profiles
+
+3.8. What is IPSec often used for?
+3.8.a. Disabling site-to-site connectivity
+3.8.b.*. Secure site-to-site connectivity over the internet
+3.8.c. Exporting screenshots only
+3.8.d. App update notifications only
+
+3.9. What are Zscaler proprietary micro-tunnels designed for?
+3.9.a. Legacy VPN-only connections
+3.9.b.*. Secure, optimized traffic paths within Zscaler’s Zero Trust framework
+3.9.c. Public anonymous browsing
+3.9.d. Local-only file sharing
+
+3.10. Which tunnel type is specifically described as Zscaler’s tunneling method?
+3.10.a. SSH only
+3.10.b.*. Zscaler proprietary micro-tunnels
+3.10.c. DNS only
+3.10.d. FTP only
+
+4. Benefits of Tunneling
+
+4.1. What is a key security benefit of tunneling?
+4.1.a. It makes data visible to attackers
+4.1.b.*. It provides extra security as data travels across networks
+4.1.c. It disables all network segmentation
+4.1.d. It removes encryption
+
+4.2. Tunneling can be used to create what kind of secure remote connectivity?
+4.2.a. Public Wi-Fi only
+4.2.b.*. VPNs
+4.2.c. Browser themes
+4.2.d. Password reset flows
+
+4.3. How does tunneling help with scaling?
+4.3.a. Adding tunnels breaks all existing services
+4.3.b.*. Adding or removing tunnels does not impact existing connections and services
+4.3.c. It requires removing all network segments
+4.3.d. It prevents growth
+
+4.4. How does tunneling support segmentation?
+4.4.a. It merges all network segments into one unmanaged network
+4.4.b.*. It allows administrators to manage different network segments separately
+4.4.c. It prevents policy separation
+4.4.d. It disables performance controls
+
+4.5. How can tunneling help with protocol compatibility?
+4.5.a. It blocks all protocols
+4.5.b.*. It allows use of protocols not supported by some hardware devices
+4.5.c. It only supports HTTP
+4.5.d. It removes application compatibility
+
+4.6. How can tunneling help in restricted environments?
+4.6.a. It only blocks more services
+4.6.b.*. It can bypass ISP firewalls or regional service restrictions when permitted
+4.6.c. It deletes all policies
+4.6.d. It disables routing
+
+4.7. Which protocols are mentioned as potentially reducing data sent and improving latency?
+4.7.a. DNS and DHCP only
+4.7.b.*. GRE and IPSec
+4.7.c. SMTP and POP3
+4.7.d. FTP and Telnet
+
+4.8. Which benefit relates to lowering latency and improving speed?
+4.8.a. Disabling all tunnels
+4.8.b.*. Reducing the amount of data sent through certain protocols
+4.8.c. Removing segmentation
+4.8.d. Forcing all traffic through public Wi-Fi
+
+5. Introduction to Z-Tunnel
+
+5.1. What does Z-Tunnel do?
+5.1.a. Stores passwords locally
+5.1.b.*. Securely routes user traffic to the Zscaler cloud for inspection
+5.1.c. Disables ZIA policies
+5.1.d. Replaces device posture
+
+5.2. What uses Z-Tunnel to forward traffic?
+5.2.a. Browser bookmarks
+5.2.b.*. Zscaler Client Connector
+5.2.c. Local printer driver
+5.2.d. Password manager only
+
+5.3. What kind of tunnel is Z-Tunnel described as?
+5.3.a. Heavyweight hardware tunnel
+5.3.b.*. Lightweight HTTP tunnel
+5.3.c. Plain FTP tunnel
+5.3.d. Email-only tunnel
+
+5.4. Where does Client Connector forward traffic using Z-Tunnel?
+5.4.a. To random public servers
+5.4.b.*. To ZIA Public Service Edges
+5.4.c. To local printers
+5.4.d. To password vaults
+
+5.5. What happens when a user connects to the web?
+5.5.a. Client Connector disables inspection
+5.5.b.*. Client Connector establishes a Z-Tunnel to the closest ZIA Public Service Edge
+5.5.c. Client Connector deletes all policies
+5.5.d. Client Connector bypasses Zscaler
+
+5.6. What does the ZIA Public Service Edge apply to tunneled traffic?
+5.6.a. Browser wallpapers
+5.6.b.*. Security and access policies
+5.6.c. Local-only print settings
+5.6.d. User profile pictures
+
+5.7. Which two Z-Tunnel versions are available?
+5.7.a. Z-Tunnel Lite and Z-Tunnel Pro
+5.7.b.*. Z-Tunnel 1.0 and Z-Tunnel 2.0
+5.7.c. GRE 1.0 and GRE 2.0
+5.7.d. IPSec 1.0 and TLS 1.0
+
+5.8. What is Z-Tunnel 1.0?
+5.8.a. A TLS-only tunnel for all ports
+5.8.b.*. A proxy-based tunnel for TCP-based web traffic using a lightweight HTTP tunnel
+5.8.c. A device posture scanner
+5.8.d. A packet capture tool
+
+5.9. In Z-Tunnel 1.0, what does Client Connector function as?
+5.9.a. A DNS server
+5.9.b.*. A web proxy
+5.9.c. A storage server
+5.9.d. An identity provider
+
+5.10. What does Z-Tunnel 1.0 support?
+5.10.a. All ports and protocols
+5.10.b.*. Web-based traffic over ports 80 or 443
+5.10.c. Only ZPA private apps
+5.10.d. Only voice traffic
+
+5.11. Are traffic and headers encrypted by the Z-Tunnel 1.0 tunnel itself?
+5.11.a. Yes, always
+5.11.b.*. No, encryption is handled by the destination web application
+5.11.c. Only on Android
+5.11.d. Only if GRE is enabled
+
+5.12. What encapsulation types does Z-Tunnel 2.0 use?
+5.12.a. FTP and SMTP
+5.12.b.*. DTLS and TLS
+5.12.c. DNS and DHCP
+5.12.d. SNMP and Telnet
+
+5.13. What does Z-Tunnel 2.0 allow Client Connector to forward?
+5.13.a. Only TCP 80 and 443
+5.13.b.*. All ports and protocols to the Service Edge
+5.13.c. Only browser traffic from proxy-aware apps
+5.13.d. Only admin logs
+
+5.14. What does Z-Tunnel 2.0 include in the transmission for load balancing?
+5.14.a. User password
+5.14.b.*. User’s IP address
+5.14.c. Browser history
+5.14.d. Local printer name
+
+5.15. Why is including the user IP useful in Z-Tunnel 2.0?
+5.15.a. It disables routing
+5.15.b.*. It allows more granular and efficient load balancing
+5.15.c. It weakens security
+5.15.d. It bypasses all policies
+
+6. Z-Tunnel Selection and Hierarchy
+
+6.1. Which Z-Tunnel version does Zscaler recommend where possible?
+6.1.a. Z-Tunnel 1.0 only
+6.1.b.*. Z-Tunnel 2.0
+6.1.c. No tunnel
+6.1.d. HTTP CONNECT only
+
+6.2. Where must the profile for Z-Tunnel 2.0 be configured?
+6.2.a. Browser settings only
+6.2.b.*. Zscaler Client Connector Forwarding Profile
+6.2.c. Local printer settings
+6.2.d. Email client only
+
+6.3. What must the network type be set to for Z-Tunnel 2.0?
+6.3.a. Direct
+6.3.b.*. Tunnel mode
+6.3.c. Disabled
+6.3.d. Bridge mode only
+
+6.4. Which Windows Tunnel Driver Type is required/recommended for Z-Tunnel 2.0?
+6.4.a. Legacy proxy-only
+6.4.b.*. Packet Filter-Based
+6.4.c. Print driver
+6.4.d. Audio driver
+
+6.5. What is the primary recommended Z-Tunnel 2.0 encapsulation?
+6.5.a. TLS first
+6.5.b.*. DTLS
+6.5.c. HTTP only
+6.5.d. FTP
+
+6.6. What happens if Z-Tunnel 2.0 DTLS fails?
+6.6.a. Traffic stops forever
+6.6.b.*. It falls back to Z-Tunnel 2.0 TLS
+6.6.c. It deletes the profile
+6.6.d. It disables Client Connector
+
+6.7. What happens if both DTLS and TLS fail?
+6.7.a. ZIA is disabled
+6.7.b.*. Client Connector tries to establish a Z-Tunnel 1.0 connection
+6.7.c. All traffic is allowed without policy
+6.7.d. The device is unenrolled
+
+6.8. What is the correct failover hierarchy?
+6.8.a. Z-Tunnel 1.0, then TLS, then DTLS
+6.8.b.*. Z-Tunnel 2.0 DTLS, then Z-Tunnel 2.0 TLS, then Z-Tunnel 1.0
+6.8.c. IPSec, then GRE, then no tunnel
+6.8.d. DNS, then DHCP, then HTTP
+
+6.9. What does Zscaler recommend to help prevent Z-Tunnel 2.0 fallback to Z-Tunnel 1.0?
+6.9.a. Use load balancing with many NAT IPs per device
+6.9.b.*. Avoid load balancing and use a NAT device with a single IP address per device
+6.9.c. Disable all NAT
+6.9.d. Use only browser proxy settings
+
+6.10. What is DTLS optimized for in the hierarchy?
+6.10.a. Lowest security only
+6.10.b.*. Performance
+6.10.c. Browser bookmarks
+6.10.d. Password resets
+
+7. Z-Tunnel 1.0 vs Z-Tunnel 2.0
+
+7.1. What traffic does Z-Tunnel 1.0 support from proxy-aware apps?
+7.1.a. No web traffic
+7.1.b.*. Web traffic on any port from proxy-aware apps
+7.1.c. All unicast traffic
+7.1.d. Only UDP voice traffic
+
+7.2. What traffic does Z-Tunnel 1.0 support from any app?
+7.2.a. All ports and protocols
+7.2.b.*. TCP 80/443 traffic
+7.2.c. Only ICMP traffic
+7.2.d. Only private app traffic
+
+7.3. What traffic does Z-Tunnel 2.0 support?
+7.3.a. Only TCP 80/443
+7.3.b.*. Unicast traffic across all ports and protocols from all apps
+7.3.c. Only PAC file downloads
+7.3.d. Only HTTP browser requests
+
+7.4. What transport or encapsulation does Z-Tunnel 1.0 use?
+7.4.a. DTLS and TLS
+7.4.b.*. HTTP CONNECT header with no encapsulation
+7.4.c. GRE only
+7.4.d. IPSec only
+
+7.5. What transport or encapsulation does Z-Tunnel 2.0 use?
+7.5.a. HTTP CONNECT only
+7.5.b.*. DTLS and TLS encapsulation
+7.5.c. Plain FTP only
+7.5.d. DNS-only tunneling
+
+7.6. Does Z-Tunnel 1.0 provide tunnel encryption?
+7.6.a. Yes, always
+7.6.b.*. No
+7.6.c. Only on Linux
+7.6.d. Only with ZPA
+
+7.7. Does Z-Tunnel 2.0 provide tunnel encryption?
+7.7.a. No
+7.7.b.*. Yes
+7.7.c. Only for TCP 80
+7.7.d. Only for PAC files
+
+7.8. What authentication capability does Z-Tunnel 1.0 provide?
+7.8.a. No authentication
+7.8.b.*. Tunnel authentication only
+7.8.c. Authentication and integrity
+7.8.d. Biometric-only authentication
+
+7.9. What authentication capability does Z-Tunnel 2.0 provide?
+7.9.a. No authentication
+7.9.b.*. Tunnel authentication and integrity
+7.9.c. Local proxy only
+7.9.d. Browser login only
+
+7.10. What tunnel behavior is associated with Z-Tunnel 1.0?
+7.10.a. Single tunnel for all traffic
+7.10.b.*. One tunnel per web request
+7.10.c. No web requests
+7.10.d. One tunnel per device lifetime only
+
+7.11. What tunnel behavior is associated with Z-Tunnel 2.0?
+7.11.a. One tunnel per web request
+7.11.b.*. Single tunnel for all traffic
+7.11.c. No tunnel
+7.11.d. One tunnel per user password
+
+7.12. Does Z-Tunnel 1.0 have tunnel transport fallback?
+7.12.a. Yes, DTLS to TLS
+7.12.b.*. No
+7.12.c. Yes, TLS to GRE
+7.12.d. Yes, GRE to IPSec
+
+7.13. Does Z-Tunnel 2.0 have transport fallback?
+7.13.a. No
+7.13.b.*. Yes, DTLS to TLS fallback
+7.13.c. Only to DNS
+7.13.d. Only to SSH
+
+7.14. Is IPv6 supported by both Z-Tunnel 1.0 and Z-Tunnel 2.0?
+7.14.a. No
+7.14.b.*. Yes
+7.14.c. Only by Z-Tunnel 1.0
+7.14.d. Only by Z-Tunnel 2.0
+
+7.15. Is latency-based data center failover supported by both versions?
+7.15.a. No
+7.15.b.*. Yes
+7.15.c. Only by GRE
+7.15.d. Only by IPSec
+
+7.16. What traffic inclusion/exclusion method does Z-Tunnel 1.0 support?
+7.16.a. Destination IPv4 only
+7.16.b.*. PAC-based support
+7.16.c. No exclusions
+7.16.d. Only DNS domains
+
+7.17. What traffic inclusion/exclusion methods does Z-Tunnel 2.0 support?
+7.17.a. No traffic exclusion
+7.17.b.*. Destination IPv4/IPv6, DNS domains, and PAC
+7.17.c. Only browser bookmarks
+7.17.d. Only endpoint groups
+
+7.18. Which platforms support both Z-Tunnel versions?
+7.18.a. Only Windows
+7.18.b.*. All supported platforms
+7.18.c. Only iOS
+7.18.d. Only Linux
+
+8. Z-Tunnel Deployment Recommendations
+
+8.1. For which users is Z-Tunnel 2.0 recommended?
+8.1.a. Remote users only
+8.1.b.*. Both remote and on-premises users
+8.1.c. Only users inside the office
+8.1.d. Only administrators
+
+8.2. What should be allowed outbound on edge firewalls?
+8.2.a. Only internal DNS
+8.2.b.*. Destinations listed at config.zscaler.com/<CLOUDNAME>/zscaler-app
+8.2.c. Only local printer traffic
+8.2.d. Only email servers
+
+8.3. What should Z-Tunnel traffic be exempted from on third-party proxies and edge firewalls?
+8.3.a. Routing
+8.3.b.*. SSL inspection
+8.3.c. All authentication
+8.3.d. Device posture checks
+
+8.4. What tunnel types should Z-Tunnel traffic be exempted from?
+8.4.a. DNS and DHCP
+8.4.b.*. IPsec and GRE tunnels
+8.4.c. Browser and app tunnels
+8.4.d. SSH and FTP only
+
+8.5. What NAT approach is recommended when NAT pools are configured at edge firewalls or routers?
+8.5.a. Random NAT
+8.5.b.*. Sticky NAT
+8.5.c. No NAT ever
+8.5.d. Browser NAT
+
+8.6. How can Z-Tunnel 1.0 traffic be forwarded?
+8.6.a. Only direct to the internet
+8.6.b.*. Using existing GRE/IPsec tunnels
+8.6.c. Only with ZDX probes
+8.6.d. Only through email
+
+8.7. For locations with over 50 users using Z-Tunnel 1.0, what should be ensured?
+8.7.a. No forwarding is needed
+8.7.b.*. Forward traffic via GRE/IPsec or configure an IP NAT pool with enough addresses
+8.7.c. Disable all users
+8.7.d. Use only mobile devices
+
+8.8. For high-bandwidth locations above 2 Gbps, what should be considered?
+8.8.a. Removing service edges
+8.8.b.*. Deploying local Private Service Edges to terminate Z-Tunnel traffic
+8.8.c. Disabling tunneling entirely
+8.8.d. Using only browser PAC files
+
+8.9. Why deploy local Private Service Edges at very high-bandwidth locations?
+8.9.a. To bypass all policy enforcement
+8.9.b.*. To terminate Z-Tunnel 1.0 and 2.0 traffic locally
+8.9.c. To remove all forwarding profiles
+8.9.d. To disable device posture
+
+8.10. What is a key goal of Z-Tunnel best practices?
+8.10.a. Increase packet loss
+8.10.b.*. Optimize connectivity and avoid misalignment
+8.10.c. Disable inspection
+8.10.d. Force legacy VPN usage
+
+9. Introduction to Zscaler Client Connector
+
+9.1. What is Zscaler Client Connector?
+9.1.a. A hardware firewall appliance
+9.1.b.*. A lightweight application installed on user devices for secure, policy-compliant access
+9.1.c. A password-only identity provider
+9.1.d. A local database tool
+
+9.2. What problem did legacy VPNs create in the scenario?
+9.2.a. They were always faster and more resilient
+9.2.b.*. They were clunky, required manual connection, and could become a bottleneck or single point of failure
+9.2.c. They eliminated all security risks
+9.2.d. They replaced ZIA and ZPA
+
+9.3. What does Client Connector establish from an endpoint to the cloud?
+9.3.a. A public inbound connection
+9.3.b.*. A persistent, secure Z-Tunnel connection
+9.3.c. A local printer tunnel
+9.3.d. A password reset link
+
+9.4. What does Client Connector help eliminate for security and internet access?
+9.4.a. ZIA policies
+9.4.b.*. The need for legacy VPNs
+9.4.c. Device context
+9.4.d. ZPA enforcement
+
+9.5. How does the Zero Trust Exchange support high availability?
+9.5.a. By using one fixed server only
+9.5.b.*. By distributing traffic across multiple redundant components and providing automatic failover
+9.5.c. By disabling failover
+9.5.d. By forcing manual connections
+
+9.6. What does Client Connector ensure even when users are off the corporate network?
+9.6.a. No inspection
+9.6.b.*. Secure, policy-compliant access to internet and internal applications
+9.6.c. Only local printing
+9.6.d. Unrestricted access
+
+9.7. How does Client Connector forward traffic for secure browsing and SaaS access?
+9.7.a. Through ZDX only
+9.7.b.*. Through Zscaler Internet Access (ZIA)
+9.7.c. Through local VPN only
+9.7.d. Through email OTP
+
+9.8. Which service does Client Connector use for private application access?
+9.8.a. ZDX only
+9.8.b.*. Zscaler Private Access (ZPA)
+9.8.c. DLP only
+9.8.d. Local firewall only
+
+9.9. Which service does Client Connector use for monitoring and troubleshooting performance?
+9.9.a. ZIA only
+9.9.b.*. Zscaler Digital Experience (ZDX)
+9.9.c. GRE only
+9.9.d. IPSec only
+
+9.10. Which Zscaler feature safeguards sensitive data at the device level?
+9.10.a. ZIA Public Service Edge only
+9.10.b.*. Zscaler Endpoint DLP
+9.10.c. GRE tunnel
+9.10.d. SSH forwarding
+
+9.11. What context does Client Connector provide to the Zero Trust Exchange?
+9.11.a. Only browser color
+9.11.b.*. User identity and device context
+9.11.c. Only printer status
+9.11.d. Only local hostname
+
+9.12. Which deployment platforms can Client Connector integrate with?
+9.12.a. MDM and UEM platforms
+9.12.b.*. MDM and UEM platforms
+9.12.c. Only local USB drives
+9.12.d. Only unmanaged installs
+
+10. Client Connector Configuration and Platform Settings
+
+10.1. What are Global Configurations used for?
+10.1.a. Only screenshots
+10.1.b.*. Managing broad deployment and configuration settings
+10.1.c. Replacing all policies
+10.1.d. Disabling forwarding profiles
+
+10.2. What are Policy and Policy Elements used for?
+10.2.a. Only to locate DNS servers
+10.2.b.*. To manage policy-related configuration and behavior
+10.2.c. Only to export logs
+10.2.d. Only to install printers
+
+10.3. What should “Navigation” be used for in Experience Center reference material?
+10.3.a. To delete all settings
+10.3.b.*. To identify the exact setting location
+10.3.c. To delete profiles
+10.3.d. To block devices
+
+10.4. What should “Settings” help identify?
+10.4.a. Only the user's password
+10.4.b.*. What needs to be managed, such as deployment or configuration
+10.4.c. Browser search history
+10.4.d. Only user passwords
+
+10.5. What should “Usage” help confirm?
+10.5.a. The browser cache size
+10.5.b.*. The outcome being configured
+10.5.c. The endpoint color theme
+10.5.d. Local file ownership
+
+10.6. Which platforms have platform-specific settings in the Experience Center?
+10.6.a. Windows only
+10.6.b.*. Windows, macOS, Linux, iOS, and Android
+10.6.c. Only iOS and Android
+10.6.d. Only Linux
+
+10.7. Which authentication options are mentioned for Client Connector?
+10.7.a. Only command line login
+10.7.b.*. Native browser or WebView2
+10.7.c. Only command line login
+10.7.d. Only passwordless login
+
+10.8. WebView2 authentication applies to which Windows Client Connector version or later?
+10.8.a. 2.0+
+10.8.b.*. 4.2+
+10.8.c. 1.0 only
+10.8.d. 3.0 only
+
+10.9. What does Global Default Log Mode help streamline?
+10.9.a. Certificate deletion
+10.9.b.*. Logging management
+10.9.c. Certificate deletion
+10.9.d. PAC file removal
+
+10.10. What does Global Default Log Mode eliminate?
+10.10.a. The need for authentication
+10.10.b.*. The need to configure logging settings for every new policy
+10.10.c. The need for authentication
+10.10.d. The need for device posture
+
+11. Client Connector Release Types and Installation
+
+11.1. What does LA stand for in Client Connector releases?
+11.1.a. Local Access
+11.1.b.*. Limited Availability or Public Preview
+11.1.c. Long Access
+11.1.d. Log Availability
+
+11.2. What does GA stand for?
+11.2.a. Global Audit
+11.2.b.*. General Availability
+11.2.c. Gateway Access
+11.2.d. Group Assignment
+
+11.3. What does GA-2 mean?
+11.3.a. Two future unreleased versions
+11.3.b.*. Two previous Major Versions supported by Zscaler
+11.3.c. Two device groups
+11.3.d. Two password policies
+
+11.4. What does LTS stand for?
+11.4.a. Local Traffic Service
+11.4.b.*. Long Term Support
+11.4.c. Login Token Sync
+11.4.d. Lightweight Tunnel Service
+
+11.5. What do LTS release trains receive?
+11.5.a. Only new features every day
+11.5.b.*. Critical bug fixes
+11.5.c. No updates ever
+11.5.d. Only screenshots
+
+11.6. What is the typical Client Connector major version release cadence?
+11.6.a. One Major Version per day
+11.6.b.*. One Major Version per quarter
+11.6.c. One version every 10 years
+11.6.d. No regular cadence
+
+11.7. Which release type is recommended for general deployment?
+11.7.a. Unsupported 32-bit LA only
+11.7.b.*. Supported 64-bit General Availability (GA) release
+11.7.c. Beta builds only
+11.7.d. Unverified installers
+
+11.8. When should LTS releases be deployed?
+11.8.a. For devices needing public preview features
+11.8.b.*. For devices needing stability, not new features
+11.8.c. Only for testing public preview
+11.8.d. Never
+
+11.9. Which platforms do not have LA releases according to the content?
+11.9.a. Windows and macOS
+11.9.b.*. iOS, Android, and ChromeOS on Android
+11.9.c. Linux only
+11.9.d. Windows only
+
+11.10. Where do you download Client Connector from in the Experience Center?
+11.10.a. Logs > Insights
+11.10.b.*. Infrastructure > Common Resources > Client Connector Deployment > Platform Releases
+11.10.c. Policies > DLP only
+11.10.d. Analytics > ZDX only
+
+11.11. What page opens after selecting Platform Releases?
+11.11.a. User Management portal
+11.11.b.*. Client Connector App Store
+11.11.c. Audit Log viewer
+11.11.d. PAC editor only
+
+11.12. In the example, what Windows version is downloaded?
+11.12.a. 1.0.0
+11.12.b.*. 4.7.0.141 64-bit
+11.12.c. 3.1.1 32-bit
+11.12.d. 5.0 beta only
+
+11.13. Which download button is used for the Windows 64-bit installer?
+11.13.a. TARURL 32-bit
+11.13.b.*. EXEURL 64-bit
+11.13.c. APKURL
+11.13.d. DMGURL only
+
+11.14. Which Windows versions are supported?
+11.14.a. Windows 7 only
+11.14.b.*. Windows 10 and newer
+11.14.c. Windows XP only
+11.14.d. Windows 8 only
+
+11.15. Which macOS and iOS releases are supported?
+11.15.a. Unsupported beta-only releases
+11.15.b.*. Apple-supported macOS and iOS releases
+11.15.c. Only macOS 10.0
+11.15.d. Only iOS 5
+
+11.16. Which Android versions are supported?
+11.16.a. Android v4.0 and newer
+11.16.b.*. Android v9.0 and newer
+11.16.c. Android v1.0 only
+11.16.d. Android unsupported
+
+11.17. Which ChromeOS on Android version is supported?
+11.17.a. v50 and newer
+11.17.b.*. v137 and newer
+11.17.c. v10 only
+11.17.d. No ChromeOS support
+
+11.18. Which Linux distributions are mentioned as supported examples?
+11.18.a. Only Ubuntu
+11.18.b.*. Arch, CentOS, Debian, MayaOS, Fedora, openSUSE, RHEL, Ubuntu, and IGEL OS
+11.18.c. Only Windows Subsystem for Linux
+11.18.d. Only Red Hat
+
+12. Client Connector Installation Best Practices
+
+12.1. What is the first recommended best practice before rolling out updates broadly?
+12.1.a. Deploy to every user immediately
+12.1.b.*. Create a dedicated test user group
+12.1.c. Disable all policies
+12.1.d. Remove old devices
+
+12.2. Why create a test user group?
+12.2.a. To avoid testing
+12.2.b.*. To evaluate the latest Client Connector version in a controlled environment
+12.2.c. To grant all users admin rights
+12.2.d. To disable app updates
+
+12.3. What should be done in a controlled setting?
+12.3.a. Skip all validation
+12.3.b.*. Thoroughly evaluate the latest Client Connector version
+12.3.c. Remove endpoint details
+12.3.d. Turn off posture
+
+12.4. Why collect endpoint details before installation?
+12.4.a. To ignore device diversity
+12.4.b.*. To better inform installation and troubleshooting
+12.4.c. To delete endpoints
+12.4.d. To prevent compatibility checks
+
+12.5. Why test across a wide variety of devices?
+12.5.a. To increase failures
+12.5.b.*. To ensure compatibility and performance across the organization
+12.5.c. To avoid operating system support
+12.5.d. To replace MDM
+
+12.6. How should app versions be rolled out?
+12.6.a. All users instantly with no testing
+12.6.b.*. Gradually to designated user groups
+12.6.c. Never updated
+12.6.d. Only manually by each user
+
+12.7. What should the testing user group be set to install?
+12.7.a. The oldest unsupported app
+12.7.b.*. The latest version of the app
+12.7.c. No app at all
+12.7.d. Only browser extensions
+
+12.8. What is the goal of gradual rollout?
+12.8.a. To increase disruption
+12.8.b.*. To reduce risk before organization-wide installation
+12.8.c. To disable enforcement
+12.8.d. To avoid testing
+
+13. CA Certificate for SSL Inspection
+
+13.1. Why do organizations install their own CA certificate on employee devices?
+13.1.a. To disable HTTPS
+13.1.b.*. To enable SSL inspection by decrypting, checking, and re-encrypting HTTPS traffic
+13.1.c. To remove browsers
+13.1.d. To bypass security policies
+
+13.2. What threat-related benefit does SSL inspection provide?
+13.2.a. It hides malware
+13.2.b.*. It allows traffic to be checked for threats such as malware
+13.2.c. It disables DLP
+13.2.d. It prevents inspection
+
+13.3. What problem can trusted CA installation prevent in browsers?
+13.3.a. Browser speed changes only
+13.3.b.*. Security certificate errors
+13.3.c. Password expiration
+13.3.d. Device posture scans
+
+13.4. How can Client Connector install ZIA SSL Inspection CA certificates on Windows?
+13.4.a. Through audit logs only
+13.4.b.*. Through App Profiles
+13.4.c. Through audit logs only
+13.4.d. Through ZDX scorecards only
+
+13.5. What is recommended for installing and trusting Zscaler or custom CA certificates?
+13.5.a. Manual installation only
+13.5.b.*. MDM/UEM
+13.5.c. Public Wi-Fi portals
+13.5.d. Browser bookmarks
+
+13.6. Where can the Zscaler CA certificate be downloaded?
+13.6.a. Logs > Insights
+13.6.b.*. Policy > Internet & SaaS > Common Configuration & Resources > SSL Inspection
+13.6.c. Analytics > User Experience
+13.6.d. Infrastructure > Locations only
+
+13.7. What happens to HTTPS traffic during SSL inspection?
+13.7.a. It is only deleted
+13.7.b.*. It is decrypted, inspected, and re-encrypted
+13.7.c. It bypasses all security
+13.7.d. It becomes HTTP permanently
+
+13.8. Why is certificate trust important for SSL inspection?
+13.8.a. It prevents the inspection engine from working
+13.8.b.*. It helps avoid browser trust errors when traffic is re-signed
+13.8.c. It deletes user identity
+13.8.d. It disables Client Connector
+
+14. Managing Client Connector and Forwarding Traffic
+
+14.1. What is the first step in managing Client Connector and forwarding traffic?
+14.1.a. Delete all forwarding profiles
+14.1.b.*. Access the Zscaler Experience Center
+14.1.c. Disable all users
+14.1.d. Remove certificates
+
+14.2. What is configured in the Experience Center for Client Connector?
+14.2.a. Only wallpapers
+14.2.b.*. Policies, traffic forwarding rules, and user behaviors
+14.2.c. Only local printers
+14.2.d. Only browser fonts
+
+14.3. What is the Client section used for?
+14.3.a. Only DLP dictionaries
+14.3.b.*. General Client Connector settings including notifications
+14.3.c. Only ZDX scorecards
+14.3.d. Only DLP dictionaries
+
+14.4. What is Enrolled Devices used for?
+14.4.a. Only configuring GRE
+14.4.b.*. Managing enrolled devices within the organization
+14.4.c. Only configuring GRE
+14.4.d. Only exporting SIEM logs
+
+14.5. What is Supportability used for?
+14.5.a. Only setting passwords
+14.5.b.*. Managing application compatibility and troubleshooting features
+14.5.c. Only setting passwords
+14.5.d. Only creating groups
+
+14.6. What are Platform Settings used for?
+14.6.a. Only measuring latency
+14.6.b.*. Defining App Profiles for operating systems
+14.6.c. Only measuring latency
+14.6.d. Only creating tenant profiles
+
+14.7. What are Forwarding Profiles used for?
+14.7.a. Only assigning passwords
+14.7.b.*. Defining Trusted Network Criteria and forwarding rules
+14.7.c. Only assigning passwords
+14.7.d. Only logging crashes
+
+14.8. What are Client Connector Notifications?
+14.8.a. Only hidden logs
+14.8.b.*. Messages shown to users or administrators about status, behavior, or errors
+14.8.c. Only hidden logs
+14.8.d. Only VPN passwords
+
+14.9. Why are notifications useful?
+14.9.a. They hide important events
+14.9.b.*. They inform users about connection changes, policy actions, reauthentication, and updates
+14.9.c. They disable transparency
+14.9.d. They remove troubleshooting
+
+14.10. Where do you configure Client Connector notifications?
+14.10.a. Policies > Common Configuration > Resources > End User Notification Settings > Client Connector Notification Settings
+14.10.b.*. Policies > Common Configuration > Resources > End User Notification Settings > Client Connector Notification Settings
+14.10.c. Logs > Insights only
+14.10.d. Infrastructure > GRE only
+
+15. Client Connector Notification Settings
+
+15.1. What does “Show ZCC Notification Pop-ups by Default” do?
+15.1.a. Blocks all notifications
+15.1.b.*. Shows Client Connector notification pop-ups by default after enrollment
+15.1.c. Disables service status
+15.1.d. Deletes user settings
+
+15.2. Can users turn off ZCC notification pop-ups in the app?
+15.2.a. No, never
+15.2.b.*. Yes
+15.2.c. Only administrators can view them
+15.2.d. Only on Linux
+
+15.3. What does “Enable App Updates Notifications” do?
+15.3.a. Hides app updates
+15.3.b.*. Allows users to receive app upgrade notifications
+15.3.c. Disables updates
+15.3.d. Blocks the app
+
+15.4. What does “Enable Service Status Notifications” do?
+15.4.a. It disables service monitoring
+15.4.b.*. It alerts about service status such as disaster recovery mode
+15.4.c. It disables service monitoring
+15.4.d. It deletes ZIA
+
+15.5. What does “Enable ZIA Notifications” allow?
+15.5.a. Only notifications from local printers
+15.5.b.*. Notifications from Internet and SaaS such as DLP notifications
+15.5.c. Only notifications from local printers
+15.5.d. Only private app screenshots
+
+15.6. What does “ZIA Notifications Persistent” affect currently?
+15.6.a. Only GRE notifications
+15.6.b.*. DLP notifications
+15.6.c. Only password reset messages
+15.6.d. Only browser history
+
+15.7. What range can be used for the custom notification timer?
+15.7.a. 1 to 2 seconds
+15.7.b.*. 5 to 60 seconds
+15.7.c. 2 to 1440 minutes
+15.7.d. 30 to 120 seconds
+
+15.8. What does “Enable Persistent Notifications” do?
+15.8.a. It hides critical notifications
+15.8.b.*. It displays critical notifications until dismissed
+15.8.c. It removes reauthentication
+15.8.d. It deletes the app
+
+15.9. Which are examples of critical notifications?
+15.9.a. Browser theme updates
+15.9.b.*. Private application reauthentication, captive portal detection, and system reboot requests
+15.9.c. Local printer warnings only
+15.9.d. Screenshot reminders only
+
+15.10. What does “Enable Notifications for ZPA Reauthentication” do?
+15.10.a. Blocks users permanently
+15.10.b.*. Prompts users for authentication
+15.10.c. Disables ZPA
+15.10.d. Disables private apps
+
+15.11. What interval range can be used for ZPA reauthentication notifications?
+15.11.a. 5 to 60 seconds
+15.11.b.*. 2 to 1440 minutes
+15.11.c. 1 to 10 days
+15.11.d. 30 to 120 seconds
+
+15.12. What should be clicked after configuring notification settings?
+15.12.a. Delete
+15.12.b.*. Save
+15.12.c. Disable
+15.12.d. Reset tenant
+
+16. Trusted Networks and PAC Files
+
+16.1. What is Trusted Network functionality used for?
+16.1.a. To ignore all networks
+16.1.b.*. To define how Client Connector behaves on corporate, branch, or privileged networks
+16.1.c. To delete forwarding profiles
+16.1.d. To disable ZIA and ZPA
+
+16.2. What happens when a network is recognized as trusted?
+16.2.a. All traffic is automatically malicious
+16.2.b.*. Client Connector can adjust behavior using predefined App Profiles
+16.2.c. All traffic is automatically malicious
+16.2.d. Users are always blocked
+
+16.3. Can Forwarding Profiles reference multiple trusted networks?
+16.3.a. No
+16.3.b.*. Yes
+16.3.c. Only one network globally
+16.3.d. Only public Wi-Fi
+
+16.4. Which is a Trusted Network criterion?
+16.4.a. User wallpaper
+16.4.b.*. DNS servers used by the corporate network
+16.4.c. User wallpaper
+16.4.d. Browser tab count
+
+16.5. Which adapter-related criterion can Client Connector examine?
+16.5.a. Local browser cache only
+16.5.b.*. Primary domains for the network adapter
+16.5.c. Local browser cache only
+16.5.d. Mouse speed
+
+16.6. Which FQDN-related criterion is mentioned?
+16.6.a. Client Connector deletes FQDNs
+16.6.b.*. Client Connector resolves the FQDN locally and checks if it matches the IP
+16.6.c. Client Connector deletes FQDNs
+16.6.d. FQDNs are never used
+
+16.7. Which network range criterion is supported?
+16.7.a. Browser window size
+16.7.b.*. Network range or subnet
+16.7.c. Browser window size
+16.7.d. Password length
+
+16.8. Which gateway criterion is supported?
+16.8.a. Local printer gateway
+16.8.b.*. Default gateway IP address
+16.8.c. Local printer gateway
+16.8.d. Email gateway theme
+
+16.9. Which DHCP criterion is supported?
+16.9.a. DHCP logo
+16.9.b.*. DHCP server IP address
+16.9.c. DHCP logo
+16.9.d. DHCP password
+
+16.10. Which public internet criterion is supported?
+16.10.a. Browser title
+16.10.b.*. Public egress IP
+16.10.c. Browser title
+16.10.d. Device wallpaper
+
+16.11. What is a PAC file?
+16.11.a. A certificate file only
+16.11.b.*. A Proxy Auto-Configuration text file with JavaScript code for traffic routing
+16.11.c. A password audit log
+16.11.d. A device serial number
+
+16.12. Where is the PAC file embedded?
+16.12.a. Only inside audit logs
+16.12.b.*. As part of Forwarding Profile configuration
+16.12.c. Only inside audit logs
+16.12.d. Only in local printers
+
+16.13. What is the primary function of a PAC file?
+16.13.a. It encrypts all files on disk
+16.13.b.*. It decides whether web requests go directly or through a proxy
+16.13.c. It encrypts all files on disk
+16.13.d. It replaces Client Connector
+
+16.14. Which criterion can PAC files use?
+16.14.a. Keyboard color only
+16.14.b.*. Time of day
+16.14.c. Keyboard color only
+16.14.d. Local wallpaper only
+
+16.15. Which URL-related criterion can PAC files use?
+16.15.a. Password age only
+16.15.b.*. Specific URLs
+16.15.c. Password age only
+16.15.d. Screen resolution only
+
+16.16. Which domain-related criterion can PAC files use?
+16.16.a. Device icon only
+16.16.b.*. Domain names
+16.16.c. Device icon only
+16.16.d. Log file size only
+
+17. Forwarding Profiles
+
+17.1. What does a Forwarding Profile determine?
+17.1.a. Only user password length
+17.1.b.*. How user traffic is routed, secured, and inspected through the Zscaler cloud
+17.1.c. Only dashboard color
+17.1.d. Only identity provider brand
+
+17.2. Forwarding Profiles are used for which services?
+17.2.a. Only ZDX
+17.2.b.*. ZIA and ZPA
+17.2.c. Only ZDX
+17.2.d. Only NSS
+
+17.3. Which network environments are recognized by Client Connector?
+17.3.a. Only public and private
+17.3.b.*. On-Trusted, VPN-Trusted, Off-Trusted, and Split VPN Trusted
+17.3.c. Only public and private
+17.3.d. Only LAN and Wi-Fi
+
+17.4. What is an On-Trusted Network?
+17.4.a. Untrusted public cafe network
+17.4.b.*. A secure, private network belonging to the organization
+17.4.c. A split tunnel VPN only
+17.4.d. A home Wi-Fi network by default
+
+17.5. What is an Off-Trusted Network?
+17.5.a. Corporate office only
+17.5.b.*. An untrusted network such as a home office or public cafe
+17.5.c. Private service edge only
+17.5.d. Internal data center only
+
+17.6. What is a VPN-Trusted Network?
+17.6.a. A public Wi-Fi network only
+17.6.b.*. A secure connection through VPN in full tunnel mode
+17.6.c. A public Wi-Fi network only
+17.6.d. No network connection
+
+17.7. What is a Split VPN Trusted Network?
+17.7.a. No VPN at all
+17.7.b.*. A hybrid connection established through VPN in split tunnel mode
+17.7.c. No VPN at all
+17.7.d. Only LTE network
+
+17.8. Where do you configure a Forwarding Profile in the Client Connector portal?
+17.8.a. Logs > Insights
+17.8.b.*. Administration > Forwarding Profile
+17.8.c. Logs > Insights
+17.8.d. Policies > DLP only
+
+17.9. What can you do on the Forwarding Profile page?
+17.9.a. Only reset passwords
+17.9.b.*. Add, view, copy, edit, or delete Forwarding Profiles
+17.9.c. Only reset passwords
+17.9.d. Only export audit logs
+
+17.10. What does the trusted network criteria in a Forwarding Profile determine?
+17.10.a. Which password policy is used
+17.10.b.*. Whether the user is inside or outside the safe corporate environment
+17.10.c. Which password policy is used
+17.10.d. Which browser is installed
+
+17.11. What is the recommended Windows tunnel driver type?
+17.11.a. Printer driver
+17.11.b.*. Packet-filter based
+17.11.c. Printer driver
+17.11.d. Audio driver
+
+17.12. For an On-Trusted Network, what action is generally recommended?
+17.12.a. Tunnel again redundantly
+17.12.b.*. None, assuming corporate environment already forwards via GRE/IPsec
+17.12.c. Delete all forwarding
+17.12.d. Disable ZIA permanently
+
+17.13. For a VPN-Trusted Network, what action is generally recommended?
+17.13.a. Disable all private app access
+17.13.b.*. Tunnel with Local Proxy
+17.13.c. Disable all private app access
+17.13.d. Direct without control
+
+17.14. For an Off-Trusted Network, what action is generally recommended?
+17.14.a. No tunnel ever
+17.14.b.*. Tunnel with Z-Tunnel 2.0
+17.14.c. No tunnel ever
+17.14.d. Only local proxy without tunnel
+
+17.15. What should be clicked after configuring a Forwarding Profile?
+17.15.a. Delete
+17.15.b.*. Save
+17.15.c. Delete
+17.15.d. Reset
+
+17.16. What is a benefit of Forwarding Profiles?
+17.16.a. They block all traffic permanently
+17.16.b.*. They direct traffic seamlessly across diverse network environments
+17.16.c. They remove all routing logic
+17.16.d. They only apply to one location
+
+17.17. What is another benefit of Forwarding Profiles?
+17.17.a. They use one fixed setting for every location only
+17.17.b.*. They allow specific network settings tailored to multiple locations
+17.17.c. They disable all trusted network criteria
+17.17.d. They replace Client Connector
+
+18. App Profiles
+
+18.1. What is an App Profile in Zscaler Client Connector?
+18.1.a. A hardware serial number
+18.1.b.*. A set of policy rules that determine how the Client Connector app behaves
+18.1.c. A user’s profile photo
+18.1.d. A local password file
+
+18.2. What can App Profiles be based on?
+18.2.a. Browser color only
+18.2.b.*. User identity, device type, network, and other criteria
+18.2.c. Browser color only
+18.2.d. Local printer name only
+
+18.3. What do App Profiles enable?
+18.3.a. Inconsistent security enforcement
+18.3.b.*. Consistent security enforcement, dynamic traffic routing, and tailored configuration
+18.3.c. Removal of all policies
+18.3.d. No user experience management
+
+18.4. Where do you navigate to configure a Windows App Profile?
+18.4.a. Logs > Insights
+18.4.b.*. Infrastructure > Connectors > Client > Platform Settings > Windows
+18.4.c. Logs > Insights
+18.4.d. Policies > DLP only
+
+18.5. What exists by default for Windows App Profiles?
+18.5.a. No default policy
+18.5.b.*. A default app profile policy
+18.5.c. Only a disabled policy
+18.5.d. A deleted policy
+
+18.6. Can the default App Profile policy be removed?
+18.6.a. Yes
+18.6.b.*. No
+18.6.c. Only by users
+18.6.d. Only on Linux
+
+18.7. Why does the default policy exist?
+18.7.a. To block all users
+18.7.b.*. To ensure any user without a more specific group policy still receives a valid configuration
+18.7.c. To disable enrollment
+18.7.d. To prevent installation
+
+18.8. What does rule order reflect in an App Profile?
+18.8.a. The order of user passwords
+18.8.b.*. The order of precedence among policy profile rules
+18.8.c. The order of user passwords
+18.8.d. The order of audit logs
+
+18.9. How is precedence evaluated?
+18.9.a. Descending alphabetical order
+18.9.b.*. Ascending numerical order
+18.9.c. Random order
+18.9.d. Browser order
+
+18.10. What can be selected in a Windows App Profile?
+18.10.a. Printer profile only
+18.10.b.*. Forwarding Profile
+18.10.c. Printer profile only
+18.10.d. Email profile only
+
+18.11. What posture profile can optionally be selected?
+18.11.a. DNS posture only
+18.11.b.*. ZIA posture profile
+18.11.c. DNS posture only
+18.11.d. User photo posture
+
+18.12. What option can install the Zscaler SSL certificate on user devices?
+18.12.a. Disable all certificates
+18.12.b.*. Install the Zscaler SSL certificate
+18.12.c. Disable all certificates
+18.12.d. Export audit log
+
+18.13. What happens if a custom certificate was uploaded in the admin portal?
+18.13.a. The app deletes the certificate
+18.13.b.*. The app installs the custom certificate instead
+18.13.c. The app deletes the certificate
+18.13.d. The app ignores certificates
+
+18.14. What does enabling the WFP Driver install?
+18.14.a. A printer driver
+18.14.b.*. WFP-based Zscaler Driver
+18.14.c. A printer driver
+18.14.d. A browser plugin only
+
+18.15. What traffic does the WFP Driver inspect?
+18.15.a. Only tunneled traffic
+18.15.b.*. All traffic, including bypass traffic
+18.15.c. Only printer traffic
+18.15.d. No traffic
+
+18.16. Which features are supported by the WFP Driver?
+18.16.a. Only password history
+18.16.b.*. Flow logging, block domain profile detection, process-based application bypass, ZDX AutoSense probes, and location policy override
+18.16.c. Only password history
+18.16.d. Only app notifications
+
+18.17. What does group selection do in an App Profile?
+18.17.a. It disables group policy
+18.17.b.*. It lets Client Connector apply the app profile based on the user’s group
+18.17.c. It disables group policy
+18.17.d. It removes users from the tenant
+
+18.18. In the example, which group is selected?
+18.18.a. Finance Guests
+18.18.b.*. Helpdesk L1 Group
+18.18.c. Finance Guests
+18.18.d. Public Wi-Fi Users
+
+19. App Supportability
+
+19.1. What is App Supportability used for?
+19.1.a. Only billing management
+19.1.b.*. Configuring and managing Client Connector troubleshooting, visibility, diagnostics, and support options
+19.1.c. Only password resets
+19.1.d. Only service entitlement
+
+19.2. Where do you navigate to configure App Supportability?
+19.2.a. Logs > Log Streaming only
+19.2.b.*. Infrastructure > Connectors > Supportability > App Supportability
+19.2.c. Logs > Log Streaming only
+19.2.d. Policies > DLP only
+
+19.3. What does “Hide Logging Control” prevent end users from doing?
+19.3.a. Logging in
+19.3.b.*. Changing log modes, exporting logs, and clearing logs
+19.3.c. Logging in
+19.3.d. Receiving all traffic
+
+19.4. What does “Client Connector App Logs” allow?
+19.4.a. Deleting every app profile
+19.4.b.*. Collecting logs from enrolled devices
+19.4.c. Deleting every app profile
+19.4.d. Installing certificates only
+
+19.5. What does enabling Support Access allow users to do?
+19.5.a. Disable all security
+19.5.b.*. Send an email with encrypted logs attached to specified support administrators
+19.5.c. Disable all security
+19.5.d. Change routing policies
+
+19.6. What is required when enabling Support Access?
+19.6.a. DLP dictionary name
+19.6.b.*. Admin email address
+19.6.c. DLP dictionary name
+19.6.d. GRE tunnel ID
+
+19.7. What does End User Ticket Submission to Zscaler do?
+19.7.a. Deletes logs locally only
+19.7.b.*. Automatically sends encrypted logs to Zscaler Support
+19.7.c. Deletes logs locally only
+19.7.d. Disables support
+
+19.8. Which feature is enabled by default and lets users repair the app?
+19.8.a. Hide Logging Control
+19.8.b.*. End User Restart Services and Repair App
+19.8.c. Hide Logging Control
+19.8.d. Disable ZCC
+
+19.9. What does Automatically Populate Username for IdP Authentication do?
+19.9.a. It deletes the username
+19.9.b.*. It fills username on the IdP login page if supported
+19.9.c. It deletes the username
+19.9.d. It disables SAML
+
+19.10. What mechanisms can support automatic username population?
+19.10.a. GRE and IPSec only
+19.10.b.*. JavaScript or login hint SAML attribute
+19.10.c. GRE and IPSec only
+19.10.d. Browser bookmarks only
+
+19.11. What does Automatically Attempt ZPA Reauthentication do?
+19.11.a. Disables ZPA
+19.11.b.*. Attempts silent login when users must reauthenticate to ZPA
+19.11.c. Disables ZPA
+19.11.d. Deletes the user session always
+
+19.12. What happens if automatic ZPA reauthentication fails?
+19.12.a. Users are always granted access
+19.12.b.*. Users must reauthenticate manually
+19.12.c. Users are always granted access
+19.12.d. ZPA is disabled
+
+19.13. What timeout range can be configured for automatic ZPA reauthentication?
+19.13.a. 5 to 60 seconds
+19.13.b.*. 30 to 120 seconds
+19.13.c. 2 to 1440 minutes
+19.13.d. 15 minutes only
+
+19.14. What does Register Device with ZPA IdP Username do?
+19.14.a. Registers the device using only a MAC address
+19.14.b.*. Registers the device using the username entered for ZPA authentication
+19.14.c. Registers the device using only a MAC address
+19.14.d. Deletes device registration
+
+20. Client Connector Refresh Intervals
+
+20.1. Why are Client Connector refresh intervals important?
+20.1.a. They only control themes
+20.1.b.*. They determine how quickly policies, profiles, and software updates reach devices
+20.1.c. They disable updates
+20.1.d. They remove security posture
+
+20.2. What triggers refresh on network change?
+20.2.a. Browser tab close
+20.2.b.*. Network connect or disconnect
+20.2.c. Password expiration only
+20.2.d. DLP incident only
+
+20.3. Which components are refreshed on network change?
+20.3.a. Only user photos
+20.3.b.*. App Profile, Forwarding Profile, PAC Files, and Policy Updates
+20.3.c. Only user photos
+20.3.d. Only local printers
+
+20.4. What is the purpose of refresh on network change?
+20.4.a. To delay enforcement
+20.4.b.*. To adapt immediately to new network conditions
+20.4.c. To delay enforcement
+20.4.d. To disable ZIA
+
+20.5. How often are PAC files downloaded?
+20.5.a. Every 2 hours
+20.5.b.*. Every 15 minutes
+20.5.c. Every 80 minutes
+20.5.d. Every 2 hours
+
+20.6. What is the purpose of periodic PAC file downloads?
+20.6.a. To disable routing
+20.6.b.*. To keep latest network routing configurations available
+20.6.c. To disable routing
+20.6.d. To remove proxy logic
+
+20.7. How often does Client Connector check for policy updates?
+20.7.a. Every 15 minutes
+20.7.b.*. Every 80 minutes
+20.7.c. Every 2 hours
+20.7.d. Every 10 seconds
+
+20.8. What is the purpose of policy update checks?
+20.8.a. To avoid policy changes
+20.8.b.*. To implement changes in security policies
+20.8.c. To avoid policy changes
+20.8.d. To delete App Profiles
+
+20.9. What triggers downloading a PAC file from a new URL?
+20.9.a. Browser theme change
+20.9.b.*. PAC file URL modification in Policy Update
+20.9.c. Browser theme change
+20.9.d. Device wallpaper update
+
+20.10. How often does Client Connector check for software updates?
+20.10.a. Every 15 minutes
+20.10.b.*. Every 2 hours
+20.10.c. Every 80 minutes
+20.10.d. Every 15 minutes
+
+20.11. What is the purpose of software update checks?
+20.11.a. To disable Client Connector
+20.11.b.*. To install latest enhancements and security patches
+20.11.c. To disable Client Connector
+20.11.d. To remove security patches
+
+21. Device Posture Overview
+
+21.1. What is Device Posture in Zscaler Client Connector?
+21.1.a. A set of desktop wallpaper settings
+21.1.b.*. A set of criteria or profiles evaluated on a user’s device to determine security status
+21.1.c. A password-only policy
+21.1.d. A local printer rule
+
+21.2. What do Device Posture profiles assess?
+21.2.a. Only browser font size
+21.2.b.*. Whether a device meets minimum security requirements
+21.2.c. Only browser font size
+21.2.d. Only user department
+
+21.3. Why was VPN-only identity checking risky in the scenario?
+21.3.a. It fully checked device health
+21.3.b.*. It often lacked visibility into device health or compliance
+21.3.c. It blocked all unhealthy devices automatically
+21.3.d. It replaced posture profiles
+
+21.4. What risk exists if a user logs in from an outdated or infected personal laptop?
+21.4.a. The device is automatically trusted safely
+21.4.b.*. The network could grant access without checking device risk
+21.4.c. ZPA blocks all apps always
+21.4.d. ZIA cannot apply policies
+
+21.5. What does ZCC act as in device posture?
+21.5.a. A password vault only
+21.5.b.*. A constant sensor
+21.5.c. A password vault only
+21.5.d. A local printer
+
+21.6. For ZPA, what can happen if a laptop fails posture checks?
+21.6.a. The user gets full access
+21.6.b.*. Access to private apps can be denied even with correct password
+21.6.c. The user gets full access
+21.6.d. ZPA policies are ignored
+
+21.7. For ZIA, what can happen if a device is non-compliant?
+21.7.a. ZIA is disabled
+21.7.b.*. The user can be switched to a more restrictive App Profile
+21.7.c. ZIA is disabled
+21.7.d. All SaaS is allowed
+
+21.8. What might a restrictive App Profile do for a non-compliant device?
+21.8.a. Remove all inspection
+21.8.b.*. Block high-risk websites or cloud apps until fixed
+21.8.c. Remove all inspection
+21.8.d. Give full admin access
+
+21.9. What security components can posture verify?
+21.9.a. Only browser version
+21.9.b.*. Firewall enabled, antivirus running, and disk encryption active
+21.9.c. Only browser version
+21.9.d. Only mouse type
+
+21.10. Which disk encryption examples are mentioned?
+21.10.a. GRE and IPSec
+21.10.b.*. BitLocker and FileVault
+21.10.c. GRE and IPSec
+21.10.d. PAC and DNS
+
+22. Device Posture Features and Compliance
+
+22.1. What does posture-based Trust Level do?
+22.1.a. Only changes wallpaper
+22.1.b.*. Grants, limits, or denies access based on High, Medium, or Low trust
+22.1.c. Only changes wallpaper
+22.1.d. Only logs browser history
+
+22.2. What is the purpose of Trust Level decisions?
+22.2.a. To remove access control
+22.2.b.*. To enforce Zero Trust and risk-based policies
+22.2.c. To remove access control
+22.2.d. To bypass device checks
+
+22.3. Which criteria can be evaluated for device posture?
+22.3.a. Only user photo
+22.3.b.*. OS, security tools, and identity across platforms
+22.3.c. Only user photo
+22.3.d. Only public IP
+
+22.4. What is the purpose of granular device context?
+22.4.a. Less visibility
+22.4.b.*. Better policy decisions
+22.4.c. Less visibility
+22.4.d. No enforcement
+
+22.5. How often does Zscaler Client Connector evaluate device posture profiles?
+22.5.a. Every 80 minutes
+22.5.b.*. Every 15 minutes
+22.5.c. Every 80 minutes
+22.5.d. Every 2 hours
+
+22.6. Under which circumstances can posture be re-evaluated in real time?
+22.6.a. Browser color changes only
+22.6.b.*. Network changes, service restarts, and system reboots
+22.6.c. Browser color changes only
+22.6.d. Printer changes only
+
+22.7. What happens if a device’s posture degrades mid-session?
+22.7.a. Nothing can change until next year
+22.7.b.*. Policies can be immediately enforced
+22.7.c. Nothing can change until next year
+22.7.d. Access is automatically broadened
+
+22.8. What does ZIA posture failure typically not do to an established HTTP/HTTPS connection?
+22.8.a. It always deletes it
+22.8.b.*. It typically does not break it
+22.8.c. It always deletes it
+22.8.d. It always converts it to GRE
+
+22.9. What will ZIA posture failure typically affect?
+22.9.a. Only browser themes
+22.9.b.*. New connections or re-authentications
+22.9.c. Only browser themes
+22.9.d. Only admin audit logs
+
+22.10. What can device posture require regarding security agents?
+22.10.a. No security agents
+22.10.b.*. Approved security agents such as CrowdStrike
+22.10.c. No security agents
+22.10.d. Only browser plugins
+
+22.11. What additional requirement example is mentioned?
+22.11.a. Maximum screen brightness
+22.11.b.*. Minimum risk score
+22.11.c. Maximum screen brightness
+22.11.d. User profile image
+
+22.12. What corporate asset validation checks are mentioned?
+22.12.a. Browser title only
+22.12.b.*. Domain Joined or specific Client Certificate
+22.12.c. Browser title only
+22.12.d. Local printer model
+
+23. Three Pillars of Device Posture
+
+23.1. What are the three pillars of Device Posture?
+23.1.a. Routing, DNS, and DHCP
+23.1.b.*. Device Identity, Device Compliance, and Device Integrity
+23.1.c. ZIA, ZPA, and ZDX only
+23.1.d. Password, OTP, and token
+
+23.2. What does Device Identity refer to?
+23.2.a. The user’s password
+23.2.b.*. The unique identification of a device within Client Connector
+23.2.c. The user’s password
+23.2.d. The browser logo
+
+23.3. What internal identifier can be used for Device Identity?
+23.3.a. Browser ID only
+23.3.b.*. Device ID
+23.3.c. Browser ID only
+23.3.d. GRE ID only
+
+23.4. What external identifier may be used if integrated with MDM?
+23.4.a. Printer ID
+23.4.b.*. External Device ID
+23.4.c. Printer ID
+23.4.d. Browser tab ID
+
+23.5. What does Device Compliance indicate?
+23.5.a. Whether the user likes the app
+23.5.b.*. Whether a device meets required configuration and security standards
+23.5.c. Whether the user likes the app
+23.5.d. Whether the device wallpaper is approved
+
+23.6. What does the platform monitor for compliance?
+23.6.a. Only mouse activity
+23.6.b.*. Device configuration and registration status
+23.6.c. Only mouse activity
+23.6.d. Only printer status
+
+23.7. What does Device Integrity refer to?
+23.7.a. User password length
+23.7.b.*. Device health and trustworthiness
+23.7.c. User password length
+23.7.d. Public Wi-Fi name
+
+23.8. Which elements are included in Device Integrity?
+23.8.a. Browser color only
+23.8.b.*. Configuration, security posture, and interaction with Client Connector
+23.8.c. Browser color only
+23.8.d. DNS logo only
+
+24. Device Posture Use Cases
+
+24.1. How can Device Postures be used for Service Entitlement?
+24.1.a. To remove all service controls
+24.1.b.*. To grant specific services based on device criteria
+24.1.c. To remove all service controls
+24.1.d. To bypass identity
+
+24.2. What service entitlement example is given for BYOD devices?
+24.2.a. Entitle to no services ever
+24.2.b.*. Entitle to ZPA but not ZIA
+24.2.c. Entitle to no services ever
+24.2.d. Entitle to only ZDX logs
+
+24.3. What service entitlement example is given for VDI devices?
+24.3.a. Entitle to both with no restrictions
+24.3.b.*. Entitle to ZIA but restrict from ZPA
+24.3.c. Entitle to both with no restrictions
+24.3.d. Entitle to only audit logs
+
+24.4. What does posture-based service entitlement provide?
+24.4.a. No control over services
+24.4.b.*. Precise control based on device type and organizational policy
+24.4.c. No control over services
+24.4.d. Unrestricted access
+
+24.5. How can Device Postures be used for App Profile selection?
+24.5.a. Delete all App Profiles
+24.5.b.*. Apply customized App Profiles based on device type
+24.5.c. Delete all App Profiles
+24.5.d. Disable Client Connector
+
+24.6. What App Profile example is given for BYOD devices?
+24.6.a. Force ZPA off permanently
+24.6.b.*. Allow users to disable ZIA
+24.6.c. Force ZPA off permanently
+24.6.d. Disable all internet access
+
+24.7. What App Profile example is given for VDI devices?
+24.7.a. Disable all tunneling
+24.7.b.*. Enforce Z-Tunnel 1.0 for sessions from a datacenter
+24.7.c. Disable all tunneling
+24.7.d. Always use random NAT
+
+24.8. What is the first step to configure posture for App Profile selection?
+24.8.a. Delete all profiles
+24.8.b.*. Create Device Postures for the target platforms
+24.8.c. Delete all profiles
+24.8.d. Disable ZIA
+
+24.9. How can Device Postures be used for ZPA Access Policies?
+24.9.a. Expose private apps publicly
+24.9.b.*. Restrict private app access to corporate-owned devices
+24.9.c. Expose private apps publicly
+24.9.d. Disable ZPA
+
+24.10. What is the first step to configure Device Postures for ZPA Access Policy?
+24.10.a. Delete ZPA apps
+24.10.b.*. Create Device Postures for the target platforms
+24.10.c. Delete ZPA apps
+24.10.d. Disable App Connectors
+
+24.11. How can Device Postures be used for ZIA Enforcement Policies?
+24.11.a. Allow every device all SaaS apps
+24.11.b.*. Allow only trusted devices used by authorized users to access designated SaaS apps
+24.11.c. Allow every device all SaaS apps
+24.11.d. Disable SaaS inspection
+
+25. Zscaler Client Connector Telemetry
+
+25.1. What is Zscaler Client Connector Telemetry?
+25.1.a. A password reset method
+25.1.b.*. A mechanism for collecting device health, operations, and end-user interaction data
+25.1.c. A GRE tunnel type
+25.1.d. A local-only DNS server
+
+25.2. Where is telemetry data sent?
+25.2.a. Only to the endpoint
+25.2.b.*. To the Zscaler cloud for analysis and reporting
+25.2.c. Only to local printers
+25.2.d. Only to the browser cache
+
+25.3. How does telemetry compare to ZDX?
+25.3.a. It replaces all ZDX functionality completely
+25.3.b.*. It collects a subset of data, focusing on critical events without full ZDX overhead
+25.3.c. It replaces all ZDX functionality completely
+25.3.d. It collects no data
+
+25.4. What are the two event accessibility levels?
+25.4.a. User-level and printer-level only
+25.4.b.*. Support/engineering-level and admin-level
+25.4.c. User-level and printer-level only
+25.4.d. Password-level and PAC-level only
+
+25.5. What are crash events?
+25.5.a. Password failures only
+25.5.b.*. Logs when Client Connector crashes
+25.5.c. Password failures only
+25.5.d. Browser close events only
+
+25.6. What are end-user interaction and notification events?
+25.6.a. Only device wallpaper changes
+25.6.b.*. Records user interactions such as dismissing notifications
+25.6.c. Only device wallpaper changes
+25.6.d. Only printer updates
+
+25.7. What do PAC-related issue events track?
+25.7.a. Password reuse
+25.7.b.*. Problems processing PAC files
+25.7.c. Password reuse
+25.7.d. Mobile carrier billing
+
+25.8. What does Service Activity track at admin level?
+25.8.a. Browser font changes
+25.8.b.*. Users enabling or disabling ZIA/ZPA services
+25.8.c. Browser font changes
+25.8.d. Local file copying only
+
+25.9. What do Posture Failure events record?
+25.9.a. When passwords expire only
+25.9.b.*. When device posture checks fail
+25.9.c. When passwords expire only
+25.9.d. When printers disconnect
+
+25.10. What does OTP Usage monitor?
+25.10.a. Use of GRE tunnels
+25.10.b.*. Use of OTPs to disable Zscaler services
+25.10.c. Use of GRE tunnels
+25.10.d. Use of SSL certificates only
+
+25.11. What do System Events capture?
+25.11.a. Browser icons only
+25.11.b.*. Network, OS, and power-related data points
+25.11.c. Browser icons only
+25.11.d. User photos only
+
+25.12. What is the primary need for Client Connector Telemetry?
+25.12.a. To manually retrieve every log file from each user
+25.12.b.*. To proactively detect, debug, and resolve device and connectivity issues without manually retrieving logs from each device
+25.12.c. To disable diagnostics
+25.12.d. To replace all policies
+
+25.13. What resource usage goal does the telemetry module have?
+25.13.a. High CPU and high memory usage
+25.13.b.*. Low CPU and memory consumption
+25.13.c. Unlimited network usage
+25.13.d. Blocking all endpoint activity
+
+25.14. What is telemetry useful for?
+25.14.a. Removing all visibility
+25.14.b.*. Monitoring, troubleshooting, and optimizing security policies
+25.14.c. Removing all visibility
+25.14.d. Disabling ZCC
+
+26. Scenario-Based Review
+
+26.1. A user on public Wi-Fi needs safe access to company documents. What concept helps protect the traffic?
+26.1.a. Browser bookmarks
+26.1.b.*. Tunneling
+26.1.c. Browser bookmarks
+26.1.d. Printer policy
+
+26.2. Jane wants to forward all ports and protocols from devices to the Zscaler Service Edge. What should she use where possible?
+26.2.a. Z-Tunnel 1.0
+26.2.b.*. Z-Tunnel 2.0
+26.2.c. No tunnel
+26.2.d. HTTP CONNECT only
+
+26.3. Jane wants a proxy-based tunnel for web traffic only. Which version matches?
+26.3.a. Z-Tunnel 2.0
+26.3.b.*. Z-Tunnel 1.0
+26.3.c. GRE only
+26.3.d. IPSec only
+
+26.4. Jane wants passwordless authentication using a security key for Client Connector auth options. Which method is relevant?
+26.4.a. PAC
+26.4.b.*. FIDO2
+26.4.c. PAC
+26.4.d. GRE
+
+26.5. A device has firewall disabled and should not access a private app even though the user is authenticated. What should enforce this?
+26.5.a. Browser theme
+26.5.b.*. Device Posture with ZPA Access Policy
+26.5.c. Browser theme
+26.5.d. Local printer policy
+
+26.6. A non-compliant device should use stricter internet rules. What can Zscaler change?
+26.6.a. The user’s wallpaper
+26.6.b.*. The App Profile
+26.6.c. The user’s wallpaper
+26.6.d. The local username
+
+26.7. Jane wants users in a branch already forwarding traffic through GRE/IPsec not to create redundant tunnels. Which network condition is relevant?
+26.7.a. Public Wi-Fi only
+26.7.b.*. On-Trusted Network
+26.7.c. Off-Trusted Network
+26.7.d. Public Wi-Fi only
+
+26.8. Jane wants users on public Wi-Fi to tunnel with Z-Tunnel 2.0. Which network type is relevant?
+26.8.a. On-Trusted Network
+26.8.b.*. Off-Trusted Network
+26.8.c. On-Trusted Network
+26.8.d. Local printer network
+
+26.9. Jane wants to know if devices are crashing or failing posture checks without pulling logs manually. What should she use?
+26.9.a. Password history
+26.9.b.*. Client Connector Telemetry
+26.9.c. Password history
+26.9.d. Manual screenshots
+
+26.10. Jane wants to prevent users from changing log modes or exporting logs. What setting should she use?
+26.10.a. Enable ZIA Notifications
+26.10.b.*. Hide Logging Control
+26.10.c. Enable ZIA Notifications
+26.10.d. Forwarding Profile only

@@ -1,5 +1,7 @@
-const exams = [
+﻿const exams = [
   { folder: 'ExamenZscalerIntro', file: 'Examen_Zscaler_Intro.txt', name: 'Zscaler EDU-200 - Introducción Zero Trust' },
+  { folder: 'Examen2', file: 'Examen2_User_Management_Zscaler.txt', name: 'Examen 2 - User Management' },
+  { folder: 'Examen3', file: 'Examen3_Device_Management_Zscaler.txt', name: 'Examen 3 - Device Management' },
   { folder: 'Examen1', file: 'Examen1_Estructuras_DNA.txt', name: 'Examen 1 - Estructuras DNA' }
 ];
 
