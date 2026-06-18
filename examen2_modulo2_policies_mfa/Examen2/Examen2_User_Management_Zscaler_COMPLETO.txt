@@ -1,0 +1,1045 @@
+1. Zscaler EDU-200 - Module 2 User Management
+
+1.1. In Module 2, why is user management essential to Zero Trust?
+1.1.a. Because Zero Trust works even if any user can access any resource.
+1.1.b.*. Because Zero Trust depends on ensuring the right users access the right resources at the right time.
+1.1.c. Because user management replaces all security policies.
+1.1.d. Because user identity is only needed for reporting.
+
+1.2. What is Jane’s main goal in Module 2?
+1.2.a. To expose all internal applications to the internet.
+1.2.b.*. To configure and manage user identity so access decisions are secure, consistent, and aligned with Zero Trust.
+1.2.c. To remove identity providers and local groups.
+1.2.d. To replace ZIA and ZPA with VPNs.
+
+1.3. What foundation does Jane first work with in this module?
+1.3.a. Log Streaming
+1.3.b. GRE tunnels
+1.3.c.*. ZIdentity
+1.3.d. SSL inspection only
+
+1.4. According to the scenario, what does the company need besides secure access?
+1.4.a. To allow all contractors permanent administrator privileges.
+1.4.b.*. To automate onboarding and offboarding.
+1.4.c. To disable SSO and SCIM.
+1.4.d. To route every application through a public firewall.
+
+1.5. In the scenario, which service is used for secure access to internet resources?
+1.5.a. ZPA
+1.5.b.*. ZIA
+1.5.c. ZDX
+1.5.d. NSS
+
+1.6. In the scenario, which service is used for secure access to internal applications?
+1.6.a. ZIA
+1.6.b.*. ZPA
+1.6.c. ZDX
+1.6.d. DLP
+
+1.7. Why does automating onboarding and offboarding matter?
+1.7.a. It gives every new user full network access.
+1.7.b.*. It helps keep permissions accurate as users join or leave the organization.
+1.7.c. It removes the need for identity verification.
+1.7.d. It prevents the use of SAML.
+
+1.8. What strengthens authentication at the end of the module?
+1.8.a. Disabling all password policies.
+1.8.b.*. Configuring MFA, enabling FIDO2, and integrating IdP-based MFA.
+1.8.c. Replacing users with service accounts.
+1.8.d. Removing administrative entitlements.
+
+2. Authentication, Authorization, and Provisioning
+
+[Imagen: img/user_management_auth_overview.png]
+
+2.1. What does authentication verify?
+2.1.a. What the user can do in every application.
+2.1.b.*. Who the user is.
+2.1.c. Which network tunnel the user prefers.
+2.1.d. How long the application response time is.
+
+2.2. What does authorization determine?
+2.2.a. The identity provider’s physical location.
+2.2.b.*. What the authenticated user is allowed to access or do.
+2.2.c. The user’s password complexity.
+2.2.d. The format of a SAML assertion.
+
+2.3. A user successfully signs in but is denied access to an application because they lack permission. Which concept is being applied?
+2.3.a. Authentication
+2.3.b. Provisioning
+2.3.c.*. Authorization
+2.3.d. Tunneling
+
+2.4. According to the content, access is not granted based on what?
+2.4.a. Identity and policy
+2.4.b. Context and user attributes
+2.4.c.*. Network or IP range alone
+2.4.d. Authentication result
+
+2.5. In the flow visualization, what protocol is associated with authorization and provisioning flow?
+2.5.a. TLS
+2.5.b.*. SCIM
+2.5.c. IPSec
+2.5.d. DNS
+
+2.6. What is the primary role of SCIM in the module?
+2.6.a. To replace MFA.
+2.6.b.*. To automate identity and entitlement provisioning for users and groups.
+2.6.c. To encrypt browser sessions.
+2.6.d. To monitor application latency.
+
+2.7. What does provisioning mainly help automate?
+2.7.a. Browser rendering
+2.7.b.*. Onboarding, updating, and offboarding user access
+2.7.c. Firewall throughput
+2.7.d. Packet capture
+
+2.8. Which statement best summarizes the difference between authentication and authorization?
+2.8.a. Authentication assigns permissions, while authorization verifies identity.
+2.8.b.*. Authentication verifies identity, while authorization determines access permissions.
+2.8.c. Both are exactly the same.
+2.8.d. Authorization happens before identity is checked.
+
+3. SAML Fundamentals
+
+3.1. What does SAML stand for?
+3.1.a. Secure Access Management Layer
+3.1.b.*. Security Assertion Markup Language
+3.1.c. Service Authorization Management Logic
+3.1.d. Standard Application Mapping Layer
+
+3.2. Who defines SAML as an open standard?
+3.2.a. IETF
+3.2.b. NIST
+3.2.c.*. OASIS
+3.2.d. IEEE
+
+3.3. What kind of data does SAML exchange between parties?
+3.3.a. Only network latency values
+3.3.b.*. Authentication and authorization data
+3.3.c. Only antivirus signatures
+3.3.d. Only source code metadata
+
+3.4. What is the main benefit of SAML for users?
+3.4.a. It creates GRE tunnels automatically.
+3.4.b.*. It enables Single Sign-On so users authenticate once and access multiple applications.
+3.4.c. It replaces all authorization policies.
+3.4.d. It disables identity providers.
+
+3.5. What is a Service Provider (SP)?
+3.5.a. A system that only stores passwords.
+3.5.b.*. A system that receives identity credentials from an IdP and provides access to resources.
+3.5.c. A protocol used to create bearer tokens.
+3.5.d. A user provisioning database.
+
+3.6. Which of the following is given as an example of a Service Provider?
+3.6.a. Microsoft Entra ID
+3.6.b.*. Zscaler
+3.6.c. PingFederate only
+3.6.d. Okta directory agent
+
+3.7. What is an Identity Provider (IdP)?
+3.7.a. A device that routes internet traffic.
+3.7.b.*. A system that authenticates users and manages or verifies credentials.
+3.7.c. A private application connector.
+3.7.d. A data loss prevention engine.
+
+3.8. Which example is explicitly given as an Identity Provider?
+3.8.a. ZIA
+3.8.b. ZPA
+3.8.c.*. Microsoft Entra ID
+3.8.d. NSS
+
+3.9. What trusted relationship allows users to authenticate with the IdP and then access the SP?
+3.9.a. Trust between the browser and firewall
+3.9.b.*. Trust between the Service Provider and the Identity Provider
+3.9.c. Trust between the endpoint and DNS
+3.9.d. Trust between SCIM and DLP
+
+3.10. Which setup does Jane use in the scenario to enable SSO for Zscaler services?
+3.10.a. Ping as an OAuth resource server
+3.10.b.*. Okta as the SAML IdP
+3.10.c. ZDX as a SAML gateway
+3.10.d. API keys as the primary IdP
+
+3.11. Which SSO initiation methods does Jane configure?
+3.11.a. Token-initiated and SCIM-initiated
+3.11.b.*. IdP-initiated and SP-initiated
+3.11.c. GRE-initiated and IPSec-initiated
+3.11.d. Browser-initiated and VPN-initiated
+
+3.12. In a basic SAML flow, where does the user typically authenticate?
+3.12.a. Directly at the Service Provider with no IdP involved
+3.12.b.*. At the Identity Provider
+3.12.c. At the firewall proxy
+3.12.d. Inside the JWT token
+
+4. OAuth 2.0 and API Authorization
+
+[Imagen: img/oauth2_overview.png]
+
+4.1. What is OAuth 2.0 primarily used for?
+4.1.a. Authentication only
+4.1.b.*. Authorization for third-party applications to access resources without exposing user credentials
+4.1.c. Replacing all APIs with SAML
+4.1.d. Provisioning users and groups
+
+4.2. According to the overview, what does OAuth 2.0 avoid exposing?
+4.2.a. Application source code
+4.2.b.*. User login credentials such as usernames or passwords
+4.2.c. Network latency data
+4.2.d. Device posture information
+
+4.3. In the OAuth flow, what does the client first request from the authorization server?
+4.3.a. A SAML assertion
+4.3.b.*. An access token
+4.3.c. A GRE tunnel
+4.3.d. A device certificate
+
+4.4. Which information must be included in the authorization request besides client credentials?
+4.4.a. Only the employee’s phone number
+4.4.b.*. The required scope and the grant type
+4.4.c. Only the browser version
+4.4.d. The DLP policy name
+
+4.5. What does the authorization server provide upon successful authorization?
+4.5.a. A hardware security key
+4.5.b.*. A signed JWT access token
+4.5.c. A SAML XML file only
+4.5.d. A static IP address
+
+4.6. What additional items are included in the authorization server response?
+4.6.a. A list of all user passwords
+4.6.b.*. Token type as a bearer token and token expiration time
+4.6.c. Endpoint antivirus logs
+4.6.d. Service edge metrics only
+
+4.7. Where does the client send the access token when requesting protected resources?
+4.7.a. In the browser bookmarks bar
+4.7.b.*. In the API request Authorization header to the resource server
+4.7.c. In a DNS TXT record
+4.7.d. In the SP login page title
+
+4.8. What does the Zscaler service extract from the API request header?
+4.8.a. A SCIM payload
+4.8.b.*. The JWT access token
+4.8.c. The user’s plaintext password
+4.8.d. The IPsec pre-shared key
+
+4.9. What does Zscaler use to cryptographically verify the JWT signature?
+4.9.a. The client’s local password file
+4.9.b.*. The authorization server’s public key
+4.9.c. The user’s browser cache
+4.9.d. The service provider’s favicon
+
+4.10. Which claim format is used for scope in the Zscaler API flow?
+4.10.a. User :: Device :: Timezone
+4.10.b.*. Zscaler Cloud Name :: Org ID :: API Role
+4.10.c. IdP :: SP :: Assertion
+4.10.d. IP :: Port :: Protocol
+
+4.11. What is used to authorize the API request after JWT verification?
+4.11.a. The browser name
+4.11.b.*. The API Role value inside the scope claim
+4.11.c. The user’s office location alone
+4.11.d. The DLP policy severity score
+
+4.12. What happens if the API Role in the JWT scope does not match a configured API Role in ZIA?
+4.12.a. The request is automatically allowed.
+4.12.b.*. The API request is rejected.
+4.12.c. The user is converted into an administrator.
+4.12.d. The service provider ignores the token.
+
+4.13. Which additional JWT claims might Zscaler verify?
+4.13.a. Screen resolution and keyboard layout
+4.13.b.*. Audience, issuer, or client ID
+4.13.c. Password age and browser theme
+4.13.d. GPS route history only
+
+4.14. What is the final outcome when the JWT is valid and authorized?
+4.14.a. The resource server deletes the application.
+4.14.b.*. The client application is granted access to the requested API resources.
+4.14.c. The IdP becomes the resource server.
+4.14.d. The token is replaced by a VPN tunnel.
+
+5. OpenID Connect (OIDC)
+
+[Imagen: img/oidc_overview.png]
+
+5.1. What is OpenID Connect (OIDC)?
+5.1.a. A provisioning standard for synchronizing user groups.
+5.1.b.*. An authentication protocol built on the OAuth 2.0 framework that supports SSO.
+5.1.c. A log streaming method for SIEMs.
+5.1.d. A private access connector.
+
+5.2. What does OAuth 2.0 mainly provide in the OIDC comparison image?
+5.2.a. Identity verification and SSO
+5.2.b.*. Access token for API access
+5.2.c. Group provisioning via SCIM
+5.2.d. Data loss prevention policies
+
+5.3. What extra capability does OIDC add on top of OAuth 2.0?
+5.3.a. GRE tunnel negotiation
+5.3.b.*. User identity verification through an ID token and optional profile information
+5.3.c. Firewall rule synchronization
+5.3.d. XML-only formatting
+
+5.4. What token is specifically associated with OIDC in the diagram?
+5.4.a. Bearer firewall token
+5.4.b.*. ID Token
+5.4.c. SCIM token
+5.4.d. IPSec token
+
+5.5. What can OIDC provide in addition to identity verification?
+5.5.a. Static routes
+5.5.b.*. Optional profile information
+5.5.c. Malware signatures
+5.5.d. Device disk encryption
+
+5.6. Which statement best describes the difference between OAuth 2.0 and OIDC?
+5.6.a. OAuth 2.0 is for authentication, while OIDC is for authorization.
+5.6.b.*. OAuth 2.0 uses access tokens for authorization, while OIDC builds on OAuth 2.0 to support authentication.
+5.6.c. OAuth 2.0 replaces SAML, while OIDC replaces SCIM.
+5.6.d. OAuth 2.0 is only for enterprise apps, while OIDC is only for government apps.
+
+5.7. Which concept is applied when a user signs in successfully but is denied access because they lack permission?
+5.7.a. Authentication only
+5.7.b.*. Authorization
+5.7.c. Token expiration
+5.7.d. Tunnel provisioning
+
+6. Key Differences Between SAML and OIDC
+
+[Imagen: img/saml_oidc_differences.png]
+
+6.1. According to the learning content, what is a common usage pattern for SAML?
+6.1.a. Only IoT device onboarding
+6.1.b.*. Enterprise, browser-based SSO
+6.1.c. Public DNS management
+6.1.d. Mobile VPN tunneling only
+
+6.2. According to the learning content, what is a common usage pattern for OIDC?
+6.2.a. Mainframe-only authentication
+6.2.b.*. Modern web and mobile sign-in
+6.2.c. Log retention export
+6.2.d. Data center rack monitoring
+
+6.3. How does the content describe password handling in SAML?
+6.3.a. Applications must collect and store passwords directly.
+6.3.b.*. Authentication is handled by the IdP, so applications do not need to collect user passwords.
+6.3.c. Passwords are stored inside the SP favicon.
+6.3.d. Password handling is done only by SCIM.
+
+6.4. How does the content describe password handling in OIDC?
+6.4.a. Applications always require the user’s raw password.
+6.4.b.*. Authentication is handled by the IdP and applications typically rely on tokens rather than handling passwords directly.
+6.4.c. OIDC requires XML password envelopes.
+6.4.d. OIDC disables token usage.
+
+6.5. Which data format is associated with SAML?
+6.5.a. YAML
+6.5.b.*. XML
+6.5.c. CSV
+6.5.d. JWT only
+
+6.6. Which data format is associated with OIDC?
+6.6.a. XML assertions only
+6.6.b.*. JSON-based web tokens (JWT)
+6.6.c. Packet captures
+6.6.d. Binary GRE headers
+
+6.7. Which statement about implementation is correct?
+6.7.a. SAML is typically simpler than OIDC because XML handling is easier.
+6.7.b.*. SAML is often more complex to implement and maintain due to XML handling, while OIDC is often simpler for modern app stacks.
+6.7.c. OIDC cannot be used with modern applications.
+6.7.d. Both have identical implementation characteristics.
+
+6.8. Which statement best describes the relationship between SAML and OIDC?
+6.8.a. They are unrelated and cannot both support SSO.
+6.8.b.*. Both can support SSO, but they are commonly used in different application contexts and rely on different data formats.
+6.8.c. OIDC is only for provisioning, while SAML is only for logging.
+6.8.d. SAML and OIDC are both DLP tools.
+
+[Imagen: img/idp_examples.png]
+
+6.9. Which of the following is listed as a common SAML Identity Provider example?
+6.9.a. OneLogin only for OIDC
+6.9.b.*. Microsoft AD FS
+6.9.c. ZDX
+6.9.d. NSS
+
+6.10. Which of the following is listed as a common OIDC Identity Provider example?
+6.10.a. ZPA
+6.10.b.*. OneLogin
+6.10.c. GRE
+6.10.d. DLP
+
+7. Admin Sign-On Policies and Password Policies
+
+7.1. What is the main purpose of Sign-on Policies and Password Policies?
+7.1.a. To increase application latency
+7.1.b.*. To secure users by controlling access and enforcing strong credentials
+7.1.c. To replace all identity providers
+7.1.d. To disable administrator authentication
+
+7.2. In Jane’s scenario, what does she need to protect?
+7.2.a. Only public websites
+7.2.b.*. The Zscaler Admin Portal from unauthorized access attempts
+7.2.c. Only endpoint wallpaper settings
+7.2.d. The DNS resolver only
+
+7.3. Why are valid credentials alone not enough proof of identity?
+7.3.a. Because passwords are never used in Zscaler
+7.3.b.*. Because credentials can be stolen or used from untrusted locations or devices
+7.3.c. Because usernames are always public
+7.3.d. Because Zscaler does not support MFA
+
+7.4. What concern does Jane have about administrators logging in from public Wi-Fi or unrecognized locations?
+7.4.a. They may have slower downloads only
+7.4.b.*. They could expose the organization to security risks
+7.4.c. They will automatically lose all permissions
+7.4.d. They cannot use browsers
+
+7.5. Why are Sign-on Policies important for administrative privileges?
+7.5.a. They remove all admin roles
+7.5.b.*. They help ensure administrative privileges are not exploited from untrusted networks or unsecured devices
+7.5.c. They disable all password rules
+7.5.d. They make every login trusted by default
+
+7.6. What does Jane configure in ZIdentity to enforce condition-based access controls?
+7.6.a. Only a DLP dictionary
+7.6.b.*. Admin Sign-on Policy
+7.6.c. GRE forwarding
+7.6.d. NSS log streaming only
+
+7.7. What can Jane define in Admin Sign-on Policy rules?
+7.7.a. Only browser font size
+7.7.b.*. Rules to permit access from trusted sources and block unauthorized attempts
+7.7.c. Only endpoint battery level
+7.7.d. Only application icons
+
+7.8. What do Password Policies require administrators to use?
+7.8.a. Weak passwords without expiration
+7.8.b.*. Strong, complex passwords with set rules
+7.8.c. Shared passwords for all admins
+7.8.d. Passwords stored in public notes
+
+7.9. Which statement best describes a Sign-on Policy?
+7.9.a. It only controls password length
+7.9.b.*. It defines who can access the Admin Portal and under what conditions
+7.9.c. It only stores audit logs
+7.9.d. It only manages SaaS bandwidth
+
+7.10. Which statement best describes a Password Policy?
+7.10.a. It only determines user geolocation
+7.10.b.*. It sets rules for strong passwords such as length, complexity, and expiration
+7.10.c. It only configures GRE tunnels
+7.10.d. It only defines private application segments
+
+7.11. Which two policy types work together to protect administrative access?
+7.11.a. Firewall Policy and DNS Policy
+7.11.b.*. Sign-on Policy and Password Policy
+7.11.c. GRE Policy and IPSec Policy
+7.11.d. SaaS Policy and Browser Theme Policy
+
+7.12. What security idea is supported by blocking unapproved login attempts even with valid credentials?
+7.12.a. Implicit trust
+7.12.b.*. Zero Trust verification
+7.12.c. Network-only trust
+7.12.d. Password-only trust
+
+8. Sign-on Policy Configuration
+
+8.1. What is a Sign-on Policy?
+8.1.a. A report showing internet bandwidth usage
+8.1.b.*. A set of configurable rules that allows or denies login attempts based on criteria
+8.1.c. A password recovery email template
+8.1.d. A physical firewall appliance
+
+8.2. Which criteria can a Sign-on Policy use to allow or deny login attempts?
+8.2.a. Only screen resolution
+8.2.b.*. Trusted IP locations and user attributes
+8.2.c. Only browser bookmarks
+8.2.d. Only application logo color
+
+8.3. What can administrators create to strengthen access controls?
+8.3.a. Rules to ignore location
+8.3.b.*. Rules to allow or deny login attempts from trusted IP locations
+8.3.c. Rules that disable all authentication
+8.3.d. Rules that expose the Admin Portal publicly
+
+8.4. What is the first step before creating a Sign-on Policy rule based on trusted locations?
+8.4.a. Delete all existing administrators
+8.4.b.*. Add the trusted IP locations
+8.4.c. Disable MFA globally
+8.4.d. Create a DLP incident
+
+8.5. Where do you navigate in the Experience Center to add a trusted IP location?
+8.5.a. Logs > Log Streaming > Add SIEM
+8.5.b.*. Infrastructure > Locations > Trusted IP Locations > Add Location
+8.5.c. Policies > Data Protection > Dictionaries
+8.5.d. Analytics > User Experience > Latency
+
+8.6. What information is specified when adding a trusted IP location?
+8.6.a. Only username and password
+8.6.b.*. Name, country, and IP address
+8.6.c. User password, MFA code, and browser version
+8.6.d. GRE tunnel name, NSS feed, and ZDX score
+
+8.7. After entering the trusted IP location information, what should the administrator click?
+8.7.a. Delete
+8.7.b.*. Save
+8.7.c. Reset all users
+8.7.d. Disable policy
+
+8.8. Where do you navigate to create an Admin Sign-On Policy rule?
+8.8.a. Infrastructure > Connectors > Branch Connectors
+8.8.b.*. Administration > Admin Management > Administrator Management > Sign-On
+8.8.c. Logs > Insights > Web Logs
+8.8.d. Analytics > SSL/TLS Inspection Health
+
+8.9. Which option is selected to create a new Admin Sign-On Policy rule?
+8.9.a. Add Tunnel
+8.9.b.*. Add Rule
+8.9.c. Add DLP Engine
+8.9.d. Add Connector
+
+8.10. Which rule setting determines the priority of the Sign-on Policy rule?
+8.10.a. Rule Color
+8.10.b.*. Rule Order
+8.10.c. Browser Size
+8.10.d. Application Icon
+
+8.11. Which rule setting determines whether the rule is active?
+8.11.a. Rule Description only
+8.11.b.*. Rule Status
+8.11.c. User Wallpaper
+8.11.d. Dashboard Layout
+
+8.12. Under which section do you select the location and IP address when creating the rule?
+8.12.a. RESPONSE
+8.12.b.*. CRITERIA
+8.12.c. LOG STREAM
+8.12.d. DLP PROFILE
+
+8.13. What rule setting determines whether the login is permitted or denied?
+8.13.a. Rule description only
+8.13.b.*. Action
+8.13.c. Browser Language
+8.13.d. Log Size
+
+8.14. What does this policy do when an administrator attempts access from an unapproved location?
+8.14.a. It allows access if the password is valid
+8.14.b.*. It blocks the attempt even if valid administrator credentials are used
+8.14.c. It deletes the administrator account
+8.14.d. It disables the Admin Portal
+
+8.15. Why does location-based sign-on policy strengthen Zero Trust security?
+8.15.a. Because it trusts passwords alone
+8.15.b.*. Because it verifies both credentials and geographic or trusted location conditions
+8.15.c. Because it removes MFA permanently
+8.15.d. Because it exposes all admin portals to the internet
+
+9. Password Policy Configuration
+
+9.1. What is a Password Policy?
+9.1.a. A dashboard for web transaction logs
+9.1.b.*. A set of security requirements for password complexity, reuse restrictions, and account lockout criteria
+9.1.c. A connector used to reach private apps
+9.1.d. A firewall rule for GRE tunnels
+
+9.2. What is the purpose of password complexity rules?
+9.2.a. To make passwords easier to guess
+9.2.b.*. To ensure users create strong passwords that are difficult to guess or crack
+9.2.c. To remove all password requirements
+9.2.d. To replace MFA completely
+
+9.3. What is an example of a password lifecycle policy?
+9.3.a. Never rotating passwords
+9.3.b.*. Expiring passwords after a specific period, such as every 90 days
+9.3.c. Sharing passwords among administrators
+9.3.d. Sending passwords through public chat
+
+9.4. What account protection example is mentioned for unsuccessful login attempts?
+9.4.a. Automatically grant access after 10 failures
+9.4.b.*. Automatically deactivate an account after 10 unsuccessful login attempts
+9.4.c. Disable all password checks after 10 failures
+9.4.d. Convert the user to super admin after 10 failures
+
+9.5. What does minimum password length define?
+9.5.a. The maximum browser session time
+9.5.b.*. The minimum number of characters required for a password
+9.5.c. The number of trusted IP locations
+9.5.d. The number of logs retained
+
+9.6. Which is an example of a minimum password length?
+9.6.a. 1 or 2 characters
+9.6.b.*. 8 or 12 characters
+9.6.c. 100 or 200 characters only
+9.6.d. No minimum length
+
+9.7. Which character types can password complexity require?
+9.7.a. Only lowercase letters
+9.7.b.*. Uppercase letters, lowercase letters, numbers, and special characters
+9.7.c. Only emojis
+9.7.d. Only spaces
+
+9.8. Which examples represent uppercase letters?
+9.8.a. a-z
+9.8.b.*. A-Z
+9.8.c. 0-9
+9.8.d. !@#$%^&*
+
+9.9. Which examples represent lowercase letters?
+9.9.a. A-Z
+9.9.b.*. a-z
+9.9.c. 0-9
+9.9.d. !@#$%^&*
+
+9.10. Which examples represent numbers in password complexity?
+9.10.a. A-Z
+9.10.b.*. 0-9
+9.10.c. a-z
+9.10.d. Only punctuation
+
+9.11. Which examples represent special characters?
+9.11.a. A-Z
+9.11.b. a-z
+9.11.c. 0-9
+9.11.d.*. !@#$%^&*
+
+9.12. What does password history restriction prevent?
+9.12.a. Using MFA
+9.12.b.*. Reusing a specified number of previous passwords
+9.12.c. Assigning administrators to groups
+9.12.d. Creating trusted IP locations
+
+9.13. What is an example of a password history restriction?
+9.13.a. Reusing the last password immediately
+9.13.b.*. Restricting reuse of the last 5 passwords
+9.13.c. Using no password history
+9.13.d. Reusing all old passwords
+
+9.14. What flexibility do admins have on the Password Policy page?
+9.14.a. They can only view settings and cannot change anything
+9.14.b.*. They can edit, enable, or disable options based on organizational security requirements
+9.14.c. They can only configure GRE tunnels
+9.14.d. They can only export logs
+
+9.15. Where are password complexity and password criteria options displayed?
+9.15.a. Only in ZDX analytics
+9.15.b.*. On the Password Policy page in the Zscaler Experience Center
+9.15.c. Only in a local firewall console
+9.15.d. Only in the browser cache
+
+10. Audit Logs
+
+10.1. What do audit logs in the ZIdentity admin portal capture?
+10.1.a. Only website screenshots
+10.1.b.*. User activities such as configuration changes, user management, tenant management, authentication changes, and service assignments
+10.1.c. Only browser bookmarks
+10.1.d. Only endpoint battery status
+
+10.2. Which user management actions can audit logs capture?
+10.2.a. Only reading user records
+10.2.b.*. Creating, updating, and deleting users
+10.2.c. Only changing browser font size
+10.2.d. Only measuring latency
+
+10.3. Which tenant-related activity can audit logs capture?
+10.3.a. Public Wi-Fi speed only
+10.3.b.*. Tenant management
+10.3.c. Local printer configuration
+10.3.d. DNS theme settings
+
+10.4. Which authentication-related activity can audit logs capture?
+10.4.a. Only browser wallpaper
+10.4.b.*. Authentication setting changes
+10.4.c. Wallpaper updates
+10.4.d. Packet payload size only
+
+10.5. Which assignment-related activity can audit logs capture?
+10.5.a. Browser bookmarks
+10.5.b.*. Service assignments
+10.5.c. Browser bookmarks
+10.5.d. Public Wi-Fi speed tests
+
+10.6. Which fields are useful when reviewing audit logs?
+10.6.a. Only screen resolution and browser zoom
+10.6.b.*. Time, user, action, and IP address
+10.6.c. Only display brightness and language
+10.6.d. Only keyboard layout
+
+10.7. What can administrators review in audit logs to understand what was modified?
+10.7.a. Browser wallpaper only
+10.7.b.*. Change details
+10.7.c. Application icons only
+10.7.d. Browser history only
+
+10.8. How long are audit logs maintained?
+10.8.a. 24 hours
+10.8.b.*. 6 months
+10.8.c. 10 years by default
+10.8.d. They are not maintained
+
+10.9. In what format can audit logs be downloaded?
+10.9.a. .mp3
+10.9.b.*. .csv
+10.9.c. .jpg only
+10.9.d. .exe
+
+10.10. Why are audit logs important for administrators?
+10.10.a. They replace all authentication
+10.10.b.*. They support monitoring, troubleshooting, compliance, and configuration tracking
+10.10.c. They allow bypassing MFA
+10.10.d. They automatically approve all sign-ins
+
+11. Multi-Factor Authentication and FIDO2
+
+11.1. What is the purpose of Multi-Factor Authentication?
+11.1.a. To require only a password
+11.1.b.*. To add an extra layer of security by requiring users to verify identity using multiple methods
+11.1.c. To disable identity verification
+11.1.d. To replace all users with service accounts
+
+11.2. Why does Jane enable MFA?
+11.2.a. To make phishing easier
+11.2.b.*. To secure user logins against stolen passwords and phishing
+11.2.c. To allow password-only access
+11.2.d. To remove all user sessions
+
+11.3. What happens when a login attempt provides only a password and MFA is required?
+11.3.a. Access is always granted
+11.3.b.*. The login attempt is denied or not completed until the second verification succeeds
+11.3.c. The user becomes a super admin
+11.3.d. MFA is automatically disabled
+
+11.4. Which factor is “something you know”?
+11.4.a. Biometric
+11.4.b.*. Password
+11.4.c. Hardware token
+11.4.d. Security key
+
+11.5. Which factor is “something you have”?
+11.5.a. Password
+11.5.b.*. Device or token
+11.5.c. Eye color only
+11.5.d. User role only
+
+11.6. Which factor is “something you are”?
+11.6.a. Password
+11.6.b. Device
+11.6.c.*. Biometric
+11.6.d. IP address only
+
+11.7. Why is MFA critical for administrators?
+11.7.a. It eliminates the need for all policies
+11.7.b.*. It secures access to critical systems, reduces unauthorized logins, and supports compliance requirements
+11.7.c. It makes passwords public
+11.7.d. It disables sign-on policies
+
+11.8. What does Zscaler strongly recommend for administrator MFA?
+11.8.a. Disable it
+11.8.b.*. Keep MFA enabled
+11.8.c. Use shared accounts
+11.8.d. Remove all second factors
+
+11.9. What is required by default for all administrators according to the content?
+11.9.a. No authentication
+11.9.b.*. MFA
+11.9.c. Public Wi-Fi access
+11.9.d. Shared passwords
+
+11.10. Which MFA method uses a temporary code sent by text message?
+11.10.a. FIDO only
+11.10.b.*. SMS one-time passcode
+11.10.c. SCIM token
+11.10.d. SAML assertion only
+
+11.11. Which MFA method uses a temporary code sent through email?
+11.11.a. GRE token
+11.11.b.*. Email OTP
+11.11.c. GRE token
+11.11.d. IPsec key
+
+11.12. Which MFA method uses an authenticator app generating time-based codes?
+11.12.a. DLP incident ID
+11.12.b.*. Time-based OTP (TOTP)
+11.12.c. SAML XML
+11.12.d. DLP dictionary
+
+11.13. Which MFA method supports security keys and passwordless authentication?
+11.13.a. NSS log feed
+11.13.b.*. FIDO / FIDO2
+11.13.c. NSS
+11.13.d. GRE
+
+11.14. What note is given about FIDO2?
+11.14.a. It can never be used as a primary authenticator
+11.14.b.*. Passwordless authentication can be enabled by setting FIDO2 as the primary authenticator
+11.14.c. It only works for audit logs
+11.14.d. It replaces SCIM provisioning
+
+11.15. Where do you navigate in the Experience Center to enable MFA or FIDO2?
+11.15.a. Analytics > Threat Activity > Sandbox
+11.15.b.*. Administration > Identity > Password and Authentication > Authentication Methods
+11.15.c. Infrastructure > Locations > GRE
+11.15.d. Logs > Log Streaming > NSS
+
+11.16. What wizard opens when configuring MFA and FIDO2?
+11.16.a. DLP Dictionary Wizard
+11.16.b.*. Authentication Methods wizard
+11.16.c. GRE Tunnel Wizard
+11.16.d. NSS Feed Wizard
+
+11.17. What should be enabled to require MFA for service enrollment?
+11.17.a. Disable multifactor authentication for all admins
+11.17.b.*. Enable multifactor authentication for service enrolment
+11.17.c. Disable all authentication methods
+11.17.d. Enable public access only
+
+11.18. What should be enabled to allow FIDO2 as a primary authenticator?
+11.18.a. Disable all FIDO methods
+11.18.b.*. Allow FIDO2 as a primary authenticator
+11.18.c. Disable FIDO2 globally
+11.18.d. Require password-only login
+
+11.19. After enabling MFA and FIDO2 sliders, what should the admin click?
+11.19.a. Delete
+11.19.b.*. Save
+11.19.c. Reset tenant
+11.19.d. Export CSV only
+
+11.20. When MFA is enabled, what are users prompted to do at login?
+11.20.a. Skip all verification
+11.20.b.*. Choose and set up their authentication method
+11.20.c. Disable their identity provider
+11.20.d. Delete their account
+
+12. External IdP MFA Authentication Flow
+
+12.1. What role does ZIdentity serve for Zscaler services?
+12.1.a. A DNS resolver only
+12.1.b.*. A central identity management hub for ZIA, ZPA, and ZDX
+12.1.c. A local firewall appliance
+12.1.d. A VPN concentrator only
+
+12.2. Which external IdP examples are mentioned for handling authentication and MFA?
+12.2.a. GRE, IPSec, and NSS
+12.2.b.*. Microsoft Entra ID, Okta, and Ping Identity
+12.2.c. GRE, IPSec, and NSS
+12.2.d. ZIA, ZPA, and ZDX only
+
+12.3. How does ZIdentity treat the external IdP?
+12.3.a. As an untrusted source that is always ignored
+12.3.b.*. As the single source of truth for user identity and security policies
+12.3.c. As a log storage bucket
+12.3.d. As a packet forwarder
+
+12.4. What response does ZIdentity trust from the external IdP?
+12.4.a. Only maybe responses
+12.4.b.*. The yes or no authentication response
+12.4.c. Only DNS records
+12.4.d. Only user screenshots
+
+12.5. Which currently available authentication methods are mentioned for handling authentication including MFA?
+12.5.a. GRE tunnel, NSS feed, and DLP dictionary
+12.5.b.*. TOTP, Security Key or Biometric, and Email OTP
+12.5.c. GRE, IPSec, and NSS
+12.5.d. DLP, CASB, and Sandbox
+
+12.6. What is the first step in the external IdP authentication flow?
+12.6.a. Log deletion
+12.6.b.*. The user opens Zscaler Client Connector and attempts to log in
+12.6.c. The admin creates a DLP policy
+12.6.d. The user configures GRE forwarding
+
+12.7. Which Zscaler services may recognize the need for user authentication?
+12.7.a. Only NSS log streaming
+12.7.b.*. ZIA for internet access and ZPA for private application access
+12.7.c. Only NSS
+12.7.d. Only ZDX dashboards
+
+12.8. In the SAML transaction, what does ZIdentity function as?
+12.8.a. Identity Provider only
+12.8.b.*. Service Provider (SP)
+12.8.c. DNS server
+12.8.d. DLP engine
+
+12.9. How does ZIdentity decide which IdP to use?
+12.9.a. Based only on browser color
+12.9.b.*. Based on the user’s domain
+12.9.c. Based only on browser color
+12.9.d. Based only on screen size
+
+12.10. What happens after ZIdentity identifies the correct IdP?
+12.10.a. It grants access without authentication
+12.10.b.*. It redirects the browser to the external IdP login endpoint
+12.10.c. It grants access without authentication
+12.10.d. It deletes the user session
+
+12.11. Where does the user enter username and password?
+12.11.a. Directly in the Zscaler firewall logs
+12.11.b.*. On the identity provider’s login page
+12.11.c. Inside a DLP dictionary
+12.11.d. In the NSS feed
+
+12.12. What does the IdP check primary credentials against?
+12.12.a. GRE tunnel configuration only
+12.12.b.*. Its user directory
+12.12.c. GRE tunnel configuration
+12.12.d. ZDX latency metrics
+
+12.13. If the IdP is configured for MFA, what happens after primary credential verification?
+12.13.a. The user is granted access without second factor
+12.13.b.*. The user is presented with an MFA challenge
+12.13.c. The Zscaler app is deleted
+12.13.d. All policies are disabled
+
+12.14. Which are examples of MFA challenges?
+12.14.a. Browser zoom, wallpaper, or DNS theme
+12.14.b.*. Push notification, hardware key prompt, or authenticator code
+12.14.c. GRE tunnel, NSS feed, or DLP dictionary
+12.14.d. Browser zoom, wallpaper, or DNS theme
+
+12.15. What happens if the user fails the MFA challenge?
+12.15.a. Access is automatically granted
+12.15.b.*. The user is redirected back to the credential check or IdP login page to try again
+12.15.c. The user becomes an administrator
+12.15.d. All MFA methods are disabled
+
+12.16. What token can the IdP generate after successful credentials and MFA?
+12.16.a. A GRE tunnel key only
+12.16.b.*. A SAML assertion or OIDC ID token
+12.16.c. A GRE tunnel key only
+12.16.d. A DLP incident number
+
+12.17. What identity attributes can the token include?
+12.17.a. Browser color and mouse speed
+12.17.b.*. Username, email, and group membership
+12.17.c. Browser color and mouse speed
+12.17.d. Screen brightness and printer name
+
+12.18. What validation does ZIdentity perform on the received assertion?
+12.18.a. Only checks browser wallpaper
+12.18.b.*. Verifies the digital signature and confirms it was issued by a trusted IdP
+12.18.c. Only checks the user wallpaper
+12.18.d. Only checks the DNS theme
+
+12.19. What happens after the assertion is successfully validated?
+12.19.a. The user is always blocked
+12.19.b.*. The user is authenticated and granted access to Zscaler services
+12.19.c. The user is always blocked
+12.19.d. The IdP is deleted
+
+12.20. After authentication, what does Zscaler Client Connector do?
+12.20.a. It stops routing traffic
+12.20.b.*. It securely routes traffic through the Zscaler Zero Trust Exchange
+12.20.c. It exposes private apps to the internet
+12.20.d. It disables ZIA and ZPA policies
+
+12.21. Access after authentication is based on which policies?
+12.21.a. Only browser policies
+12.21.b.*. ZIA and ZPA policies
+12.21.c. Only browser policies
+12.21.d. Only GRE tunnel policies
+
+13. Skipping Two-Factor Authentication
+
+13.1. What does ZIdentity allow administrators to temporarily permit?
+13.1.a. Users to permanently bypass all authentication
+13.1.b.*. Users to temporarily skip two-factor authentication and log in using only their password
+13.1.c. Attackers to access the Admin Portal
+13.1.d. Passwords to be shared publicly
+
+13.2. Why might a user need to temporarily skip 2FA?
+13.2.a. They want to avoid security forever
+13.2.b.*. They do not have the device on which they receive an OTP
+13.2.c. They want to delete the IdP
+13.2.d. They want to disable audit logs
+
+13.3. Which scenario is given for skipping 2FA temporarily?
+13.3.a. A user wants to disable security forever
+13.3.b.*. A new user needs to log in but does not have time to set up MFA immediately
+13.3.c. A user wants to avoid password policy forever
+13.3.d. An attacker has stolen a password
+
+13.4. Which scenario may avoid a second Zscaler MFA prompt?
+13.4.a. A user connects anonymously
+13.4.b.*. A user already authenticates with MFA through an external IdP
+13.4.c. A user has no identity provider
+13.4.d. A user is connecting anonymously
+
+13.5. What option can be disabled to avoid reauthentication when MFA is already handled by an external IdP?
+13.5.a. Audit Log Visibility
+13.5.b.*. Enforce Zscaler Admin MFA
+13.5.c. Password Policy page
+13.5.d. Audit Logs
+
+13.6. Why can Zscaler allow admin access without a second prompt in that scenario?
+13.6.a. Because it ignores authentication
+13.6.b.*. Because Zscaler trusts the authentication performed by the external IdP
+13.6.c. Because passwords are public
+13.6.d. Because MFA is never recommended
+
+13.7. What should skipping 2FA be treated as?
+13.7.a. A normal permanent bypass for all users
+13.7.b.*. A temporary or controlled exception
+13.7.c. A replacement for all password policies
+13.7.d. A way to disable Zero Trust
+
+13.8. What is the security risk of allowing password-only access without controls?
+13.8.a. It strengthens MFA
+13.8.b.*. Stolen passwords could be enough to impersonate users
+13.8.c. It improves identity assurance
+13.8.d. It makes phishing impossible
+
+14. Scenario-Based Review
+
+14.1. Jane wants to prevent admins from logging in from public Wi-Fi even if they know the correct password. What should she configure?
+14.1.a. Log Streaming only
+14.1.b.*. Admin Sign-on Policy with trusted IP location rules
+14.1.c. ZDX scorecards only
+14.1.d. GRE tunnel forwarding
+
+14.2. Jane wants all admins to use complex passwords with expiration and reuse controls. What should she configure?
+14.2.a. NSS Log Streaming
+14.2.b.*. Password Policy
+14.2.c. DLP engine
+14.2.d. NSS feed
+
+14.3. Jane wants to know who changed a configuration, when it changed, and from which IP. What should she review?
+14.3.a. GRE tunnel logs only
+14.3.b.*. Audit Logs
+14.3.c. Password complexity only
+14.3.d. ZDX only
+
+14.4. Jane wants users to verify identity with a password and a second factor. What should she enable?
+14.4.a. DLP only
+14.4.b.*. MFA
+14.4.c. Only password history
+14.4.d. Only IPsec tunnels
+
+14.5. Jane wants passwordless authentication using a security key. What should she configure?
+14.5.a. GRE as primary authenticator
+14.5.b.*. FIDO2 as primary authenticator
+14.5.c. GRE as primary authenticator
+14.5.d. NSS as primary authenticator
+
+14.6. A user authenticates successfully at Okta with MFA. Jane does not want Zscaler to ask for MFA again. What can she disable?
+14.6.a. Password complexity
+14.6.b.*. Enforce Zscaler Admin MFA
+14.6.c. Password length
+14.6.d. Audit log retention
+
+14.7. Jane wants to block login attempts from unknown countries or locations. Which control is most relevant?
+14.7.a. Email OTP only
+14.7.b.*. Sign-on Policy
+14.7.c. Email OTP only
+14.7.d. OAuth scope claim only
+
+14.8. Jane wants to reduce the chance that admins reuse old passwords. Which control helps?
+14.8.a. Trusted IP Location only
+14.8.b.*. Password History
+14.8.c. Log Streaming
+14.8.d. Trusted IP Location only
